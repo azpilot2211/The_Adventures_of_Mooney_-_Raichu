@@ -94,12 +94,52 @@ SEQ = [
     # end card (reused, free) + teaser
     ('EC-1_endcard',            REUSE + '/END-CARD.mp4'),
     ('TZ-1_gary-moves-in',      'clips/TZ-1_FINAL_gary-moves-in.mp4'),  # + teaser text
+    # --- like & subscribe outro, paw-pressed ---
+    ('OUTRO_like-subscribe',    'clips/OUTRO_like-subscribe.mp4'),
 ]
 
 # Measured spread across the 60 shots is -51 to -20 LUFS (median -29.4), so the
 # target sits near the dialogue cluster and the clamp is wide enough to reach it.
 # Ambience-only shots (B-9/B-11 blank faces, D-8, C-10) sit far below the clamp
 # and therefore STAY quieter than dialogue, which is what the edit wants.
+# Head trims. Seedance front-loads dead air: the character often stands there
+# for seconds before speaking. Measured with pacing.py (first sustained run of
+# voiced frames), then cut so each line lands ~0.6s in. Shots whose opening
+# carries a visual beat (a reveal, a character noticing, Gerald's stillness)
+# keep a longer lead-in. Set TRIM = {} to restore the untrimmed pacing.
+TRIM = {
+    'CO-2_carrier':                     1.16,   # line at 1.76s -> shot 2.88s
+    'CO-5_the-portion':                 1.98,   # line at 3.78s -> shot 3.11s
+    'A-1_v2_keep-an-eye':               1.90,   # line at 2.50s -> shot 3.19s
+    'A-3_she-meant-generally':          1.51,   # line at 2.11s -> shot 2.58s
+    'A-4_never-given-a-job':            1.99,   # line at 2.59s -> shot 3.10s
+    'A-6_name-one':                     2.30,   # line at 3.07s -> shot 1.80s
+    'A-7_watch-the-door':               0.81,   # line at 1.41s -> shot 4.28s
+    'A-9_raccoon-lives-here':           0.58,   # line at 1.18s -> shot 3.46s
+    'A-10_gary-morning':                2.52,   # line at 4.22s -> shot 2.56s
+    'A-11_garys-fine':                  0.55,   # line at 1.15s -> shot 3.54s
+    'B-1_ive-been-reading':             3.14,   # line at 3.74s -> shot 1.94s
+    'B-2_you-cant-read':                1.16,   # line at 1.76s -> shot 2.94s
+    'B-4_where-did-you-get-lasers':     2.07,   # line at 3.97s -> shot 4.01s
+    'B-5_the-drawer':                   2.30,   # line at 3.14s -> shot 1.80s
+    'B-6_no-laser-drawer':              1.03,   # line at 1.63s -> shot 4.06s
+    'B-8_who-here-is-tired':            2.04,   # line at 3.74s -> shot 5.06s
+    'B-10_nobodys-told-you':            2.12,   # line at 2.72s -> shot 1.98s
+    'B-12_im-going-to-tell-you':        3.05,   # line at 3.65s -> shot 2.04s
+    'C-3_what-do-you-have':             2.09,   # line at 2.69s -> shot 2.01s
+    'C-5_what-do-you-want':             2.02,   # line at 2.62s -> shot 2.07s
+    'C-6_everything-you-own':           2.43,   # line at 4.03s -> shot 2.66s
+    'C-7_i-own-a-bowl':                 1.99,   # line at 2.59s -> shot 2.05s
+    'C-8_then-i-want-the-bowl':         1.63,   # line at 3.23s -> shot 3.46s
+    'C-12_nobody-asked-you-gary':       2.38,   # line at 2.98s -> shot 3.70s
+    'D-2_wheres-your-bowl':             3.29,   # line at 4.22s -> shot 1.80s
+    'D-3_what-bowl':                    1.80,   # line at 2.40s -> shot 2.24s
+    'D-4_you-had-a-bowl':               3.21,   # line at 4.61s -> shot 2.87s
+    'D-5_did-i':                        2.38,   # line at 2.98s -> shot 2.71s
+    'E-2_i-know':                       3.82,   # line at 4.42s -> shot 2.26s
+    'E-4_thats-not':                    1.64,   # line at 2.24s -> shot 3.45s
+}
+
 TARGET_LUFS = -23.0
 GAIN_MIN, GAIN_MAX = -8.0, 14.0
 PEAK_CEILING = -1.0              # never let the boost clip
@@ -153,13 +193,14 @@ def main():
     ins, parts = [], []
     t = 0.0
     for i, (name, path) in enumerate(SEQ):
-        d = dur(path)
+        t0 = TRIM.get(name, 0.0)
+        d = dur(path) - t0
         lufs, tp = measure_lufs(path)
         gain = gain_for(lufs, tp)
         shown = 'silent' if lufs is None else '%.1f' % lufs
         print('%-3d %-30s %6.2fs %7.2fs %8s %6.1fdB' % (i + 1, name, d, t, shown, gain))
         t += d
-        ins += ['-i', path]
+        ins += (['-ss', '%.3f' % t0] if t0 else []) + ['-i', path]
         parts.append(
             '[%d:v:0]scale=1280:720:force_original_aspect_ratio=decrease,'
             'pad=1280:720:(ow-iw)/2:(oh-ih)/2,fps=24,setsar=1[v%d];'
