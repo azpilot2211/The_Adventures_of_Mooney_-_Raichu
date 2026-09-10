@@ -27,7 +27,7 @@ Cats speak English to each other. Tone: Simpsons structure, Family Guy devices, 
 **The owner's verdict: the jokes are weak.** Not the pacing — the writing. Shelved, not deleted. Untouched in this pass.
 
 ### Episode 2 — "Chonk" — COMPLETE
-`ep02-chonk/CHONK_EPISODE-2.mp4` — **60 shots, 5:26, 99.1 MB**
+`ep02-chonk/CHONK_EPISODE-2.mp4` — **60 shots + 6 dividers, 5:30, 99.6 MB**
 `ep02-chonk/CHONK_EPISODE-2_preview.mp4` — 16.1 MB, 854x480, for sending
 
 All 60 shots exist, in order, verified. Script followed line for line from `ep02-chonk/chonk.html`.
@@ -156,6 +156,28 @@ and rendered to `shots.json`. **Copy that structure for Episode 3.**
     each shot against the FIRST frame of the next within a continuous scene — that is
     what the audience actually sees at the cut. There is a builder for these strips in
     the qa/ workflow.
+
+---
+
+## Scene dividers
+
+`ep02-chonk/divider.py` builds the bumper: a navy card in the logo's own palette
+(navy `#000048` / cream `#f0f0f0` / gold `#f0d878`) with a diagonal cream sticker band
+sweeping across carrying a paw print. 0.8s, built entirely in PIL + ffmpeg, no credits.
+Two variants, `DIV-L` (left-to-right) and `DIV-R` (right-to-left), alternated so
+consecutive dividers do not look copy-pasted. Audio is synthesised in numpy: a swept
+noise whoosh plus a low thump on the covered frame.
+
+The card covers the full frame the whole time — an earlier version let the band sweep
+over black, which read as a dropout rather than a divider.
+
+**Placed at the six genuine location/time changes only:**
+cold open -> titles, kitchen -> back fence, garden day -> kitchen night,
+night -> morning, kitchen -> garden, garden -> deck at sunset.
+
+**Deliberately NOT placed at the cutaways** (CO-3 counter fail, A-10 Gary, C-11 Gary).
+The script is explicit that the hard unexplained jump is the joke there; a divider would
+smooth it out and kill it. Same reasoning inside the cold open, which is meant to run fast.
 
 ---
 

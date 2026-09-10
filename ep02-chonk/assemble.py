@@ -20,6 +20,8 @@ SEQ = [
     ('CO-3_counter-fail',       'clips/CO-3_counter-fail.mp4'),
     ('CO-4_carrier-again',      'clips/CO-4_carrier-again.mp4'),
     ('CO-5_the-portion',        'clips/CO-5_the-portion.mp4'),
+    # --- divider: cold open -> titles ---
+    ('DIV-1_open',              'clips/DIV-L.mp4'),
     # main title (reused, free)
     ('TS-1_main-title',         'clips/TS-1_FINAL_main-title.mp4'),   # reused plate + episode line
     # act one - the sentence
@@ -43,6 +45,8 @@ SEQ = [
     ('B-5_the-drawer',          'clips/B-5_the-drawer.mp4'),
     ('B-6_no-laser-drawer',     'clips/B-6_no-laser-drawer.mp4'),
     ('B-7_i-made-one',          'clips/B-7_i-made-one.mp4'),
+    # --- divider: kitchen -> back fence ---
+    ('DIV-2_to-fence',          'clips/DIV-R.mp4'),
     ('B-8_who-here-is-tired',   'clips/B-8_who-here-is-tired.mp4'),
     ('B-9_blank-faces-1',       'clips/B-9_blank-faces-1.mp4'),
     ('B-10_nobodys-told-you',   'clips/B-10_nobodys-told-you.mp4'),
@@ -50,6 +54,8 @@ SEQ = [
     ('B-12_im-going-to-tell-you', 'clips/B-12_im-going-to-tell-you.mp4'),
     ('B-13_movement-montage',   'clips/B-13_movement-montage.mp4'),
     ('B-14_the-banner',         'clips/B-14_the-banner.mp4'),
+    # --- divider: garden day -> kitchen night ---
+    ('DIV-3_to-night',          'clips/DIV-L.mp4'),
     # act three - the black market
     ('C-1_empty-bowl-night',    'clips/C-1_empty-bowl-night.mp4'),
     ('C-2_gerald-at-the-window','clips/C-2_gerald-at-the-window.mp4'),
@@ -64,6 +70,8 @@ SEQ = [
     ('C-11_disappointed',       'clips/C-11_disappointed.mp4'),
     ('C-12_nobody-asked-you-gary','clips/C-12_nobody-asked-you-gary.mp4'),
     ('C-13_escalation-montage', 'clips/C-13_escalation-montage.mp4'),
+    # --- divider: night -> morning ---
+    ('DIV-4_to-morning',        'clips/DIV-R.mp4'),
     # act four - collapse
     ('D-1_the-clean-circle',    'clips/D-1_the-clean-circle.mp4'),
     ('D-2_wheres-your-bowl',    'clips/D-2_wheres-your-bowl.mp4'),
@@ -71,8 +79,12 @@ SEQ = [
     ('D-4_you-had-a-bowl',      'clips/D-4_you-had-a-bowl.mp4'),
     ('D-5_did-i',               'clips/D-5_did-i.mp4'),
     ('D-6_the-throne',          'clips/D-6_the-throne.mp4'),
+    # --- divider: kitchen -> garden ---
+    ('DIV-5_to-garden',         'clips/DIV-L.mp4'),
     ('D-7_the-collapse',        'clips/D-7_the-collapse.mp4'),
     ('D-8_alone-in-the-wreckage','clips/D-8_alone-in-the-wreckage.mp4'),
+    # --- divider: garden -> deck at sunset ---
+    ('DIV-6_to-deck',           'clips/DIV-R.mp4'),
     # resolution - the wrong moral
     ('E-1_i-wanted-to-help',    'clips/E-1_i-wanted-to-help.mp4'),
     ('E-2_i-know',              'clips/E-2_i-know.mp4'),
