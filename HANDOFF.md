@@ -33,14 +33,15 @@ Cats speak English to each other. Tone: Simpsons structure, Family Guy devices, 
 All 60 shots exist, in order, verified. Script followed line for line from `ep02-chonk/chonk.html`.
 Main title carries the composited `Episode 2 — "Chonk"` line; teaser carries the STAY TUNED text.
 
-**Still unverified: nobody has listened to it.** No transcription key is configured
-(`~/.config/watch/.env` has no API key), so the voice performances have never been
-audited — only audio *presence*, level and timing. **The open question from the first
-handoff is still open: does the Family Guy dialogue land in Seedance's voices?**
-Watch it before committing to Episode 3.
+**Second pass, 2026-09-10:** the owner watched it and caught two things frame-review
+could not: characters re-staging between shots, and Mooney's voice changing. Both were
+real. 15 shots were re-cut to fix them — see "Voice consistency" below. Nobody has
+still *listened* with ears (no transcription key configured), but voice consistency is
+now measured objectively per shot by `voicecheck.py`.
 
 ### Credits
-**678.1 on Ultra.** Episode 2 cost 759.5 (700 planned + 59.5 in retries).
+**412.1 on Ultra.** Episode 2 cost 759.5 to build, plus 266 for the voice/staging
+fix pass (15 shots re-cut).
 **Ultra does NOT include free Seedance** — re-verified this session: `unlim: {available: false}`.
 Every video second costs **3.5 credits**, flat and linear. A 5-minute episode is ~1,100 credits.
 
@@ -58,6 +59,18 @@ Every video second costs **3.5 credits**, flat and linear. A 5-minute episode is
 | Lyndie | `36f7a2a3-7eae-4fac-bb93-d1924413fcf3` |
 | Six neighbourhood cats | `b809cefb-d684-441a-b2a0-0383085b7ded` |
 | Sticker logo (for video) | `abad9a2e-9210-4638-aebb-de7a701f0eda` |
+
+### Voice references — pass as `audio_references` (see below)
+
+| Character | Media ID | Source clip | F0 |
+|---|---|---|---|
+| Mooney | `5b9c99cf-13b6-494c-894a-7cee5e61f56f` | B-6 | 84 Hz |
+| Raichu | `d52f2999-456d-4943-8317-feb289f4f9a5` | B-7 | 296 Hz |
+| Gary | `f4912f8f-2f7b-4473-9a15-f45e0a2b8db8` | C-11 | 94 Hz |
+| Lyndie | `e95bf568-da1d-40e7-9d8a-2996ee6f3960` | CO-1 | 219 Hz |
+
+Local copies in `ep02-chonk/voiceref/`. Gerald has no reference — his three shots were
+generated in one batch and are already consistent (119-129 Hz).
 
 **The previous handoff's Gerald row was wrong** — it listed Gary's ID. Fixed above.
 Uploaded media IDs are durable; the presigned upload URLs are not (24h).
@@ -125,6 +138,64 @@ and rendered to `shots.json`. **Copy that structure for Episode 3.**
     not charged.** Just reword and resubmit.
 13. **Ask for "no readable text" on anything hand-made.** Charts, banners and signs
     otherwise come back covered in garbled lettering.
+14. **Posture drifts across cuts inside one scene.** Mooney sat upright in E-1/E-2 then
+    was lying down in E-3/E-5; Raichu flipped between lying beside Mooney and sitting
+    alone across A-6/A-7/A-8. Fix by passing the previous shot's final frame AND stating
+    the posture negatively: `MOONEY IS SITTING UPRIGHT - he is NOT lying down, NOT
+    sprawled, NOT flat on the boards.` Verified working on E-3 and E-5.
+15. **Frame-sampling does not catch continuity.** Reviewing one frame per shot proves
+    order and content, and nothing else. To find re-staging, compare the LAST frame of
+    each shot against the FIRST frame of the next within a continuous scene — that is
+    what the audience actually sees at the cut. There is a builder for these strips in
+    the qa/ workflow.
+
+---
+
+## Voice consistency — THE most important finding
+
+**The first handoff was wrong: Seedance DOES have a voice-ID mechanism.** `seedance_2_0`
+accepts an `audio_references` media role. Passing a clip of the character's correct voice,
+plus a line in the prompt saying *"X speaks with the EXACT SAME VOICE as the provided audio
+reference - the same pitch, texture and cadence. Match that voice precisely"*, reliably pulls
+the generated voice onto the reference.
+
+Measured, on 15 re-cut shots:
+
+| Shot | Before | After | Target |
+|---|---|---|---|
+| D-3 Mooney | 174 Hz | 100 Hz | 84 |
+| A-9 Mooney | 147 Hz | 87 Hz | 84 |
+| B-4 Mooney | 138 Hz | 86 Hz | 84 |
+| A-7 Mooney | 129 Hz | 78 Hz | 84 |
+| E-2 Mooney | 117 Hz | 89 Hz | 84 |
+| **A-10 Gary** | **262 Hz** | **91 Hz** | 94 |
+| E-1 Raichu | 118 Hz | 327 Hz | 296 |
+| A-8 Raichu | 146 Hz | 294 Hz | 296 |
+
+Per-character spread across the whole episode, before -> after:
+
+```
+MOONEY   84-174 Hz (90 spread)  ->  78-113 Hz (35 spread)
+RAICHU  118-356 Hz (238)        -> 258-377 Hz (118)
+GARY     94-262 Hz (168)        ->  91- 94 Hz (3)
+GERALD  119-129 Hz (11)         -> unchanged, never drifted
+LYNDIE  144-219 Hz (75)         -> unchanged, FIX FAILED
+```
+
+**Gary was two entirely different characters** — 262 Hz in A-10, 94 Hz in C-11, nearly
+1.5 octaves apart. That is fixed.
+
+**Lyndie is the one failure.** A-1 did not move (148 -> 144 Hz) even with a clean 219 Hz
+reference. Unknown why; the reference was verified uncontaminated. She has only two short
+lines in separate scenes, so it was left. If Episode 3 gives her more to say, solve this first.
+
+**Why Gerald never drifted:** his three shots were generated in a single batch. Identical
+delivery wording is NOT enough on its own — Seedance re-rolls the voice per generation.
+**For Episode 3, build the reference clips FIRST and pass `audio_references` on every
+single dialogue shot.** It is the difference between a cast and a lottery.
+
+`ep02-chonk/voicecheck.py` measures median F0 per speaking shot by autocorrelation and
+flags outliers. Run it after any batch. It needs numpy only.
 
 ---
 
@@ -207,10 +278,12 @@ the 1 GB free LFS quota. Decide before enabling it.
 
 ## Next actions
 
-1. **Watch `CHONK_EPISODE-2_preview.mp4` with sound.** This is the gate. Everything below
-   depends on whether the voices work. If the delivery is wrong, the fix is prompt wording
-   (rule 4) and it is cheap to re-run individual shots — the per-shot prompts are all saved
-   in `ep02-chonk/prompts/shots.json`.
-2. If the voices land, write Episode 3. Gary moves in properly — the teaser has committed to it.
-3. If they don't, the lever to try first is a different model for dialogue shots
-   (`kling3_0` supports audio and multi-shot) before rewriting anything.
+1. **Watch `CHONK_EPISODE-2_preview.mp4` with sound** and confirm the re-cut voices land.
+   Pitch is now consistent by measurement, but whether the *performance* is funny is a
+   judgement no script can make.
+2. Write Episode 3. Gary moves in properly — the teaser has committed to it.
+3. **For Episode 3, generate the voice reference clips first** and pass `audio_references`
+   on every dialogue shot from the start. Retro-fitting cost 266 credits on this episode;
+   doing it up front costs nothing.
+4. Superseded v1 clips are kept in `ep02-chonk/clips/superseded_v1/` if any re-cut turns
+   out worse than the original.

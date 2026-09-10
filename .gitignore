@@ -10,3 +10,5 @@ ep02-chonk/continuity/
 ep01-fowl-play/continuity/
 __pycache__/
 *.pyc
+ep02-chonk/fixes/
+ep02-chonk/voiceref/*.mp3
