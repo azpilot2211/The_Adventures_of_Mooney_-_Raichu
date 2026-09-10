@@ -40,7 +40,7 @@ still *listened* with ears (no transcription key configured), but voice consiste
 now measured objectively per shot by `voicecheck.py`.
 
 ### Credits
-**412.1 on Ultra.** Episode 2 cost 759.5 to build, plus 266 for the voice/staging
+**394.6 on Ultra.** Episode 2 cost 759.5 to build, plus 266 for the voice/staging
 fix pass (15 shots re-cut).
 **Ultra does NOT include free Seedance** — re-verified this session: `unlim: {available: false}`.
 Every video second costs **3.5 credits**, flat and linear. A 5-minute episode is ~1,100 credits.
@@ -143,7 +143,15 @@ and rendered to `shots.json`. **Copy that structure for Episode 3.**
     alone across A-6/A-7/A-8. Fix by passing the previous shot's final frame AND stating
     the posture negatively: `MOONEY IS SITTING UPRIGHT - he is NOT lying down, NOT
     sprawled, NOT flat on the boards.` Verified working on E-3 and E-5.
-15. **Frame-sampling does not catch continuity.** Reviewing one frame per shot proves
+15. **Keep the scene's geography.** E-4 had Raichu standing against a wall looking UP at
+    empty air while objecting to Mooney, who was not in frame — in a scene where the two of
+    them sit side by side at the same level. It read as a different scene. Fixed by making
+    it a two-shot and stating the eye-line explicitly: `RAICHU TURNS HIS HEAD SIDEWAYS TO
+    LOOK DIRECTLY AT MOONEY BESIDE HIM - he does NOT look upward, there is nothing above
+    him`, plus `MOONEY does not react and keeps facing the sunset`. Naming what a character
+    is looking AT, and what the other one is doing meanwhile, is what makes a reaction beat
+    legible.
+16. **Frame-sampling does not catch continuity.** Reviewing one frame per shot proves
     order and content, and nothing else. To find re-staging, compare the LAST frame of
     each shot against the FIRST frame of the next within a continuous scene — that is
     what the audience actually sees at the cut. There is a builder for these strips in
@@ -184,6 +192,17 @@ LYNDIE  144-219 Hz (75)         -> unchanged, FIX FAILED
 
 **Gary was two entirely different characters** — 262 Hz in A-10, 94 Hz in C-11, nearly
 1.5 octaves apart. That is fixed.
+
+**Mooney's target is 112 Hz, NOT his deepest take.** The first fix pass anchored him to
+B-6 at 84 Hz because the script says "deep, slow, gravelly" — that was an over-correction and
+the owner flagged it as too low. His natural median across the original episode was 110 Hz.
+Corrected in post with `rubberband=pitch=<ratio>:formant=preserved`, per shot, to land each
+on 112 Hz. Formant preservation is what makes this work: the spectral centroid barely moves
+(554 -> 578 Hz on a 1.33x shift), so it is a genuine pitch lift and not a chipmunk effect.
+Duration is preserved to within 20 ms and the ~2 dB level drop is absorbed by the loudness
+pass in assemble.py. Final: **median 111 Hz, range 93-124**. Originals in
+`clips/superseded_deep/`. TZ-1 was deliberately excluded — Gary shares that track and
+shifting it would undo his fix.
 
 **Lyndie is the one failure.** A-1 did not move (148 -> 144 Hz) even with a clean 219 Hz
 reference. Unknown why; the reference was verified uncontaminated. She has only two short
