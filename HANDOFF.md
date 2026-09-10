@@ -215,16 +215,30 @@ LYNDIE  144-219 Hz (75)         -> unchanged, FIX FAILED
 **Gary was two entirely different characters** — 262 Hz in A-10, 94 Hz in C-11, nearly
 1.5 octaves apart. That is fixed.
 
-**Mooney's target is 112 Hz, NOT his deepest take.** The first fix pass anchored him to
+**MOONEY'S CANONICAL VOICE IS A-12, "I have never been hungry" — 107 Hz.**
+The owner picked it by ear. The reference clip is the first 5.5s of that shot
+(Mooney only, before Raichu answers), uploaded as
+`f7770c02-0ae8-4b53-a10d-ee46997aa44a`, local copy
+`ep02-chonk/voiceref/MOONEY-CANONICAL-a12.mp3`. Use it for every Mooney shot in
+Episode 3 and do not re-derive the target.
+
+**Mooney's target is 107 Hz, NOT his deepest take.** The first fix pass anchored him to
 B-6 at 84 Hz because the script says "deep, slow, gravelly" — that was an over-correction and
 the owner flagged it as too low. His natural median across the original episode was 110 Hz.
-Corrected in post with `rubberband=pitch=<ratio>:formant=preserved`, per shot, to land each
-on 112 Hz. Formant preservation is what makes this work: the spectral centroid barely moves
+Corrected per shot to land on ~107 Hz. Formant preservation is what makes this work: the spectral centroid barely moves
 (554 -> 578 Hz on a 1.33x shift), so it is a genuine pitch lift and not a chipmunk effect.
 Duration is preserved to within 20 ms and the ~2 dB level drop is absorbed by the loudness
 pass in assemble.py. Final: **median 111 Hz, range 93-124**. Originals in
 `clips/superseded_deep/`. TZ-1 was deliberately excluded — Gary shares that track and
 shifting it would undo his fix.
+
+**Regeneration only moves the voice about two thirds of the time,** so the working
+method is: regenerate with the corrected wording, then apply the SMALLEST possible
+rubberband lift to close the gap. Always rebase off a fresh natural take rather
+than re-shifting an already-shifted clip — processing compounds. Doing that cut
+the lift on four shots from 1.18-1.29x down to 1.09-1.14x for the same final pitch.
+E-5 "And I'd do it again" trips the NSFW filter every single time (three attempts,
+three rewordings) - it cannot be regenerated, only shifted.
 
 **Lyndie is the one failure.** A-1 did not move (148 -> 144 Hz) even with a clean 219 Hz
 reference. Unknown why; the reference was verified uncontaminated. She has only two short

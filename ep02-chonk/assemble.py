@@ -106,38 +106,35 @@ SEQ = [
 # for seconds before speaking. Measured with pacing.py (first sustained run of
 # voiced frames), then cut so each line lands ~0.6s in. Shots whose opening
 # carries a visual beat (a reveal, a character noticing, Gerald's stillness)
-# keep a longer lead-in. Set TRIM = {} to restore the untrimmed pacing.
+# keep a longer lead-in. Set TRIM to an empty dict to restore untrimmed pacing.
 TRIM = {
-    'CO-2_carrier':                     1.16,   # line at 1.76s -> shot 2.88s
-    'CO-5_the-portion':                 1.98,   # line at 3.78s -> shot 3.11s
+    'CO-2_carrier':                     1.13,   # line at 1.73s -> shot 2.91s
     'A-1_v2_keep-an-eye':               1.90,   # line at 2.50s -> shot 3.19s
     'A-3_she-meant-generally':          1.51,   # line at 2.11s -> shot 2.58s
     'A-4_never-given-a-job':            1.99,   # line at 2.59s -> shot 3.10s
-    'A-6_name-one':                     2.30,   # line at 3.07s -> shot 1.80s
-    'A-7_watch-the-door':               0.81,   # line at 1.41s -> shot 4.28s
-    'A-9_raccoon-lives-here':           0.58,   # line at 1.18s -> shot 3.46s
+    'A-7_watch-the-door':               0.78,   # line at 1.38s -> shot 4.31s
+    'A-9_raccoon-lives-here':           0.68,   # line at 1.28s -> shot 3.36s
     'A-10_gary-morning':                2.52,   # line at 4.22s -> shot 2.56s
-    'A-11_garys-fine':                  0.55,   # line at 1.15s -> shot 3.54s
-    'B-1_ive-been-reading':             3.14,   # line at 3.74s -> shot 1.94s
-    'B-2_you-cant-read':                1.16,   # line at 1.76s -> shot 2.94s
-    'B-4_where-did-you-get-lasers':     2.07,   # line at 3.97s -> shot 4.01s
-    'B-5_the-drawer':                   2.30,   # line at 3.14s -> shot 1.80s
-    'B-6_no-laser-drawer':              1.03,   # line at 1.63s -> shot 4.06s
-    'B-8_who-here-is-tired':            2.04,   # line at 3.74s -> shot 5.06s
-    'B-10_nobodys-told-you':            2.12,   # line at 2.72s -> shot 1.98s
+    'B-1_ive-been-reading':             2.92,   # line at 3.52s -> shot 2.17s
+    'B-2_you-cant-read':                1.13,   # line at 1.73s -> shot 2.97s
+    'B-4_where-did-you-get-lasers':     2.00,   # line at 3.90s -> shot 4.08s
+    'B-5_the-drawer':                   2.30,   # line at 2.94s -> shot 1.80s
+    'B-6_no-laser-drawer':              2.06,   # line at 2.66s -> shot 3.03s
+    'B-8_who-here-is-tired':            2.01,   # line at 3.71s -> shot 5.09s
+    'B-10_nobodys-told-you':            0.97,   # line at 1.57s -> shot 3.13s
     'B-12_im-going-to-tell-you':        3.05,   # line at 3.65s -> shot 2.04s
-    'C-3_what-do-you-have':             2.09,   # line at 2.69s -> shot 2.01s
-    'C-5_what-do-you-want':             2.02,   # line at 2.62s -> shot 2.07s
-    'C-6_everything-you-own':           2.43,   # line at 4.03s -> shot 2.66s
-    'C-7_i-own-a-bowl':                 1.99,   # line at 2.59s -> shot 2.05s
-    'C-8_then-i-want-the-bowl':         1.63,   # line at 3.23s -> shot 3.46s
-    'C-12_nobody-asked-you-gary':       2.38,   # line at 2.98s -> shot 3.70s
-    'D-2_wheres-your-bowl':             3.29,   # line at 4.22s -> shot 1.80s
+    'C-3_what-do-you-have':             2.06,   # line at 2.66s -> shot 2.04s
+    'C-5_what-do-you-want':             1.77,   # line at 2.37s -> shot 2.33s
+    'C-6_everything-you-own':           1.82,   # line at 3.42s -> shot 3.26s
+    'C-7_i-own-a-bowl':                 1.10,   # line at 1.70s -> shot 2.95s
+    'C-8_then-i-want-the-bowl':         0.54,   # line at 2.14s -> shot 4.54s
+    'C-12_nobody-asked-you-gary':       2.28,   # line at 2.88s -> shot 3.80s
+    'D-2_wheres-your-bowl':             3.05,   # line at 3.65s -> shot 2.04s
     'D-3_what-bowl':                    1.80,   # line at 2.40s -> shot 2.24s
-    'D-4_you-had-a-bowl':               3.21,   # line at 4.61s -> shot 2.87s
-    'D-5_did-i':                        2.38,   # line at 2.98s -> shot 2.71s
-    'E-2_i-know':                       3.82,   # line at 4.42s -> shot 2.26s
-    'E-4_thats-not':                    1.64,   # line at 2.24s -> shot 3.45s
+    'D-5_did-i':                        2.34,   # line at 2.94s -> shot 2.74s
+    'E-1_i-wanted-to-help':             4.20,   # line at 4.80s -> shot 2.90s
+    'E-2_i-know':                       3.59,   # line at 4.19s -> shot 2.49s
+    'E-4_thats-not':                    1.61,   # line at 2.21s -> shot 3.48s
 }
 
 TARGET_LUFS = -23.0
