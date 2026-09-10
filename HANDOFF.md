@@ -181,7 +181,44 @@ smooth it out and kill it. Same reasoning inside the cold open, which is meant t
 
 ---
 
-## Voice consistency — THE most important finding
+## Voice consistency — SOLVED, use voice_change
+
+**Do not chase pitch. Use `voice_change`.** Everything below about pitch matching
+was the wrong approach and is kept only as a record of what failed.
+
+Seedance generates a NEW voice for every shot. `audio_references` nudges it, prompt
+wording moves it further, and pitch-shifting forces the number — but F0 is only one
+dimension of a voice. Two clips can both sit at 107 Hz and still sound like two
+different actors, and every shift adds artifacts. That is exactly what the owner
+heard: "his voice is all over the place" and "sounds robotic".
+
+**The fix:** `voice_change` replaces the spoken voice in a finished clip with one
+chosen voice, keeping the original timing, lip-sync and visuals. Apply the same
+voice to every one of a character's shots and the character has ONE voice, with
+zero pitch processing.
+
+    MOONEY = preset voice "Cillian", voice_id d8ba9f14-8a24-44db-932b-99e16c45bd32,
+             voice_type 'preset'   (owner's choice)
+
+  · Cost is about **1 credit per shot** - trivially cheap. Cloning a custom voice
+    costs ~40, so prefer a preset unless a clone is genuinely needed.
+  · A clone of Mooney's A-12 take also exists if wanted:
+    `e1f028f2-9e60-4659-9a86-07e6f285112f`, voice_type 'element'.
+  · Feed it the LEAST processed source available - a raw generation job_id, or an
+    uploaded natural clip. Do not feed it something already pitch-shifted.
+  · **Only revoice shots where that character is the only speaker.** voice_change
+    converts every voice on the track. CO-2 (Michael off-screen), CO-5 (Lyndie) and
+    A-12 (Raichu answers) are therefore still the original generated audio.
+  · Residual F0 spread after revoicing (90-137 Hz) is normal prosody from one
+    actor, not drift. Do not "correct" it.
+
+**FOR EPISODE 3: generate with the voices as they come, then voice_change every
+dialogue shot per character as a finishing pass.** Do not fight the generator.
+Pick a preset per character up front and record it here.
+
+---
+
+## Voice consistency — the pitch-matching approach that FAILED
 
 **The first handoff was wrong: Seedance DOES have a voice-ID mechanism.** `seedance_2_0`
 accepts an `audio_references` media role. Passing a clip of the character's correct voice,

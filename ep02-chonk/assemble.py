@@ -110,31 +110,32 @@ SEQ = [
 TRIM = {
     'CO-2_carrier':                     1.13,   # line at 1.73s -> shot 2.91s
     'A-1_v2_keep-an-eye':               1.90,   # line at 2.50s -> shot 3.19s
-    'A-3_she-meant-generally':          1.51,   # line at 2.11s -> shot 2.58s
+    'A-3_she-meant-generally':          1.51,   # line at 2.11s -> shot 2.53s
     'A-4_never-given-a-job':            1.99,   # line at 2.59s -> shot 3.10s
-    'A-7_watch-the-door':               0.78,   # line at 1.38s -> shot 4.31s
+    'A-7_watch-the-door':               0.74,   # line at 1.34s -> shot 4.30s
     'A-9_raccoon-lives-here':           0.68,   # line at 1.28s -> shot 3.36s
     'A-10_gary-morning':                2.52,   # line at 4.22s -> shot 2.56s
     'B-1_ive-been-reading':             2.92,   # line at 3.52s -> shot 2.17s
-    'B-2_you-cant-read':                1.13,   # line at 1.73s -> shot 2.97s
-    'B-4_where-did-you-get-lasers':     2.00,   # line at 3.90s -> shot 4.08s
+    'B-2_you-cant-read':                1.13,   # line at 1.73s -> shot 2.91s
+    'B-4_where-did-you-get-lasers':     2.04,   # line at 3.94s -> shot 4.01s
     'B-5_the-drawer':                   2.30,   # line at 2.94s -> shot 1.80s
-    'B-6_no-laser-drawer':              2.06,   # line at 2.66s -> shot 3.03s
+    'B-6_no-laser-drawer':              2.09,   # line at 2.69s -> shot 2.95s
     'B-8_who-here-is-tired':            2.01,   # line at 3.71s -> shot 5.09s
     'B-10_nobodys-told-you':            0.97,   # line at 1.57s -> shot 3.13s
     'B-12_im-going-to-tell-you':        3.05,   # line at 3.65s -> shot 2.04s
-    'C-3_what-do-you-have':             2.06,   # line at 2.66s -> shot 2.04s
-    'C-5_what-do-you-want':             1.77,   # line at 2.37s -> shot 2.33s
+    'C-3_what-do-you-have':             2.06,   # line at 2.66s -> shot 1.99s
+    'C-5_what-do-you-want':             1.77,   # line at 2.37s -> shot 2.27s
     'C-6_everything-you-own':           1.82,   # line at 3.42s -> shot 3.26s
     'C-7_i-own-a-bowl':                 1.10,   # line at 1.70s -> shot 2.95s
     'C-8_then-i-want-the-bowl':         0.54,   # line at 2.14s -> shot 4.54s
-    'C-12_nobody-asked-you-gary':       2.28,   # line at 2.88s -> shot 3.80s
+    'C-12_nobody-asked-you-gary':       2.28,   # line at 2.88s -> shot 3.76s
     'D-2_wheres-your-bowl':             3.05,   # line at 3.65s -> shot 2.04s
-    'D-3_what-bowl':                    1.80,   # line at 2.40s -> shot 2.24s
-    'D-5_did-i':                        2.34,   # line at 2.94s -> shot 2.74s
+    'D-3_what-bowl':                    1.70,   # line at 2.30s -> shot 2.34s
+    'D-5_did-i':                        2.34,   # line at 2.94s -> shot 2.70s
     'E-1_i-wanted-to-help':             4.20,   # line at 4.80s -> shot 2.90s
-    'E-2_i-know':                       3.59,   # line at 4.19s -> shot 2.49s
+    'E-2_i-know':                       3.62,   # line at 4.22s -> shot 2.42s
     'E-4_thats-not':                    1.61,   # line at 2.21s -> shot 3.48s
+    'E-5_id-do-it-again':               3.30,   # line at 3.90s -> shot 2.74s
 }
 
 TARGET_LUFS = -23.0
