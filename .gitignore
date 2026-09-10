@@ -1,0 +1,12 @@
+# Rendered video and source clips.
+# ~1.1 GB total, and FOWL-PLAY_EPISODE-1.mp4 is 113.8 MB — over GitHub's hard
+# 100 MB per-file limit, so these cannot be pushed without Git LFS (1.1 GB also
+# exceeds the 1 GB free LFS quota). Episodes are rebuildable with assemble.py.
+*.mp4
+
+# Generated QA artifacts — contact sheets and extracted frames.
+ep02-chonk/qa/
+ep02-chonk/continuity/
+ep01-fowl-play/continuity/
+__pycache__/
+*.pyc

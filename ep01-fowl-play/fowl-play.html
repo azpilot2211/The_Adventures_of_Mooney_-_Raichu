@@ -1,0 +1,770 @@
+<title>Fowl Play</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --fog:#EDF0F3;
+    --surface:#E2E7EB;
+    --card:#F6F8F9;
+    --ink:#16202B;
+    --ink-2:#3A4854;
+    --shingle:#6F7C88;
+    --rule:#CBD4DB;
+    --hydrangea:#4F63B8;
+    --hydrangea-soft:#DDE2F4;
+    --buoy:#B14E33;
+    --seaglass:#37796B;
+    --shadow:rgba(22,32,43,.10);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --fog:#121A22;
+      --surface:#1B252F;
+      --card:#1E2A35;
+      --ink:#E6EDF2;
+      --ink-2:#B4C2CE;
+      --shingle:#8797A4;
+      --rule:#2E3D4A;
+      --hydrangea:#93A4EA;
+      --hydrangea-soft:#26314C;
+      --buoy:#E08D6E;
+      --seaglass:#6FB6A4;
+      --shadow:rgba(0,0,0,.34);
+    }
+  }
+  :root[data-theme="dark"]{
+    --fog:#121A22;
+    --surface:#1B252F;
+    --card:#1E2A35;
+    --ink:#E6EDF2;
+    --ink-2:#B4C2CE;
+    --shingle:#8797A4;
+    --rule:#2E3D4A;
+    --hydrangea:#93A4EA;
+    --hydrangea-soft:#26314C;
+    --buoy:#E08D6E;
+    --seaglass:#6FB6A4;
+    --shadow:rgba(0,0,0,.34);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--fog);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,"Times New Roman",serif;
+    font-size:17px;
+    line-height:1.6;
+    margin:0;
+    padding:0 20px 96px;
+  }
+  .wrap{max-width:980px;margin:0 auto}
+
+  /* ---- masthead ---- */
+  .mast{padding:56px 0 30px;border-bottom:2px solid var(--ink)}
+  .eyebrow{
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--shingle);margin:0 0 18px;
+  }
+  h1{
+    font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    font-weight:800;font-size:clamp(46px,9vw,88px);line-height:.94;
+    letter-spacing:-.025em;margin:0;text-wrap:balance;
+  }
+  h1 .amp{color:var(--hydrangea)}
+  .subtitle{
+    font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    font-weight:600;font-size:clamp(19px,2.6vw,25px);
+    color:var(--ink-2);margin:14px 0 0;letter-spacing:-.01em;
+  }
+  .logline{max-width:62ch;color:var(--ink-2);margin:20px 0 0;font-size:18px}
+
+  /* ---- stat strip ---- */
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
+    gap:1px;background:var(--rule);border:1px solid var(--rule);
+    margin:34px 0 0;
+  }
+  .stat{background:var(--fog);padding:15px 16px}
+  .stat dt{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--shingle);margin:0 0 6px;
+  }
+  .stat dd{
+    font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    font-weight:700;font-size:26px;margin:0;letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;
+  }
+  .stat dd small{font-size:13px;font-weight:600;color:var(--shingle);letter-spacing:0}
+  .stat.total dd{color:var(--buoy)}
+
+  /* ---- act headers ---- */
+  .act{margin:60px 0 0}
+  .act-head{
+    display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+    padding-bottom:10px;border-bottom:1px solid var(--ink);
+  }
+  .act-num{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--hydrangea);font-weight:600;
+  }
+  .act-name{
+    font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    font-weight:700;font-size:27px;letter-spacing:-.02em;margin:0;flex:1;
+  }
+  .act-meta{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:12px;color:var(--shingle);font-variant-numeric:tabular-nums;
+  }
+  .act-note{
+    color:var(--ink-2);font-style:italic;margin:12px 0 0;max-width:62ch;font-size:16px;
+  }
+
+  /* ---- shot rows ---- */
+  .shot{
+    display:grid;grid-template-columns:112px 1fr;gap:22px;
+    padding:20px 0;border-bottom:1px solid var(--rule);
+  }
+  .rail{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-variant-numeric:tabular-nums;line-height:1.45;
+  }
+  .tc{font-size:15px;font-weight:600;color:var(--ink);display:block}
+  .code{font-size:11px;letter-spacing:.08em;color:var(--hydrangea);display:block;margin-top:3px}
+  .dur{font-size:11.5px;color:var(--shingle);display:block;margin-top:7px}
+  .cr{font-size:11.5px;color:var(--buoy);display:block}
+
+  .action{margin:0;color:var(--ink)}
+  .action b{font-weight:500;color:var(--ink);font-variant-caps:small-caps;letter-spacing:.02em}
+
+  .line{
+    margin:13px 0 0;padding:11px 16px;
+    background:var(--card);border-left:3px solid var(--hydrangea);
+  }
+  .who{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--hydrangea);font-weight:600;display:block;margin-bottom:3px;
+  }
+  .said{font-size:19px;line-height:1.45;margin:0}
+  .paren{font-style:italic;color:var(--shingle);font-size:14px}
+
+  .sfx{display:flex;flex-wrap:wrap;gap:6px;margin:13px 0 0}
+  .sfx span{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:10.5px;letter-spacing:.06em;
+    background:var(--hydrangea-soft);color:var(--ink-2);
+    padding:3px 9px;border-radius:2px;
+  }
+  .sfx span::before{content:"♪ ";color:var(--hydrangea)}
+
+  .reuse{
+    display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--seaglass);border:1px solid var(--seaglass);
+    padding:2px 7px;margin-left:8px;vertical-align:2px;
+  }
+
+  /* ---- text card block ---- */
+  .card-spec{
+    background:var(--surface);border:1px solid var(--rule);
+    padding:22px 24px;margin:16px 0 0;
+  }
+  .card-spec h4{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--shingle);margin:0 0 14px;font-weight:600;
+  }
+  .plate{text-align:center;padding:8px 0}
+  .plate .big{
+    font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    font-weight:800;font-size:clamp(20px,3.4vw,31px);letter-spacing:-.02em;
+    line-height:1.1;margin:0;
+  }
+  .plate .ep{
+    font-family:"Newsreader",Georgia,serif;font-style:italic;
+    font-size:18px;color:var(--ink-2);margin:9px 0 0;
+  }
+  .plate .fine{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:11px;letter-spacing:.09em;color:var(--shingle);margin:16px 0 0;
+  }
+
+  /* ---- notes ---- */
+  .notes{margin:64px 0 0;padding-top:26px;border-top:2px solid var(--ink)}
+  .notes h3{
+    font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    font-size:24px;font-weight:700;letter-spacing:-.02em;margin:0 0 20px;
+  }
+  .note-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:26px}
+  .note h5{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:11px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--hydrangea);margin:0 0 7px;font-weight:600;
+  }
+  .note p{margin:0;color:var(--ink-2);font-size:16px}
+
+  .ledger{width:100%;border-collapse:collapse;margin:18px 0 0;font-size:15px}
+  .ledger th,.ledger td{
+    text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--rule);
+  }
+  .ledger th{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--shingle);font-weight:600;
+  }
+  .ledger td:last-child,.ledger th:last-child{
+    text-align:right;padding-right:0;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .ledger tr.sum td{
+    border-bottom:none;border-top:2px solid var(--ink);
+    font-weight:600;color:var(--buoy);padding-top:12px;
+  }
+  .scroll{overflow-x:auto}
+
+  @media (max-width:640px){
+    .shot{grid-template-columns:1fr;gap:10px}
+    .rail{display:flex;gap:14px;align-items:baseline}
+    .tc,.code,.dur,.cr{display:inline;margin:0}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header class="mast">
+    <p class="eyebrow">The Adventures of Mooney &amp; Raichu · Episode 1 · Shooting Script</p>
+    <h1>Fowl Play</h1>
+    <p class="subtitle">A seagull named Gerald. Four traps. One nap.</p>
+    <p class="logline">A herring gull robs the deck railing every morning at the same hour. Raichu declares war. Mooney declines to participate — and every trap Raichu builds lands on Mooney instead of the bird.</p>
+
+    <dl class="stats">
+      <div class="stat"><dt>Runtime</dt><dd>4:52</dd></div>
+      <div class="stat"><dt>Shots</dt><dd>46</dd></div>
+      <div class="stat"><dt>Spoken lines</dt><dd>28</dd></div>
+      <div class="stat"><dt>Rate</dt><dd>3.5<small> cr/sec</small></dd></div>
+      <div class="stat total"><dt>Episode cost</dt><dd>1,022</dd></div>
+    </dl>
+  </header>
+
+  <!-- COLD OPEN -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-num">Cold open</span>
+      <h2 class="act-name">The Robbery</h2>
+      <span class="act-meta">15s · 52.5 cr</span>
+    </div>
+    <p class="act-note">Before any titles. Establishes the crime, the villain, and both cats' entire personalities in fifteen seconds.</p>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:00</span><span class="code">CO-1</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Cape Cod morning. A weathered deck railing, gray shingle behind it, hydrangeas below. On a plate: one perfect turkey sandwich. Stillness. A wide gull shadow slides across the plate and keeps going.</p>
+        <div class="sfx"><span>distant surf</span><span>halyards clinking</span><span>one gull cry, far off</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:05</span><span class="code">CO-2</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">The cat door <b>explodes</b> open. RAICHU launches through it at full speed, already airborne, already yelling. The plate is empty.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">No no no no —</p></div>
+        <div class="sfx"><span>cat-door clatter</span><span>whoosh</span><span>claw skid on decking</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:10</span><span class="code">CO-3</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">GERALD — an enormous, unhurried herring gull — hovers just out of reach. He holds eye contact with Raichu. He eats the entire sandwich without breaking it. In the background MOONEY sleeps on a deck chair and does not stir once.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">GERALD!</p></div>
+        <div class="sfx"><span>slow wingbeats</span><span>single smug gull call</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TITLES -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-num">Titles</span>
+      <h2 class="act-name">Main Title <span class="reuse">built once · reused</span></h2>
+      <span class="act-meta">12s · 42 cr</span>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:15</span><span class="code">TS-1</span><span class="dur">12s</span><span class="cr">42 cr</span></div>
+      <div>
+        <p class="action">Cape Cod title montage: gray-shingle house in morning light, hydrangeas, a glimpse of harbor and moored boats, then both cats trotting the fence line toward camera in step. Composed with the lower third held clean and empty for text. <b>No lettering generated in-shot.</b></p>
+        <div class="card-spec">
+          <h4>Composited in post — not AI-rendered</h4>
+          <div class="plate">
+            <p class="big">THE ADVENTURES OF<br>MOONEY <span style="color:var(--hydrangea)">&amp;</span> RAICHU</p>
+            <p class="ep">Episode 1 — “Fowl Play”</p>
+          </div>
+        </div>
+        <div class="sfx"><span>theme music</span><span>gulls</span><span>harbor bell</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:27</span><span class="code">WG-1</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action"><b>The windowsill gag</b> — this episode's version of the couch gag, one new shot per episode. Interior, front window. Raichu arrives at a dead sprint, fails to brake, hits the glass and slides down it. Mooney is already asleep on the sill and does not move.</p>
+        <div class="sfx"><span>running claws</span><span>glass thud</span><span>slow squeak down the pane</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT ONE -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-num">Act One</span>
+      <h2 class="act-name">Declaration of War</h2>
+      <span class="act-meta">42s · 147 cr</span>
+    </div>
+    <p class="act-note">Seven shots, seven lines, one line each — so every mouth on screen is the mouth that's talking.</p>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:32</span><span class="code">A1-1</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Living room. Raichu paces a tight furious circle on the rug.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">That's the fourth sandwich this week.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:38</span><span class="code">A1-2</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Mooney, flat out in a sunbeam. He does not open his eyes to speak.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">Maybe stop leaving sandwiches out.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:44</span><span class="code">A1-3</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Raichu wheels around, tail enormous.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">It's not about the sandwich!</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:49</span><span class="code">A1-4</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Mooney cracks exactly one eye.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">It's a little about the sandwich.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">0:55</span><span class="code">A1-5</span><span class="dur">8s</span><span class="cr">28 cr</span></div>
+      <div>
+        <p class="action">Raichu drags a claw through spilled litter, sketching a battle map — arrows, a crude gull, a crude cat, a dotted flanking route. He taps it like a general.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">Phase one is reconnaissance.</p></div>
+        <div class="sfx"><span>grit scraping</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:03</span><span class="code">A1-6</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Mooney regards the diagram without lifting his head.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">Phase one is you staring at a bird.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:09</span><span class="code">A1-7</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Push in tight on Raichu. Deadly serious. Pupils enormous.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">Aggressively.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT TWO -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-num">Act Two</span>
+      <h2 class="act-name">The Ladder</h2>
+      <span class="act-meta">96s · 336 cr</span>
+    </div>
+    <p class="act-note">Three traps, each more elaborate, each defeated more casually. Gerald never hurries and never acknowledges the trap — that restraint is the joke. Mooney absorbs every consequence.</p>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:14</span><span class="code">T1-1</span><span class="dur">7s</span><span class="cr">24.5 cr</span></div>
+      <div>
+        <p class="action"><b>Trap one — the box.</b> A cardboard box propped on a stick, string running off into the hydrangeas, half a sandwich beneath it. Raichu presents it with enormous pride.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">Elegant. Simple. Undefeatable.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:21</span><span class="code">T1-2</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Mooney from the deck chair, not moving.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">It's a box.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:26</span><span class="code">T1-3</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Raichu buried in the hydrangeas, string clamped in his teeth, eyes enormous, absolutely vibrating.</p>
+        <div class="sfx"><span>leaf rustle</span><span>tense held breath</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:32</span><span class="code">T1-4</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Gerald lands. He studies the box. He turns and looks <b>directly</b> at Raichu in the bush. Then he reaches under the box, removes the sandwich, and leaves the trap entirely undisturbed.</p>
+        <div class="sfx"><span>claw taps on decking</span><span>cardboard scrape</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:38</span><span class="code">T1-5</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Raichu yanks the string in blind panic. The box drops — onto MOONEY, who had wandered into frame at exactly the wrong moment.</p>
+        <div class="line"><span class="who">Mooney</span><p class="paren">(muffled, from under the box)</p><p class="said">Undefeatable.</p></div>
+        <div class="sfx"><span>string whip</span><span>hollow cardboard thud</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:43</span><span class="code">T2-1</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action"><b>Trap two — the sprinkler.</b> Raichu rigs a garden sprinkler at the railing with a tripwire, fussing over the angle.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">Water. Birds hate water.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:49</span><span class="code">T2-2</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Mooney, bone dry, watching from a safe distance.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">Seagulls live on the ocean.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">1:54</span><span class="code">T2-3</span><span class="dur">7s</span><span class="cr">24.5 cr</span></div>
+      <div>
+        <p class="action">Gerald lands and trips the wire. The sprinkler swings around and hoses him at full pressure. He continues eating, soaked, entirely unbothered, mildly enjoying it.</p>
+        <div class="sfx"><span>tripwire twang</span><span>sprinkler chatter</span><span>water on feathers</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:01</span><span class="code">T2-4</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">The sprinkler completes its arc and catches Mooney square in the face. Hold. Water streams off his whiskers. He does not blink.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">There it is.</p></div>
+        <div class="sfx"><span>direct water hit</span><span>steady drip</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:07</span><span class="code">T3-1</span><span class="dur">7s</span><span class="cr">24.5 cr</span></div>
+      <div>
+        <p class="action"><b>Trap three — Todd.</b> Raichu unveils a decoy cat assembled from a mop head, a pinecone and a great deal of tape. He is deeply proud of Todd.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">Meet Todd.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:14</span><span class="code">T3-2</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Mooney stares at Todd. Todd stares at nothing. Long beat.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">Todd.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:19</span><span class="code">T3-3</span><span class="dur">7s</span><span class="cr">24.5 cr</span></div>
+      <div>
+        <p class="action">Gerald lands beside Todd. He considers Todd at length. Then he knocks Todd flat and stands on him while eating.</p>
+        <div class="sfx"><span>mop flop</span><span>pinecone roll</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:26</span><span class="code">T3-4</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Raichu charges. Gerald lifts off without urgency. Raichu, unable to stop, skids the entire length of the deck and takes out Mooney's water bowl.</p>
+        <div class="sfx"><span>claw skid</span><span>metal bowl clatter</span><span>water slosh</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:32</span><span class="code">T3-5</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Mooney: still damp, box still wearing him, bowl now upside down on his head. He looks directly down the lens.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">Day three.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:38</span><span class="code">T4-1</span><span class="dur">12s</span><span class="cr">42 cr</span></div>
+      <div>
+        <p class="action"><b>Escalation montage.</b> Rapid cuts, roughly two seconds apiece — flypaper (Mooney stuck to it), a net (Mooney in it), fishing line (Mooney hoisted upside down by one back leg, revolving gently). Gerald appears in none of them.</p>
+        <div class="line"><span class="who">Raichu</span><p class="paren">(off screen, delighted)</p><p class="said">Phase seven!</p></div>
+        <div class="sfx"><span>boing</span><span>net whump</span><span>rope creak</span><span>slide whistle</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT THREE -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-num">Act Three</span>
+      <h2 class="act-name">Phase Twelve</h2>
+      <span class="act-meta">60s · 210 cr</span>
+    </div>
+    <p class="act-note">The full Rube Goldberg. Gerald defeats it by walking around it — the only correct payoff for an escalation ladder this steep.</p>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:50</span><span class="code">A3-1</span><span class="dur">8s</span><span class="cr">28 cr</span></div>
+      <div>
+        <p class="action">Slow reveal. The entire deck has become one machine — pulleys, hanging buckets, a lawn-chair catapult, string in every direction. Raichu watches from a cardboard command bunker with a viewing slot cut in it.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">Phase twelve.</p></div>
+        <div class="sfx"><span>rope creak</span><span>swinging bucket</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">2:58</span><span class="code">A3-2</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Mooney wanders in, surveys the machine, and takes a long moment with it.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">How long was I asleep?</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:04</span><span class="code">A3-3</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Raichu in the bunker slot. Wild-eyed. Clearly has not slept.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">Tuesday.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:09</span><span class="code">A3-4</span><span class="dur">7s</span><span class="cr">24.5 cr</span></div>
+      <div>
+        <p class="action">The bait: one magnificent sandwich on a small pedestal, dead centre of the machine, lit like a religious artifact.</p>
+        <div class="sfx"><span>choral sting</span><span>faint hum</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:16</span><span class="code">A3-5</span><span class="dur">8s</span><span class="cr">28 cr</span></div>
+      <div>
+        <p class="action">Gerald lands on the railing. He surveys the entire apparatus, slowly, left to right. Long patient beat. He is doing arithmetic.</p>
+        <div class="sfx"><span>wind through string</span><span>one bucket knocking</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:24</span><span class="code">A3-6</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Raichu at the bunker slot, trembling, whispering into his own paws.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">Come on. Come on.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:30</span><span class="code">A3-7</span><span class="dur">8s</span><span class="cr">28 cr</span></div>
+      <div>
+        <p class="action">Gerald steps off the railing onto the deck boards and simply <b>walks around</b> the entire machine — unhurried, touching nothing — collects the sandwich from the far side, and leaves.</p>
+        <div class="sfx"><span>unhurried claw taps</span><span>machine creaking, untriggered</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:38</span><span class="code">A3-8</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Raichu erupts from the bunker screaming and lunges — and catches the master tripline with one back foot.</p>
+        <div class="sfx"><span>cardboard tearing</span><span>single ominous twang</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:44</span><span class="code">A3-9</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Everything fires at once. The catapult launches, buckets swing, the pulleys unspool, the whole deck folds in on itself — and every single piece of it arrives on Mooney.</p>
+        <div class="sfx"><span>catapult snap</span><span>cascading crashes</span><span>final small tinkle</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOLUTION -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-num">Resolution</span>
+      <h2 class="act-name">The Nap</h2>
+      <span class="act-meta">49s · 171.5 cr</span>
+    </div>
+    <p class="act-note">Mooney wins without trying, without waking, and without ever learning he did it. He gets the last line of the episode.</p>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:50</span><span class="code">R-1</span><span class="dur">7s</span><span class="cr">24.5 cr</span></div>
+      <div>
+        <p class="action">Aftermath. The deck is a wreck. Raichu sits down in the middle of the ruins, small for the first time.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">He's better than me.</p></div>
+        <div class="sfx"><span>something settling</span><span>gulls, distant</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">3:57</span><span class="code">R-2</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Mooney extracts himself from the wreckage, entirely unbothered, and flops down flat on the warm deck boards.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">He's a bird with a schedule.</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">4:03</span><span class="code">R-3</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Mooney is asleep within two seconds. Camera drifts slightly — revealing that he has laid down directly on top of the last surviving sandwich. He has no idea.</p>
+        <div class="sfx"><span>deep cat snore</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">4:09</span><span class="code">R-4</span><span class="dur">7s</span><span class="cr">24.5 cr</span></div>
+      <div>
+        <p class="action">Gerald returns for it. He lands. He approaches with total confidence. He stops — because the sandwich is under a large sleeping cat.</p>
+        <div class="sfx"><span>wingbeats</span><span>claw taps slowing to a stop</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">4:16</span><span class="code">R-5</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Mooney rolls over in his sleep. One heavy white paw flops out and lands squarely on Gerald's foot. Gerald looks down at the paw. Gerald looks at camera.</p>
+        <div class="sfx"><span>soft thud</span><span>indignant gull mutter</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">4:21</span><span class="code">R-6</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Gerald extracts his foot, gives up, and departs — the first retreat in living memory. He does not look back, which is somehow worse for him.</p>
+        <div class="sfx"><span>heavy reluctant wingbeats</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">4:26</span><span class="code">R-7</span><span class="dur">7s</span><span class="cr">24.5 cr</span></div>
+      <div>
+        <p class="action">Raichu stands in the wreckage, staring at the empty sky, utterly awestruck.</p>
+        <div class="line"><span class="who">Raichu</span><p class="said">How did you DO that?</p></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">4:33</span><span class="code">R-8</span><span class="dur">6s</span><span class="cr">21 cr</span></div>
+      <div>
+        <p class="action">Mooney. Eyes shut. Does not move a muscle. Sandwich still beneath him.</p>
+        <div class="line"><span class="who">Mooney</span><p class="said">I didn't.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-num">End</span>
+      <h2 class="act-name">Card &amp; Teaser <span class="reuse">plate reused</span></h2>
+      <span class="act-meta">13s · 45.5 cr</span>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">4:39</span><span class="code">EC-1</span><span class="dur">8s</span><span class="cr">28 cr</span></div>
+      <div>
+        <p class="action">Sunset behind the gray-shingle house. Hydrangeas in silhouette. Both cats sitting on the deck rail, facing the water, backs to camera. Lower two-thirds held clean for text.</p>
+        <div class="card-spec">
+          <h4>Composited in post — not AI-rendered</h4>
+          <div class="plate">
+            <p class="big">THE ADVENTURES OF<br>MOONEY <span style="color:var(--hydrangea)">&amp;</span> RAICHU</p>
+            <p class="fine">© 2026 CAPECODER · ALL RIGHTS RESERVED</p>
+            <p class="fine" style="margin-top:6px">BY CAPECODER</p>
+          </div>
+        </div>
+        <div class="sfx"><span>theme reprise</span><span>evening gulls</span><span>water lapping</span></div>
+      </div>
+    </div>
+
+    <div class="shot">
+      <div class="rail"><span class="tc">4:47</span><span class="code">TZ-1</span><span class="dur">5s</span><span class="cr">17.5 cr</span></div>
+      <div>
+        <p class="action">Hard cut. A cooler sits on the deck in low evening light. The lid lifts one inch. A single lobster claw emerges and clicks, twice, with intent.</p>
+        <div class="line"><span class="who">Mooney</span><p class="paren">(off screen, flat)</p><p class="said">This is going to end badly.</p></div>
+        <div class="card-spec">
+          <h4>Composited in post</h4>
+          <div class="plate">
+            <p class="fine" style="margin:0">STAY TUNED FOR NEXT WEEK WHEN RAICHU</p>
+            <p class="ep" style="margin-top:8px">declares war on a lobster.</p>
+          </div>
+        </div>
+        <div class="sfx"><span>cooler lid creak</span><span>two claw clicks</span><span>sting</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES -->
+  <section class="notes">
+    <h3>Production notes</h3>
+    <div class="note-grid">
+      <div class="note">
+        <h5>What broke last time</h5>
+        <p>Episode 1's original 26 clips ran <em>generate_audio: false</em> and their prompts said “DO NOT render words or mouth-sync dialogue.” That is why nothing had sound and no mouths moved. Both are reversed throughout this script.</p>
+      </div>
+      <div class="note">
+        <h5>One line, one shot</h5>
+        <p>28 lines across 46 shots, almost never stacked. The old cut put three lines into a single eight-second shot where neither cat opened its mouth. Whoever speaks is on screen and framed for it.</p>
+      </div>
+      <div class="note">
+        <h5>Rhythm is free</h5>
+        <p>Cost is 3.5 credits per second regardless of shot count, so cuts cost nothing. Shots here run 5–12s instead of the old uniform 8.04s. Seedance's floor is 4s; the montage beats are generated at 4s and trimmed in the edit.</p>
+      </div>
+      <div class="note">
+        <h5>Voice consistency</h5>
+        <p>Native Seedance voices, so all 46 prompts carry identical wording: Mooney deep, slow, dry; Raichu bright and fast. Across independent generations this is a mitigation, not a guarantee — it's the most likely thing to force retries.</p>
+      </div>
+      <div class="note">
+        <h5>Character lock</h5>
+        <p>Every shot references the existing character sheet <span style="font-family:'IBM Plex Mono',monospace;font-size:13px">3c223738</span>, the same image behind all 26 original clips. Gerald is new and will need a reference pass of his own.</p>
+      </div>
+      <div class="note">
+        <h5>Text is never generated</h5>
+        <p>Titles, copyright, credit and teaser card are all composited after the fact. Video models garble lettering; the original prompts avoided text everywhere for exactly this reason.</p>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <table class="ledger">
+        <thead><tr><th>Segment</th><th>Shots</th><th>Runtime</th><th>Credits</th></tr></thead>
+        <tbody>
+          <tr><td>Cold open</td><td>3</td><td>0:15</td><td>52.5</td></tr>
+          <tr><td>Main title <em>(reused after Ep 1)</em></td><td>1</td><td>0:12</td><td>42.0</td></tr>
+          <tr><td>Windowsill gag</td><td>1</td><td>0:05</td><td>17.5</td></tr>
+          <tr><td>Act One — Declaration of War</td><td>7</td><td>0:42</td><td>147.0</td></tr>
+          <tr><td>Act Two — The Ladder</td><td>15</td><td>1:36</td><td>336.0</td></tr>
+          <tr><td>Act Three — Phase Twelve</td><td>9</td><td>1:00</td><td>210.0</td></tr>
+          <tr><td>Resolution — The Nap</td><td>8</td><td>0:49</td><td>171.5</td></tr>
+          <tr><td>End card <em>(reused after Ep 1)</em></td><td>1</td><td>0:08</td><td>28.0</td></tr>
+          <tr><td>Next-week teaser</td><td>1</td><td>0:05</td><td>17.5</td></tr>
+          <tr class="sum"><td>Episode 1 total</td><td>46</td><td>4:52</td><td>1,022</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="act-note" style="margin-top:20px">One clean take per shot. Budget roughly double for realistic retries — your Chicken Caper history ran 60 generations to land 26 keepers. Episode 2 drops to <strong>952 credits</strong>, since the main title and end card are already built.</p>
+  </section>
+
+</div>
