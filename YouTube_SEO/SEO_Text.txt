@@ -1,0 +1,217 @@
+================================================================================
+THE ADVENTURES OF MOONEY & RAICHU — YOUTUBE SEO PACK
+Prepared 2026-09-10 · character counts checked against YouTube's live limits
+================================================================================
+
+HOW TO USE THIS FILE
+  Everything below is paste-ready. Limits are noted in [brackets]. Where there
+  are two options, A is the safer/clearer one and B is the higher-risk,
+  higher-curiosity one — worth A/B testing once you have a few uploads.
+
+
+================================================================================
+1. CHANNEL IDENTITY
+================================================================================
+
+CHANNEL NAME  [max 50]
+    The Adventures of Mooney & Raichu                        (33 chars)
+
+HANDLE  [3-30, letters/numbers/underscores/periods, must be unique]
+    First choice ....... @MooneyAndRaichu                    (16)
+    Backups ............ @MooneyRaichu
+                         @MooneyAndRaichuTV
+                         @CapeCodCats
+
+CHANNEL TAGLINE (used on the banner, and as the first line people read)
+    Two cats. One couch. Zero remorse.
+
+
+================================================================================
+2. CHANNEL DESCRIPTION  [max 1000 characters]
+================================================================================
+--- paste below this line ------------------------------------------------------
+Mooney is a very large tuxedo cat who has never once been hungry. Raichu is a
+Maine Coon with enormous ear tufts and no impulse control. They live on Cape Cod
+with two humans, a seagull who runs a protection racket, and a raccoon named
+Gary that nobody has agreed to.
+
+The Adventures of Mooney & Raichu is an animated comedy series about two talking
+cats making bad decisions in a small coastal town. New episodes every week.
+
+Episodes are short, fully animated, and written to be watched twice — once for
+the plot and once for what Gary is doing in the background.
+
+Start with Episode 1: "Fowl Play", or jump in anywhere.
+
+New here? The cats are not role models. That is the point.
+
+For business enquiries: [YOUR EMAIL]
+--- paste above this line ------------------------------------------------------
+                                                            (720 characters)
+
+WHY IT IS BUILT THIS WAY
+  · The first 100-150 characters show in search results and on mobile before
+    "...more" — so the hook (a fat cat who has never been hungry) is up front.
+  · It names the characters, the format, the setting and the upload cadence,
+    which is what YouTube's systems and a new viewer both need.
+  · "animated comedy series", "talking cats", "Cape Cod", "short" are all
+    naturally in the prose rather than stuffed at the end.
+
+
+================================================================================
+3. EPISODE 2 — UPLOAD COPY
+================================================================================
+
+TITLE  [max 100, but only ~60 show on mobile — front-load it]
+  A ..... Mooney Goes On A Diet | The Adventures of Mooney & Raichu | Ep 2 "Chonk"
+                                                            (72 chars)
+  B ..... The Vet Called Him "Structurally The Heaviest Cat" | Mooney & Raichu Ep 2
+                                                            (73 chars)
+
+  A is clearer for search ("cat diet cartoon"). B is a stronger curiosity hook
+  and uses the actual best line in the cold open. Try B first; if click-through
+  is weak, fall back to A.
+
+--------------------------------------------------------------------------------
+DESCRIPTION  [max 5000 — first 2 lines are what people actually see]
+--- paste below this line ------------------------------------------------------
+Mooney has been put on a diet. Raichu has been put in charge of it. This goes
+badly for everyone, including a raccoon who was not involved.
+
+When the vet calls Mooney "structurally the heaviest cat she's seen this year",
+Lyndie puts him on a portion-controlled diet and makes Raichu the diet buddy.
+Raichu takes this responsibility extremely seriously, builds a neighbourhood
+wellness movement, and installs lasers. Meanwhile Gerald the seagull opens a
+black market in sandwiches, and Mooney starts trading away everything he owns.
+
+Nobody learns anything useful. Mooney learns something actively harmful.
+
+CHAPTERS
+00:00 "She said structurally"
+00:20 Titles
+00:30 Raichu is given a job
+01:15 Raichu has been reading
+01:42 The movement
+02:14 A seagull with a paper bag
+02:25 The deal
+03:11 It all comes apart
+03:49 The moral (please do not follow it)
+04:24 Next week: Gary
+
+THE CAST
+Mooney — tuxedo cat, deeply unbothered, has never been hungry
+Raichu — Maine Coon, ear tufts, zealot
+Gerald — herring gull, businessman
+Gary — raccoon, reading glasses, lives here now
+
+WATCH THE SERIES FROM THE START
+Episode 1 — "Fowl Play": [LINK]
+Full playlist: [PLAYLIST LINK]
+
+New episodes every week. Subscribe so you find out what Gary does next.
+
+#animation #cartoon #cats
+--- paste above this line ------------------------------------------------------
+
+  NOTE ON CHAPTERS: YouTube requires the first to be 00:00, at least three
+  chapters, and each at least 10 seconds. The list above satisfies all three.
+  These timestamps are taken from the actual assembled cut (4:34) — if you
+  re-edit the episode, regenerate them before uploading.
+
+--------------------------------------------------------------------------------
+TAGS  [500 characters TOTAL across all tags — this list is 459]
+--- paste below this line ------------------------------------------------------
+mooney and raichu, the adventures of mooney and raichu, cat cartoon, talking cats, animated series, cartoon series, cat comedy, funny cat cartoon, animated short, cartoon cats, tuxedo cat, maine coon, cat diet, seagull, cape cod, indie animation, adult cartoon, animated comedy, cat animation, short cartoon, weekly cartoon, capecoder, cats cartoon episode, funny animation, cartoon for adults, talking animals, animated sitcom, cat lovers, new cartoon series
+--- paste above this line ------------------------------------------------------
+
+PINNED COMMENT (post it yourself the moment it goes live)
+    Gary has been in the armchair since Episode 1 and nobody has addressed it.
+    Next week he moves in properly. What should he take over first?
+
+  A pinned comment that asks a specific, answerable question drives replies,
+  and comment volume in the first hour is one of the strongest early signals.
+
+
+================================================================================
+4. EPISODE 1 — RETROFIT COPY  (it is already made; give it the same treatment)
+================================================================================
+
+TITLE
+    Cat Declares War On A Seagull | The Adventures of Mooney & Raichu | Ep 1 "Fowl Play"
+                                                            (84 chars)
+
+DESCRIPTION OPENER
+    Raichu declares war on a seagull. The seagull does not notice, which is
+    worse. Mooney would like everyone to be quieter about it.
+
+HASHTAGS
+    #animation #cartoon #cats
+
+
+================================================================================
+5. PLAYLIST STRUCTURE  (do this on day one — playlists rank on their own)
+================================================================================
+
+  PLAYLIST 1 — "The Adventures of Mooney & Raichu — Full Series"
+    Description: Every episode in order. Two cats on Cape Cod making
+    consistently poor decisions. New episodes weekly.
+    Set to play in release order. This is the playlist you link everywhere.
+
+  PLAYLIST 2 — "Gary the Raccoon"
+    Description: A raccoon moved into the armchair and nobody has addressed it.
+    Every Gary appearance, in order.
+    (Running-gag playlists are excellent retention traps — Gary is your best one.)
+
+  PLAYLIST 3 — "Gerald the Seagull"
+    Description: He has never lost. Every Gerald scene.
+
+
+================================================================================
+6. UPLOAD CHECKLIST
+================================================================================
+  [ ] Thumbnail uploaded (images/05_thumb_ep02_chonk.png) — check it at phone size
+  [ ] Title, description and tags pasted from this file
+  [ ] Chapters render as chapters (they appear on the scrubber once saved)
+  [ ] Category: Film & Animation
+  [ ] "Altered or synthetic content" disclosure — SEE SECTION 7
+  [ ] Made for Kids: NO  (see section 7)
+  [ ] Added to "Full Series" playlist, in order
+  [ ] End screen: 20s, with Subscribe element + "next video"
+  [ ] Branding watermark set (images/09_watermark_150x150.png), whole video
+  [ ] Pinned comment posted
+  [ ] Language English, captions uploaded or auto-captions reviewed
+
+
+================================================================================
+7. TWO SETTINGS THAT ARE EASY TO GET WRONG
+================================================================================
+
+  ALTERED / SYNTHETIC CONTENT DISCLOSURE
+    These episodes are generated with AI video tools. YouTube requires you to
+    disclose realistic synthetic content. This is stylised 3D cartoon animation
+    with talking animals, which no viewer would mistake for real footage, so the
+    disclosure is generally NOT required. But YouTube's own guidance is that if
+    you are unsure, disclose. Ticking it does not suppress your video. Read the
+    current wording in the upload flow and decide per episode.
+
+  MADE FOR KIDS — answer NO
+    It looks like a kids' cartoon and is not one. The tone is South Park's
+    satirical spine at a PG ceiling, and the closing moral of Episode 2 is
+    deliberately monstrous. Marking it "Made for Kids" disables comments, end
+    screens, notifications and the subscribe element — that is, everything in
+    this document. Answer No, and consider setting an age rating if a future
+    episode earns one.
+
+
+================================================================================
+8. TITLE FORMULA FOR FUTURE EPISODES
+================================================================================
+    [Concrete, strange thing that happens] | The Adventures of Mooney & Raichu | Ep N "Title"
+
+  Lead with the event, never with the series name — the series name means
+  nothing to someone who has not watched it yet, and it eats the ~60 characters
+  that show on mobile. Keep the episode number, it signals a series worth
+  starting.
+
+  Good:  "A Raccoon Moved In And Nobody Has Addressed It | ... | Ep 3"
+  Bad:   "The Adventures of Mooney & Raichu Episode 3 — Gary Moves In"

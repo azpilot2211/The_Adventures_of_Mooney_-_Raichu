@@ -1,0 +1,114 @@
+================================================================================
+KEYWORDS — The Adventures of Mooney & Raichu
+================================================================================
+
+Tags are a weak ranking signal on YouTube now; they mainly help with
+misspellings and disambiguation. Titles, thumbnails and the first lines of the
+description do the real work. Use these, but do not expect them to carry a video.
+
+
+--------------------------------------------------------------------------------
+A. VIDEO TAGS — paste-ready  [YouTube counts 500 characters TOTAL]
+--------------------------------------------------------------------------------
+This block is 459 characters. Paste it whole.
+
+mooney and raichu, the adventures of mooney and raichu, cat cartoon, talking cats, animated series, cartoon series, cat comedy, funny cat cartoon, animated short, cartoon cats, tuxedo cat, maine coon, cat diet, seagull, cape cod, indie animation, adult cartoon, animated comedy, cat animation, short cartoon, weekly cartoon, capecoder, cats cartoon episode, funny animation, cartoon for adults, talking animals, animated sitcom, cat lovers, new cartoon series
+
+
+--------------------------------------------------------------------------------
+B. BRAND TERMS — always include, these are what you are trying to own
+--------------------------------------------------------------------------------
+mooney and raichu
+the adventures of mooney and raichu
+mooney & raichu
+mooney raichu cartoon
+gary the raccoon
+gerald the seagull
+capecoder
+
+
+--------------------------------------------------------------------------------
+C. CORE CATEGORY TERMS — high volume, high competition
+--------------------------------------------------------------------------------
+cat cartoon
+talking cats
+cartoon cats
+animated series
+cartoon series
+animated comedy
+funny cats
+cat comedy
+animated short film
+indie animation
+
+
+--------------------------------------------------------------------------------
+D. LONG-TAIL — lower volume, far easier to actually rank for. Prioritise these
+   in titles and the opening lines of descriptions.
+--------------------------------------------------------------------------------
+talking cat cartoon series
+cartoon about two cats
+tuxedo cat cartoon character
+maine coon cartoon
+cat on a diet cartoon
+fat cat cartoon episode
+seagull cartoon villain
+raccoon cartoon character
+cape cod cartoon
+weekly animated series
+short animated comedy series
+cartoon with talking animals for adults
+animated series about pets
+new indie cartoon series 2026
+
+
+--------------------------------------------------------------------------------
+E. PER-EPISODE TERMS
+--------------------------------------------------------------------------------
+EP 1 "Fowl Play"
+    cat vs seagull, cat declares war, seagull steals sandwich, cat revenge
+    cartoon, bird cartoon villain, fowl play cartoon
+
+EP 2 "Chonk"
+    chonk, chonky cat, cat diet, fat cat cartoon, cat weight loss, vet visit
+    cartoon, diet buddy, black market sandwich, wellness cult parody
+
+EP 3 (Gary moves in — for when it exists)
+    raccoon moves in, raccoon roommate, raccoon cartoon, unwanted houseguest
+    cartoon, gary the raccoon
+
+
+--------------------------------------------------------------------------------
+F. HASHTAGS
+--------------------------------------------------------------------------------
+Only the FIRST THREE in a description render above the title. Choose
+deliberately; the rest are close to worthless. Never exceed 15 or YouTube
+ignores all of them.
+
+Default set (use on every upload for consistency):
+    #animation #cartoon #cats
+
+Alternates worth testing:
+    #animatedseries #indieanimation #catsofyoutube #shortfilm #comedy
+
+
+--------------------------------------------------------------------------------
+G. CHANNEL KEYWORDS  (Settings > Channel > Basic info > Keywords)
+--------------------------------------------------------------------------------
+Wrap multi-word phrases in quotes or YouTube splits them on spaces.
+
+"the adventures of mooney and raichu", "mooney and raichu", "cat cartoon", "talking cats", "animated series", "cartoon series", "animated comedy", "indie animation", "cape cod", "capecoder", "gary the raccoon", "gerald the seagull", "cat comedy", "weekly cartoon"
+
+
+--------------------------------------------------------------------------------
+H. WHAT TO DO INSTEAD OF OBSESSING OVER TAGS
+--------------------------------------------------------------------------------
+1. Thumbnail first. It is the single biggest lever. Test yours at 210px wide —
+   if the word is not instantly readable at that size, it is not finished.
+2. Front-load the title with the strange concrete event, not the series name.
+3. First two lines of the description carry the hook; everything after
+   "...more" is for the algorithm and the committed viewer.
+4. Upload on a consistent day. "New episodes every week" is a promise the
+   channel description makes — keep it and returning-viewer signals compound.
+5. A pinned comment asking a specific question, posted at publish time.
+6. Playlists in release order, so one view becomes a session.
