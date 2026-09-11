@@ -36,11 +36,13 @@ The owner's verdict: the jokes are weak. Not the pacing, the writing. Untouched 
 session. **If it is ever revived, it needs the voice_change pass and the dead-air trim
 described below — both problems are almost certainly in it too.**
 
-### Episode 2 — "Chonk" — COMPLETE
-`ep02-chonk/CHONK_EPISODE-2.mp4` — **67 segments, 4:38, 88.7 MB**
-`ep02-chonk/CHONK_EPISODE-2_preview.mp4` — 14.9 MB, 854x480, for sending
+### Episode 1 — "Chonk" — COMPLETE  (renumbered from Ep2 on 2026-09-11)
+`ep02-chonk/CHONK_EPISODE-1.mp4` — **69 segments, 4:41, 89.3 MB**
+(folder is still named ep02-chonk; only the episode number changed)
+`ep02-chonk/CHONK_EPISODE-1_preview.mp4` — 23.7 MB, 854x480, for sending
 
-67 = 60 script shots + 6 scene dividers + the like/subscribe outro.
+69 = 60 script shots + 8 scene dividers + the like/subscribe outro.
+Title card reads Episode 1; the episode line is drawtext from text/episode.txt, free to change.
 Script followed line for line from `ep02-chonk/chonk.html`.
 Master: peak -1.6 dBFS, no clipping, zero dead-air spans.
 
@@ -83,7 +85,9 @@ character has one voice, with zero processing.
 | Character | Voice | voice_id | type |
 |---|---|---|---|
 | **Mooney** | Cillian (preset) | `d8ba9f14-8a24-44db-932b-99e16c45bd32` | `preset` |
-| Raichu | not yet assigned | — | — |
+| **Raichu** | **Miles (preset)** | `e18664a7-ee4f-5273-acf8-533eb24cd366` | `preset` |
+|  | *chosen by the owner 2026-09-11 after auditioning all 113 presets in `series/VOICES.html`.* |  |  |
+|  | *Caveat to check on the first test shot: Miles is tagged middle-aged and was Mooney's original voice, rejected then as too deep. Mooney is Cillian now so Miles is free — the open question is whether two male voices in a similar register read as two distinct characters when they talk to each other. Revoice ONE Raichu shot first (~1 cr) and listen before doing the other 16.* |  |  |
 | Gerald | not yet assigned (never drifted, 119-129 Hz) | — | — |
 | Gary | not yet assigned | — | — |
 
@@ -356,3 +360,45 @@ rendered episodes on GitHub needs Git LFS, and 1.1 GB exceeds the 1 GB free quot
 6. Then Episode 3. Gary moves in properly — the teaser has committed to it.
    Assign every character's voice **before** generating, and run voice_change as a
    finishing pass.
+
+
+---
+
+## Session log 2026-09-11 (free work only, 0 credits spent)
+
+- **Renumbered Chonk to Episode 1.** The episode line is composited with `drawtext`
+  from `text/episode.txt` onto the clean plate in `series/reusable/MAIN-TITLE.mp4`,
+  so renumbering costs nothing. Rebuilt `clips/TS-1_FINAL_main-title.mp4`.
+- **Two dividers added** — before B-1 "I've been reading" and before B-4 "Where did
+  you get lasers". Dividers are free; add more wherever a cut feels abrupt.
+- **B-1 head trim relaxed** 2.92s -> 1.80s so Raichu has a beat before speaking.
+- **Rebuilt**: `CHONK_EPISODE-1.mp4`, 69 segments, 4:41, master peak -1.5 dBFS.
+- **Built `series/VOICES.html`** — all 113 presets with inline players, gender filter,
+  search, click-to-copy IDs. Regenerate with `series/build_voice_browser.py`.
+  Must stay a local file; artifacts cannot load external audio.
+
+### Outstanding fix list from the owner (priced, not yet done)
+
+| Item | Type | Cost |
+|---|---|---|
+| Raichu voice consistency, 17 shots, **use Miles** | voice_change | 17 |
+| CO-2 Mooney cuts off mid-line + never revoiced | regen w/o Michael's off-screen line, then revoice | 15 |
+| A-8 Raichu unintelligible | regen | 14 |
+| C-7 says "Mooney" to the seagull | regen | 14 |
+| E-4 "Racy?" instead of "That's not—" | regen | 18 |
+| E-1 Raichu looking at the sky | regen | 25 |
+| Gerald + Gary voices | voice_change | 5 |
+| | **total** | **~108** (150 with retries) |
+
+**Why CO-2 needs a regen rather than a revoice:** Michael speaks off-screen in it, and
+voice_change converts every voice on the track. Regenerating it without his line makes
+it Mooney-solo, after which a 1-credit revoice reaches it.
+
+**E-5 warning stands:** "And I'd do it again" was rejected three times by the content
+filter and could not be regenerated. E-4 is safe to re-shoot; do not re-shoot E-5.
+
+**The owner is reviewing the cut and will return with a complete change list.**
+Sort each item: free (dividers, pacing, trims, text, ordering) / ~1 cr (voice swap,
+single-speaker shots only) / 3.5 cr per second (wrong words, wrong action, wrong eyeline).
+
+**Balance: 7.6 credits.** Enough for the one-shot Miles test, nothing else.

@@ -1,4 +1,4 @@
-"""Assemble Episode 2 'Chonk'.
+"""Assemble Episode 1 'Chonk'.
 
 Differences from ep01's assemble.py:
   * per-clip loudness matching, because the raw Seedance clips land anywhere
@@ -37,10 +37,14 @@ SEQ = [
     ('A-10_gary-morning',       'clips/A-10_gary-morning.mp4'),
     ('A-11_garys-fine',         'clips/A-11_garys-fine.mp4'),
     ('A-12_never-been-hungry',  'clips/A-12_never-been-hungry.mp4'),
+    # --- divider: act one -> act two ---
+    ('DIV-1b_to-act-two',       'clips/DIV-R.mp4'),
     # act two - the movement
     ('B-1_ive-been-reading',    'clips/B-1_ive-been-reading.mp4'),
     ('B-2_you-cant-read',       'clips/B-2_you-cant-read.mp4'),
     ('B-3_deciding-what-they-say', 'clips/B-3_deciding-what-they-say.mp4'),
+    # --- divider: before the laser reveal ---
+    ('DIV-1c_to-lasers',        'clips/DIV-L.mp4'),
     ('B-4_where-did-you-get-lasers', 'clips/B-4_where-did-you-get-lasers.mp4'),
     ('B-5_the-drawer',          'clips/B-5_the-drawer.mp4'),
     ('B-6_no-laser-drawer',     'clips/B-6_no-laser-drawer.mp4'),
@@ -115,7 +119,7 @@ TRIM = {
     'A-7_watch-the-door':               0.74,   # line at 1.34s -> shot 4.30s
     'A-9_raccoon-lives-here':           0.68,   # line at 1.28s -> shot 3.36s
     'A-10_gary-morning':                2.52,   # line at 4.22s -> shot 2.56s
-    'B-1_ive-been-reading':             2.92,   # line at 3.52s -> shot 2.17s
+    'B-1_ive-been-reading':             1.80,   # line at 3.52s -> shot 2.17s
     'B-2_you-cant-read':                1.13,   # line at 1.73s -> shot 2.91s
     'B-4_where-did-you-get-lasers':     2.04,   # line at 3.94s -> shot 4.01s
     'B-5_the-drawer':                   2.30,   # line at 2.94s -> shot 1.80s
@@ -179,7 +183,7 @@ def gain_for(lufs, tp):
 
 
 def main():
-    out = sys.argv[1] if len(sys.argv) > 1 else 'CHONK_EPISODE-2.mp4'
+    out = sys.argv[1] if len(sys.argv) > 1 else 'CHONK_EPISODE-1.mp4'
     missing = [n for n, p in SEQ if not os.path.exists(p)]
     if missing:
         print('MISSING %d:' % len(missing))
