@@ -51,6 +51,38 @@ transcription key configured, so everything audio was verified by measurement
 and by frames. The owner reviewed v1-v7 by ear and drove the fixes; v8 — seven
 re-shot shots and Raichu's Miles voice — has not been heard yet. **Start there.**
 
+### Episode 2 — "House Rules" — SCRIPT WRITTEN, nothing generated
+`ep03-house-rules/` — **63 shots, 5:47, 1,458 credits of new footage.**
+(folder is ep03 because it is the third production; it is Episode 2 on screen.
+`ep02-chonk/` is Episode 1. Production order and broadcast order stopped matching
+when Fowl Play was shelved — do not "fix" one to match the other.)
+
+Gary moves in, which the Episode 1 teaser committed to. The cats set traps; every
+trap lands on the cat who set it; Gary wins by being entirely within his rights.
+Tom and Jerry in the middle, Family Guy at the edges, the South Park turn in Act Four.
+
+`script.py` holds the shot list and renders `house-rules.html`, `house-rules.txt`
+and `shots.json`, so timecodes, runtime and credits are computed rather than typed,
+and the counts quoted in the production notes are asserted against the shot list on
+every render. `shots.json` is what the prompt pass should read.
+
+**Read the production notes in the HTML before writing a single prompt.** They carry
+every lesson from Episode 1 and the trailer, applied per shot.
+
+Two things to settle first, both free:
+- **Gary and Gerald still have no assigned voice.** Gary has seven lines here and is
+  the antagonist. Pick from `series/VOICES.html` and fill in the cast table above.
+- **The inline-sound-effect wording is untested on this account.** It comes from the
+  owner's Lucky Lots prompt (higgsfield.ai/s/kMh3mXz6BqY), which was generated on
+  Seedance **2.5** — so the wording and the model are confounded. Shoot one trap shot
+  both ways before committing Act Two.
+
+Priced 2026-09-12: **Seedance 2.0 is 4.5 credits/second, 2.5 is 6.5** (36 vs 52 for
+eight seconds). 2.5 reaches 30 seconds where 2.0 stops at 15 and can hold a multi-beat
+sequence with an internal cut, which earns the premium only where one long take
+replaces three shots that would each waste the four-second minimum. B-11's montage is
+the only candidate in this script.
+
 ### Credits
 **7.6 remaining on Ultra.** Effectively zero — nothing further can be generated
 without a top-up. Everything local (assembly, dividers, outro, trims, SEO art) is free.
@@ -364,9 +396,10 @@ rendered episodes on GitHub needs Git LFS, and 1.1 GB exceeds the 1 GB free quot
 3. Regenerate the YouTube chapter timestamps — the cut is 4:33.7 now.
    The trailer needs its own title, description and thumbnail too; the channel
    trailer slot is a separate upload from the episode.
-4. Then Episode 3. Gary moves in properly — the teaser has committed to it.
-   Assign every character's voice **before** generating, run voice_change as a
-   finishing pass, and cap every short line with the `only()` wording below.
+4. Then Episode 2, **"House Rules"** — the script is written and sitting in
+   `ep03-house-rules/`, 1,458 credits at current rates. Assign Gary's and
+   Gerald's voices before generating, run voice_change as a finishing pass, and
+   cap every short line with the `only()` wording below.
 
 **Balance: 88 credits.**
 
