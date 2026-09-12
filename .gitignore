@@ -12,3 +12,10 @@ __pycache__/
 *.pyc
 ep02-chonk/fixes/
 ep02-chonk/voiceref/*.mp3
+series/trailer/clips/
+series/trailer/narr/
+series/trailer/prevoice/
+series/trailer/frames_card/
+series/trailer/qa/
+series/trailer/*.wav
+series/trailer/*.png

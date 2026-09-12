@@ -362,11 +362,13 @@ rendered episodes on GitHub needs Git LFS, and 1.1 GB exceeds the 1 GB free quot
 2. **Gerald and Gary still have their generated voices.** ~5 credits fixes it,
    same method, single-speaker shots only.
 3. Regenerate the YouTube chapter timestamps — the cut is 4:33.7 now.
+   The trailer needs its own title, description and thumbnail too; the channel
+   trailer slot is a separate upload from the episode.
 4. Then Episode 3. Gary moves in properly — the teaser has committed to it.
    Assign every character's voice **before** generating, run voice_change as a
    finishing pass, and cap every short line with the `only()` wording below.
 
-**Balance: 328.6 credits.**
+**Balance: 88 credits.**
 
 
 ---
@@ -486,6 +488,54 @@ Run the audit before calling a voice pass done.
   content filter and could not be regenerated. Do not re-shoot E-5.
 - Known and accepted: D-4's kitchen cabinets came back cream where D-3's are
   sage. Same drift the handoff already accepts elsewhere.
+
+### Channel trailer — built 2026-09-11, `series/trailer/`
+
+`series/TRAILER.mp4` — **34.6s, 8.4 MB, 14 segments, peak -3.1 dBFS.**
+
+The 45-second script in `LL-BG-Cards/trailer.txt` prices at ~439 credits at the
+new 4.5/second rate, so it was cut to 30 seconds by dropping the "bigger
+adventures" tease block — the weakest section with only one episode in the can.
+**239 credits of footage, 4 to revoice, 0.7 for narration.**
+
+| file | what it is |
+|---|---|
+| `prompts.py` | the 14 shot prompts; run it to re-render `trailer.json` |
+| `assemble.py` | IN/OUT per shot, not just head trims — a trailer cuts on the beat |
+| `card.py` | the reveal card, built locally from the logo sticker. Free |
+| `narration.py` | places the narrator's seven lines on their cues |
+| `clips/`, `narr/`, `prevoice/` | footage, narration, pre-revoice sources |
+
+Three things worth keeping:
+
+- **Narration is generated separately and mixed in post** (`seed_audio`,
+  **0.1 credits a line** — use `get_cost:true` to preflight anything new).
+  That means ten of the fourteen shots ask for NO dialogue at all, which is the
+  most reliable thing this model does, and the narrator is one voice throughout
+  instead of a new one per shot. Narrator is **Sterling**
+  `dc382508-c8bd-443c-8cb2-46e57b8d2e6f`, chosen unheard — swap the id in
+  `narration.py` and re-run to change it.
+- **Every dialogue shot is single-speaker**, so all four could be revoiced to
+  Cillian and Miles for 1 credit each. Do not write a two-hander.
+- **Mixing narration over the shot audio clipped the master at 0.0 dBFS** even
+  with the limiter. Two near-full-scale layers overshoot and a 5ms attack lets
+  the transient through. `assemble.py` now pre-attenuates 3 dB and limits with
+  a 1ms attack.
+
+**The content filter rejected two shots twice each** and they were dropped
+rather than attempted a third time (E-5's lesson):
+- T-4, Raichu peering round a doorway at something off-screen. Raichu is
+  introduced by the crouch instead, which is the better shot anyway.
+- T-12, Mooney settling back onto the couch. The trailer **reuses T-1** for
+  that beat, so it returns to the exact frame it opened on before Raichu ruins
+  it — free, and a stronger edit than the shot that was refused.
+
+Neither rewording was obviously unsafe, and both shots are innocuous. Assume
+one shot in seven will be refused and keep a free fallback in mind for each.
+
+**Known flaw: Mooney reads as a normal-sized cat in the trailer**, not the
+chonk he is in the episode, despite the same character block. Re-shooting the
+worst offenders is ~90 credits and was out of budget.
 
 ### The trap that cost a review cycle
 
