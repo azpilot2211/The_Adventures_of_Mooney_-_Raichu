@@ -36,10 +36,10 @@ The owner's verdict: the jokes are weak. Not the pacing, the writing. Untouched 
 session. **If it is ever revived, it needs the voice_change pass and the dead-air trim
 described below — both problems are almost certainly in it too.**
 
-### Episode 1 — "Chonk" — COMPLETE  (renumbered from Ep2 on 2026-09-11)
-`ep02-chonk/CHONK_EPISODE-1.mp4` — **69 segments, 4:41, 89.3 MB**
+### Episode 1 — "Chonk" — COMPLETE, v8  (renumbered from Ep2 on 2026-09-11)
+`ep02-chonk/CHONK_EPISODE-1.mp4` — **69 segments, 4:33.7, 85.4 MB**
 (folder is still named ep02-chonk; only the episode number changed)
-`ep02-chonk/CHONK_EPISODE-1_preview.mp4` — 23.7 MB, 854x480, for sending
+`ep02-chonk/CHONK_EPISODE-1_preview.mp4` — 13.5 MB, 854x480, for sending
 
 69 = 60 script shots + 8 scene dividers + the like/subscribe outro.
 Title card reads Episode 1; the episode line is drawtext from text/episode.txt, free to change.
@@ -47,16 +47,18 @@ Script followed line for line from `ep02-chonk/chonk.html`.
 Master: peak -1.6 dBFS, no clipping, zero dead-air spans.
 
 **Nobody has listened to the final cut end to end with ears.** There is no
-transcription key configured, so everything audio was verified by measurement.
-The owner reviewed v1-v6 by ear and drove the fixes; v7 (the voice_change pass)
-has not been confirmed by ear yet. **Start there.**
+transcription key configured, so everything audio was verified by measurement
+and by frames. The owner reviewed v1-v7 by ear and drove the fixes; v8 — seven
+re-shot shots and Raichu's Miles voice — has not been heard yet. **Start there.**
 
 ### Credits
 **7.6 remaining on Ultra.** Effectively zero — nothing further can be generated
 without a top-up. Everything local (assembly, dividers, outro, trims, SEO art) is free.
 
 Costs, measured this session:
-- video: **3.5 credits/second**, flat and linear. A 5-minute episode is ~1,100.
+- video: **4.5 credits/second**, flat and linear. A 5-minute episode is ~1,400.
+  It was 3.5 while `mode: fast` existed; the model catalog now offers only
+  `mode: std` on this account, so budget 4.5 and re-check `models_explore` first.
 - **`voice_change`: ~1 credit per shot.** Astonishingly cheap. Use it liberally.
 - custom voice clone: **~40 credits**, one-off. Prefer a preset voice.
 - **Rejected NSFW jobs are not charged.**
@@ -86,8 +88,8 @@ character has one voice, with zero processing.
 |---|---|---|---|
 | **Mooney** | Cillian (preset) | `d8ba9f14-8a24-44db-932b-99e16c45bd32` | `preset` |
 | **Raichu** | **Miles (preset)** | `e18664a7-ee4f-5273-acf8-533eb24cd366` | `preset` |
-|  | *chosen by the owner 2026-09-11 after auditioning all 113 presets in `series/VOICES.html`.* |  |  |
-|  | *Caveat to check on the first test shot: Miles is tagged middle-aged and was Mooney's original voice, rejected then as too deep. Mooney is Cillian now so Miles is free — the open question is whether two male voices in a similar register read as two distinct characters when they talk to each other. Revoice ONE Raichu shot first (~1 cr) and listen before doing the other 16.* |  |  |
+|  | *chosen by the owner 2026-09-11 after auditioning all 113 presets in `series/VOICES.html`. Applied to all 17 Raichu-solo shots on 2026-09-11.* |  |  |
+|  | *Still unconfirmed by ear: Miles was Mooney's original voice, rejected then as too deep. Mooney is Cillian now, so the open question is whether the two read as distinct characters when they talk to each other. Listen to Act One, which is nothing but the two of them.* |  |  |
 | Gerald | not yet assigned (never drifted, 119-129 Hz) | — | — |
 | Gary | not yet assigned | — | — |
 
@@ -267,7 +269,7 @@ Media IDs are durable; the presigned **upload** URLs expire after 24h.
 
 ```
 model: seedance_2_0
-mode: fast
+mode: (omit)                  <-- 'fast' is gone; the catalog offers only 'std'
 resolution: 720p
 aspect_ratio: 16:9
 genre: comedy
@@ -279,6 +281,9 @@ duration: 4-15 supported
 
 Submit with `generate_video_batch` (max 12/call, keep ~8 in flight), poll with
 `jobs_wait`, download `result_url` with curl. Never `show_generations`.
+Image references go in `medias` with role **`image_references`**; check the roles
+with `models_explore action=get model_id=seedance_2_0` before a batch, and check
+the price there too — the per-second rate changed under this account without notice.
 
 ---
 
@@ -349,22 +354,26 @@ rendered episodes on GitHub needs Git LFS, and 1.1 GB exceeds the 1 GB free quot
 
 ## Next actions
 
-1. **Watch `CHONK_EPISODE-2_preview.mp4` with sound.** The Cillian voice pass (v7) has
-   not been confirmed by ear. Listen to Act One especially — most back-and-forth.
-2. **Top up credits** before any generation. 7.6 left.
-3. If Mooney still isn't right, the lever is a different preset from `list_voices`, at
-   ~1 credit per shot to try across all 17. Cheap to iterate now.
-4. **Consider revoicing Raichu, Gary and Gerald too** — same method, ~1 credit each.
-   Raichu still ranges 258-377 Hz and Lyndie is split 144/219 Hz, which never got fixed.
-5. Regenerate the YouTube chapter timestamps for the 4:38 cut.
-6. Then Episode 3. Gary moves in properly — the teaser has committed to it.
-   Assign every character's voice **before** generating, and run voice_change as a
-   finishing pass.
+1. **Watch `CHONK_EPISODE-1_preview.mp4` with sound.** Every item on the owner's
+   2026-09-11 list is in it, and none of it has been heard. Listen for:
+   Act One, where Mooney (Cillian) and Raichu (Miles) trade lines and could
+   read as the same actor; the six re-shot lines, which should each be one
+   clean sentence; and the two new divider designs.
+2. **Gerald and Gary still have their generated voices.** ~5 credits fixes it,
+   same method, single-speaker shots only.
+3. Regenerate the YouTube chapter timestamps — the cut is 4:33.7 now.
+4. Then Episode 3. Gary moves in properly — the teaser has committed to it.
+   Assign every character's voice **before** generating, run voice_change as a
+   finishing pass, and cap every short line with the `only()` wording below.
+
+**Balance: 328.6 credits.**
 
 
 ---
 
-## Session log 2026-09-11 (free work only, 0 credits spent)
+## Session log 2026-09-11
+
+### Free work, earlier in the day
 
 - **Renumbered Chonk to Episode 1.** The episode line is composited with `drawtext`
   from `text/episode.txt` onto the clean plate in `series/reusable/MAIN-TITLE.mp4`,
@@ -377,28 +386,88 @@ rendered episodes on GitHub needs Git LFS, and 1.1 GB exceeds the 1 GB free quot
   search, click-to-copy IDs. Regenerate with `series/build_voice_browser.py`.
   Must stay a local file; artifacts cannot load external audio.
 
-### Outstanding fix list from the owner (priced, not yet done)
+### The owner's change list of 2026-09-11 — all 12 items done
 
-| Item | Type | Cost |
-|---|---|---|
-| Raichu voice consistency, 17 shots, **use Miles** | voice_change | 17 |
-| CO-2 Mooney cuts off mid-line + never revoiced | regen w/o Michael's off-screen line, then revoice | 15 |
-| A-8 Raichu unintelligible | regen | 14 |
-| C-7 says "Mooney" to the seagull | regen | 14 |
-| E-4 "Racy?" instead of "That's not—" | regen | 18 |
-| E-1 Raichu looking at the sky | regen | 25 |
-| Gerald + Gary voices | voice_change | 5 |
-| | **total** | **~108** (150 with retries) |
+Source: `LL-BG-Cards/changes-cartoon-1.txt`. **179 credits spent, 328.6 left.**
 
-**Why CO-2 needs a regen rather than a revoice:** Michael speaks off-screen in it, and
-voice_change converts every voice on the track. Regenerating it without his line makes
-it Mooney-solo, after which a 1-credit revoice reaches it.
+| # | Owner's note | Shot | What was done | Cost |
+|---|---|---|---|---|
+| 1 | "Raichu will use Miles voice" | 17 shots | `voice_change` to Miles | 17 |
+| 2 | Mooney's counter line is messed up and cuts off | CO-2 | re-shot 6s without Michael's off-screen line, then revoiced to Cillian | 27+1 |
+| 3/4 | can't tell what Raichu says after "watch the door" | A-8 | re-shot: the clip held a second, unscripted utterance | 18+1 |
+| 5 | "Gary's fine" punctuation, make it flow | A-11 | script -> "Look, Gary's fine."; re-shot in one breath | 18+1 |
+| 6 | divider before "Where did you get lasers" | — | already in place from the previous session | 0 |
+| 7 | can't tell what he says after "healthy weight" | B-10 | re-shot; the old clip muttered for 1.2s after its line | 18+1 |
+| 8 | dialogue after "where's your bowl" unclear | D-4 | re-shot; three utterances where the script has one | 22.5+1 |
+| 9 | Raichu cut off before "I'd do it again" | E-4 | said "Racy?"; re-shot as "That's not the lesson." — E-5 now interrupts him in the edit | 27+1 |
+| 10 | Mooney calls the seagull "Mooney" | C-7 | **free**: the stray name sits in its own voiced group with 0.28s of silence after it, so the head trim (1.10 -> 2.55) removes it and lip-sync is untouched | 0 |
+| 11 | Raichu looking at the sky | E-1 | re-shot against E-2's own frame; it was also the only E-run shot staged at the wall instead of the rail | 31.5+1 |
+| 12 | "a few different scene dividers" | — | two new designs, P and S; the eight placements now cycle L P R S P S L R | 0 |
+| | divider before "I've been reading" + a beat | B-1 | already in place | 0 |
 
-**E-5 warning stands:** "And I'd do it again" was rejected three times by the content
-filter and could not be regenerated. E-4 is safe to re-shoot; do not re-shoot E-5.
+### The one thing this session learned: Seedance pads short lines
 
-**The owner is reviewing the cut and will return with a complete change list.**
-Sort each item: free (dividers, pacing, trims, text, ordering) / ~1 cr (voice swap,
-single-speaker shots only) / 3.5 cr per second (wrong words, wrong action, wrong eyeline).
+**Rule 16. A line under about six words comes back with an invented second
+utterance to fill the shot.** That single failure mode caused four of the
+owner's "I don't understand what he's saying" notes — it was never the voice.
+A-8 spoke "And?" and then something else 3.4s later. B-10 said its line at 1.4s
+and muttered until 3.4s. D-4 had three utterances. C-7 opened by calling the
+seagull "Mooney".
 
-**Balance: 7.6 credits.** Enough for the one-shot Miles test, nothing else.
+The fix, in every re-shot prompt (`prompts/refix.py`, `only()`):
+
+```
+He says EXACTLY these words and NOTHING else: "..."
+He speaks no other words at any point in this shot. No second sentence,
+no muttering, no whispering, no trailing off, no ad-libbed dialogue,
+and he does not say anyone's name.
+Before and after that one line he is completely silent.
+```
+
+It worked on all six. **Use it on every short line in Episode 3.**
+
+Two consequences worth knowing:
+
+- **Capping the line exposes a silent tail.** The ad-lib was filling the back
+  half of the shot; without it A-8 held 3.3s of nothing. `assemble.py` grew a
+  `TAIL` table alongside `TRIM` for exactly this. Check onsets *and* offsets
+  after any re-shoot.
+- **Do not write "high-pitched excitable squeak"** in Raichu's voice line
+  (`blocks.py` V_RAICHU still does). That wording produced the squeaky garble.
+  The re-shoots use `V_RAICHU_CLEAR` in `refix.py`, which asks for articulation
+  and says nothing about pitch. Same lesson as rule 4, different character.
+
+### How to tell what a clip actually says without ears
+
+There is still no transcription key. `qa/speech_map.py` (scratch, worth keeping)
+prints a voiced/unvoiced timeline per clip and lists the spans. Word groups are
+visible: A-2 "I will die before you eat again" shows six spans. That is how
+every item above was diagnosed and verified before a credit was spent.
+
+Two traps in it:
+- **Engine rumble and gull cries register as voiced.** CO-2 looked like it still
+  had four utterances until the same measurement was re-run through a
+  300-3400 Hz speech band, which showed one line ending 3s before the clip.
+- **F0 after `voice_change` is noisy on short clips.** A-8 reads *higher* after
+  revoicing. Cross-correlating the old and new audio (all 17 came back at
+  |r| < 0.11) proves the voice was replaced; the pitch number does not.
+
+### Still not done
+
+- **Gerald and Gary have no assigned voice.** ~5 credits, same method.
+- **Nobody has heard v8 end to end.** Everything above was verified by
+  measurement and by frames.
+- **YouTube chapter timestamps** are still from the 4:34 cut. It is now 4:33.7,
+  and every act boundary moved. Regenerate before publishing.
+- **E-5 warning stands:** "And I'd do it again" was rejected three times by the
+  content filter and could not be regenerated. Do not re-shoot E-5.
+- Known and accepted: D-4's kitchen cabinets came back cream where D-3's are
+  sage. Same drift the handoff already accepts elsewhere.
+
+### Rollback points added this session
+
+- `clips/superseded_prefix5/` — the seven shots as they were before the re-shoot.
+- `clips/superseded_premiles/` — all 17 as they were before the voice pass.
+- `fixes5/` — the raw re-shoots, before revoicing.
+- `voicechange/miles/` — the revoiced clips as downloaded.
+- `voicechange/miles_jobs.json` — shot -> voice_change job id.

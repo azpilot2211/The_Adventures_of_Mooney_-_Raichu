@@ -1,0 +1,20 @@
+{
+ "_note": "voice_change pass 2026-09-11. Raichu -> Miles preset e18664a7-ee4f-5273-acf8-533eb24cd366; the new CO-2 -> Cillian d8ba9f14-8a24-44db-932b-99e16c45bd32. Keys are shot names, values the voice_change job id.",
+ "CO-2_carrier": "2f90a66a-49ab-4185-b32d-ee4927f77057",
+ "A-2_i-will-die": "f5fe43de-8a93-44cc-a931-a99d4e73338f",
+ "A-4_never-given-a-job": "a17ab361-a931-41e5-b68a-5bdd556528be",
+ "A-6_name-one": "29460487-2618-4538-9e24-256e25ba522f",
+ "A-8_and": "3fa3393c-8837-4490-9015-4a8fcb03d3c0",
+ "A-11_garys-fine": "aca4818f-aeb3-4115-ac8f-4b50aa310252",
+ "B-1_ive-been-reading": "92afa08c-6d4a-466b-ba17-6fe165f5b744",
+ "B-3_deciding-what-they-say": "8e3df005-4f90-493e-993a-34905ce5ec7d",
+ "B-5_the-drawer": "812b54fb-3b29-4318-9ed4-1b4789618ac2",
+ "B-7_i-made-one": "88834e72-6426-4fe5-a21a-be1c9afea489",
+ "B-8_who-here-is-tired": "36c9e050-df09-47ec-a517-d48e600c51d0",
+ "B-10_nobodys-told-you": "d19da8a0-ffbc-4ea5-a03a-330778c37b72",
+ "B-12_im-going-to-tell-you": "6b56c75d-a127-4d6e-be9d-22966399b22a",
+ "D-2_wheres-your-bowl": "3e46fd31-c91c-4564-b7bd-bbac4ad18d3a",
+ "D-4_you-had-a-bowl": "06d8ad7b-a5db-4669-a4bd-3d572838a96b",
+ "E-1_i-wanted-to-help": "d917db61-1b72-41dc-957c-3fd644a82fad",
+ "E-4_thats-not": "831a3c60-27e1-44c8-8de7-01a1f2b24cd9"
+}
