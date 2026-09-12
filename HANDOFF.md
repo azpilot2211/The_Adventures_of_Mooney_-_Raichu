@@ -452,9 +452,32 @@ Two traps in it:
   revoicing. Cross-correlating the old and new audio (all 17 came back at
   |r| < 0.11) proves the voice was replaced; the pitch number does not.
 
+### Which shots are NOT on a locked voice, and why
+
+Audit it any time with the SPEAKER map in `voicecheck.py` against
+`voicechange/media_ids.json` (Cillian) and `voicechange/miles_jobs.json` (Miles).
+All 16 Raichu shots and all but three Mooney shots are locked. The rest:
+
+| Shot | Speaker | Why it still has the generated voice |
+|---|---|---|
+| CO-5_the-portion | Mooney | Lyndie speaks in it |
+| A-12_never-been-hungry | Mooney | Raichu answers mid-shot; also the owner's favourite take |
+| TZ-1_gary-moves-in | Gary + Mooney | two speakers |
+| CO-1, A-1 | Lyndie | no voice assigned |
+| A-10, C-11 | Gary | no voice assigned |
+| C-4, C-6, C-8 | Gerald | no voice assigned |
+
+`voice_change` converts EVERY voice on a track, so a shot with two speakers can
+only be reached by re-shooting it single-speaker first. That is what was done to
+CO-2.
+
+**A-9 was not on that list — it was simply missed** by the earlier Cillian pass,
+and Mooney changed voice mid-Act-One as a result. Fixed 2026-09-11 for 1 credit.
+Run the audit before calling a voice pass done.
+
 ### Still not done
 
-- **Gerald and Gary have no assigned voice.** ~5 credits, same method.
+- **Gerald, Gary and Lyndie have no assigned voice.** ~7 credits, same method.
 - **Nobody has heard v8 end to end.** Everything above was verified by
   measurement and by frames.
 - **YouTube chapter timestamps** are still from the 4:34 cut. It is now 4:33.7,
@@ -463,6 +486,18 @@ Two traps in it:
   content filter and could not be regenerated. Do not re-shoot E-5.
 - Known and accepted: D-4's kitchen cabinets came back cream where D-3's are
   sage. Same drift the handoff already accepts elsewhere.
+
+### The trap that cost a review cycle
+
+This session ran in a git worktree under `.claude/worktrees/`. `clips/`, `qa/`,
+`fixes*/` and `series/reusable` were junctioned back to the main checkout, but
+**the episode renders to `ep02-chonk/` inside the worktree**, which is a
+different directory from the main checkout's. The owner was sent the main
+checkout's file and reviewed the previous version, reporting bugs that had
+already been fixed. Whenever you build from a worktree, copy
+`CHONK_EPISODE-1.mp4` and its preview to the main checkout before sending, and
+check the file size and duration against what you just built.
+`ep02-chonk/superseded_v7/` holds the version that was mistakenly sent.
 
 ### Rollback points added this session
 
