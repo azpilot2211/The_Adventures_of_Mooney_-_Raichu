@@ -1,0 +1,499 @@
+<title>House Rules</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --fog:#EDF0F3; --surface:#E2E7EB; --card:#F6F8F9;
+    --ink:#16202B; --ink-2:#3A4854; --shingle:#6F7C88; --rule:#CBD4DB;
+    --hydrangea:#4F63B8; --hydrangea-soft:#DDE2F4;
+    --buoy:#B14E33; --seaglass:#37796B;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --fog:#121A22; --surface:#1B252F; --card:#1E2A35;
+      --ink:#E6EDF2; --ink-2:#B4C2CE; --shingle:#8797A4; --rule:#2E3D4A;
+      --hydrangea:#93A4EA; --hydrangea-soft:#26314C;
+      --buoy:#E08D6E; --seaglass:#6FB6A4;
+    }
+  }
+  :root[data-theme="dark"]{
+      --fog:#121A22; --surface:#1B252F; --card:#1E2A35;
+      --ink:#E6EDF2; --ink-2:#B4C2CE; --shingle:#8797A4; --rule:#2E3D4A;
+      --hydrangea:#93A4EA; --hydrangea-soft:#26314C;
+      --buoy:#E08D6E; --seaglass:#6FB6A4;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--fog);color:var(--ink);font-family:"Newsreader",Georgia,serif;
+       font-size:17px;line-height:1.6;margin:0;padding:0 20px 96px}
+  .wrap{max-width:980px;margin:0 auto}
+  .mast{padding:56px 0 30px;border-bottom:2px solid var(--ink)}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+           text-transform:uppercase;color:var(--shingle);margin:0 0 18px}
+  h1{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:800;
+     font-size:clamp(50px,10vw,96px);line-height:.92;letter-spacing:-.03em;margin:0}
+  .subtitle{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:600;
+            font-size:clamp(19px,2.6vw,25px);color:var(--ink-2);margin:14px 0 0;letter-spacing:-.01em}
+  .logline{max-width:62ch;color:var(--ink-2);margin:20px 0 0;font-size:18px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:1px;
+         background:var(--rule);border:1px solid var(--rule);margin:34px 0 0}
+  .stat{background:var(--fog);padding:15px 16px}
+  .stat dt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;
+           text-transform:uppercase;color:var(--shingle);margin:0 0 6px}
+  .stat dd{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:800;
+           font-size:23px;margin:0;letter-spacing:-.02em}
+  .act{margin:64px 0 0}
+  .act-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+            border-bottom:1px solid var(--ink);padding-bottom:10px}
+  .act-num{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;
+           text-transform:uppercase;color:var(--buoy);font-weight:600}
+  .act-name{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:800;
+            font-size:34px;letter-spacing:-.025em;margin:0;flex:1}
+  .act-meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--shingle)}
+  .act-note{color:var(--ink-2);font-size:16.5px;max-width:70ch;margin:14px 0 26px;font-style:italic}
+  .shot{display:grid;grid-template-columns:104px 1fr;gap:22px;padding:17px 0;
+        border-bottom:1px solid var(--rule)}
+  .rail{display:flex;flex-direction:column;gap:3px;font-family:"IBM Plex Mono",monospace;
+        padding-top:2px}
+  .tc{font-size:12px;color:var(--shingle)}
+  .code{font-size:14px;font-weight:600;color:var(--hydrangea)}
+  .dur{font-size:11.5px;color:var(--shingle)}
+  .action{margin:0;font-size:16.5px}
+  .beat{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--seaglass);
+        margin:9px 0 0;letter-spacing:.01em}
+  .line{display:grid;grid-template-columns:132px 1fr;gap:14px;margin:12px 0 0;align-items:baseline}
+  .who{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;
+       text-transform:uppercase;color:var(--buoy);font-weight:600}
+  .said{margin:0;font-size:19px;font-weight:500;line-height:1.42}
+  .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.11em;
+       text-transform:uppercase;padding:2px 7px;margin-left:9px;border-radius:2px;
+       background:var(--hydrangea-soft);color:var(--hydrangea);white-space:nowrap}
+  .divider-rule{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.13em;
+       text-transform:uppercase;color:var(--seaglass);text-align:center;margin:20px 0 0;
+       padding:9px;border:1px dashed var(--rule)}
+  .notes{margin:74px 0 0;border-top:2px solid var(--ink);padding-top:34px}
+  .note-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(292px,1fr));gap:26px;margin-top:26px}
+  .note h3{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:800;font-size:18px;
+           letter-spacing:-.015em;margin:0 0 7px}
+  .note p{margin:0;color:var(--ink-2);font-size:16px}
+  .ledger{width:100%;border-collapse:collapse;margin:44px 0 0;font-size:15px}
+  .ledger th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.13em;
+             text-transform:uppercase;color:var(--shingle);text-align:left;
+             border-bottom:1px solid var(--ink);padding:8px 10px}
+  .ledger td{padding:8px 10px;border-bottom:1px solid var(--rule)}
+  .ledger td:nth-child(n+2){font-family:"IBM Plex Mono",monospace;font-size:13.5px}
+  .ledger .tot td{font-weight:700;border-bottom:2px solid var(--ink)}
+</style>
+<body><div class="wrap">
+<header class="mast">
+  <p class="eyebrow">The Adventures of Mooney &amp; Raichu · Episode 2 · Shooting script</p>
+  <h1>House Rules</h1>
+  <p class="subtitle">One box. One key. One raccoon who has done nothing wrong.</p>
+  <p class="logline">Gary moves in properly, as promised. He brings a chore wheel, a laminated sense of fairness and a key nobody gave him. Mooney and Raichu declare war on a houseguest who wins every round without once raising his voice — and who is, at every point, completely within his rights.</p>
+
+<dl class="stats">
+<div class="stat"><dt>Runtime</dt><dd>5:47</dd></div>
+<div class="stat"><dt>Shots</dt><dd>63</dd></div>
+<div class="stat"><dt>Silent shots</dt><dd>25</dd></div>
+<div class="stat"><dt>Cutaways</dt><dd>4</dd></div>
+<div class="stat"><dt>Dividers</dt><dd>6</dd></div>
+<div class="stat"><dt>New footage</dt><dd>1458 cr</dd></div>
+</dl></header>
+<section class="act">
+<div class="act-head"><span class="act-num">Cold open</span><h2 class="act-name">The Key</h2><span class="act-meta">23s · 104 cr</span></div>
+<p class="act-note">Gary lets himself in. Nobody stops him, because nobody can think of the grounds. Five shots, no explanation offered, and the last line is the whole episode.</p>
+<div class="shot"><div class="rail"><span class="tc">0:00</span><span class="code">CO-1</span><span class="dur">5s</span></div><div>
+<p class="action">Exterior, the front door of the cottage, morning. Close on the cat flap at the bottom of the door. A raccoon paw comes through the flap from outside, feels its way up the inside of the door, and turns the deadbolt. CLUNK. The door swings open with a long CREEEAK. GARY walks in upright, carrying one cardboard box.</p>
+<p class="beat">no dialogue · tumbler click, hinge creak, one jaunty bassoon</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:05</span><span class="code">CO-2</span><span class="dur">4s</span></div><div>
+<p class="action">Interior living room. Mooney is flat on the rug. He does not get up. He does not move at all.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">He has a key.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:09</span><span class="code">CO-3</span><span class="dur">4s</span></div><div>
+<p class="action">Raichu at the window, ear tufts straight up, thrilled by the wrong detail.</p>
+<div class="line"><span class="who">Raichu</span><p class="said">He has a <em>box.</em></p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:13</span><span class="code">CO-4</span><span class="dur">5s</span></div><div>
+<p class="action">Gary sets the box down on the rug, opens it, and lifts out one small framed photograph. He stands it on the side table and turns it a few degrees until it is straight, CLINK. The photograph is of the armchair.</p>
+<p class="beat">no dialogue · cardboard, a small glass clink, one sentimental harp</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:18</span><span class="code">CO-5</span><span class="dur">5s</span></div><div>
+<p class="action">Mooney has still not moved.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">That's a photograph of the chair he's sitting in.</p></div>
+</div></div>
+<p class="divider-rule">scene divider · 0.8s · built locally, free</p>
+</section>
+<section class="act">
+<div class="act-head"><span class="act-num">Titles</span><h2 class="act-name">Main Title reused</h2><span class="act-meta">10s · 0 cr</span></div>
+<p class="act-note">The existing main title plate. Episode line composited in post: Episode 2 — "House Rules".</p>
+<div class="shot"><div class="rail"><span class="tc">0:23</span><span class="code">TS-1</span><span class="dur">10.6s</span></div><div>
+<p class="action">The existing main title, unchanged.</p>
+<p class="beat">reused plate · 0 credits</p>
+</div></div>
+</section>
+<section class="act">
+<div class="act-head"><span class="act-num">Act One</span><h2 class="act-name">The Wheel</h2><span class="act-meta">64s · 288 cr</span></div>
+<p class="act-note">Gary institutionalises himself in about a minute. He is never rude, never loud and never wrong, which is what makes it unbearable. The act ends on the shortest declaration of war the series has managed.</p>
+<div class="shot"><div class="rail"><span class="tc">0:34</span><span class="code">A-1</span><span class="dur">5s</span></div><div>
+<p class="action">Gary in the armchair, reading glasses on, holding up a large cardboard disc with wedges scratched into it. He presents it the way a man presents a boat he has built.</p>
+<div class="line"><span class="who">Gary</span><p class="said">I've made a wheel.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:39</span><span class="code">A-2</span><span class="dur">4s</span></div><div>
+<p class="action">Mooney, on the floor, at the far end of his patience already.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">You've made a <em>what.</em></p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:43</span><span class="code">A-3</span><span class="dur">5s</span></div><div>
+<p class="action">Gary spins the wheel with one claw. TICK-TICK-TICK-TICK, it ratchets around like a game-show wheel, slowing. Tick. Tick. Tick.</p>
+<p class="beat">no dialogue · wheel ratchet, a tiny fanfare that gives up halfway through</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:48</span><span class="code">A-4</span><span class="dur">4s</span></div><div>
+<p class="action">Gary reads the wedge it stopped on.</p>
+<div class="line"><span class="who">Gary</span><p class="said">Dishes.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:52</span><span class="code">A-5</span><span class="dur">4s</span></div><div>
+<p class="action">Mooney does not blink.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">We don't have hands.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">0:56</span><span class="code">A-6</span><span class="dur">5s</span></div><div>
+<p class="action">Gary, kindly, not looking up.</p>
+<div class="line"><span class="who">Gary</span><p class="said">That's not on the wheel.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:01</span><span class="code">A-7</span><span class="dur">5s</span></div><div>
+<p class="action">Raichu shoulders into frame, desperate to be included in his own oppression.</p>
+<div class="line"><span class="who">Raichu</span><p class="said">Do me. Do me.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:06</span><span class="code">A-8</span><span class="dur">5s</span></div><div>
+<p class="action">Gary spins it again. It ticks. It stops.</p>
+<div class="line"><span class="who">Gary</span><p class="said">Also dishes.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:11</span><span class="code">A-9</span><span class="dur">7s</span></div><div>
+<p class="action"><b>Cutaway.</b> The kitchen sink. Both cats up on their hind legs, one washing, one drying, in complete silence, wearing tiny aprons. Neither of them looks at the other. Hold on it far too long.<span class="tag cutaway">cutaway</span></p>
+<p class="beat">no dialogue · running water, one squeaky plate, a clock</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:18</span><span class="code">A-10</span><span class="dur">5s</span></div><div>
+<p class="action">Back to Mooney, who turns and addresses the camera directly, flat.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">That went on for nine days.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:23</span><span class="code">A-11</span><span class="dur">5s</span></div><div>
+<p class="action">Raichu, genuinely wounded.</p>
+<div class="line"><span class="who">Raichu</span><p class="said">I dropped a mug and he put me in the hall.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:28</span><span class="code">A-12</span><span class="dur">4s</span></div><div>
+<p class="action">Mooney, without sympathy.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">You <em>live</em> in the hall.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:32</span><span class="code">A-13</span><span class="dur">6s</span></div><div>
+<p class="action">Mooney rolls upright. It is the first time he has stood up in two episodes and the camera should treat it as an event.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">Get the string.</p></div>
+</div></div>
+<p class="divider-rule">scene divider · 0.8s · built locally, free</p>
+</section>
+<section class="act">
+<div class="act-head"><span class="act-num">Act Two</span><h2 class="act-name">The Traps</h2><span class="act-meta">80s · 360 cr</span></div>
+<p class="act-note">The Tom and Jerry act. Nine of these fourteen shots have no dialogue at all — the comedy is entirely physical, every trap backfires onto the cat who set it, and Gary never once notices he is being attacked.</p>
+<div class="shot"><div class="rail"><span class="tc">1:39</span><span class="code">B-1</span><span class="dur">5s</span></div><div>
+<p class="action">Raichu has drawn a plan on the back of a cereal packet in claw scratches. It means nothing. He taps it with total authority.</p>
+<div class="line"><span class="who">Raichu</span><p class="said">Trap one.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:44</span><span class="code">B-2</span><span class="dur">6s</span></div><div>
+<p class="action"><b>Trap one.</b> A metal bucket balanced on the top edge of the door frame above the armchair. A string runs from the bucket, across the ceiling, down the far wall, to Raichu, who is tiptoeing backwards holding the end of it and barely breathing. The string goes CREAK.</p>
+<p class="beat">no dialogue · string creak, tiptoe pizzicato, one long held note</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:50</span><span class="code">B-3</span><span class="dur">7s</span></div><div>
+<p class="action">Gary walks in underneath the bucket. Nothing happens. He sits down in the armchair. He looks up at the bucket for a moment. Then he reaches up, unhooks it, CLUNK, sets it down neatly beside the chair, and sharpens his pencil into it, SCRITCH SCRITCH.</p>
+<p class="beat">no dialogue · a small clunk, pencil sharpening, a defeated trombone</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">1:57</span><span class="code">B-4</span><span class="dur">4s</span></div><div>
+<p class="action">Mooney, from the doorway, deadpan.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">He has a bin now.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:01</span><span class="code">B-5</span><span class="dur">5s</span></div><div>
+<p class="action"><b>Trap two.</b> Raichu tips an entire jar of marbles across the hallway floor, a long skittering RATTLE, and flattens himself against the wall, delighted with his own genius.</p>
+<p class="beat">no dialogue · a long skittering pour, tense pizzicato</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:06</span><span class="code">B-6</span><span class="dur">7s</span></div><div>
+<p class="action">Locked-off wide, straight down the hall. Gary strolls across the marbles without looking down, paws behind his back, entirely level, and exits. A beat of nothing. Then MOONEY steps into the hall, WHOOP, goes straight up into the air with all four legs out, and SKKKRRT, slides the whole length of the floor and out of frame. CRASH.</p>
+<p class="beat">no dialogue · marbles, a comic slide, a distant collapse of saucepans</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:13</span><span class="code">B-7</span><span class="dur">5s</span></div><div>
+<p class="action">Mooney upside down against the far wall, legs folded over his head, perfectly calm about it.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">Trap two.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:18</span><span class="code">B-8</span><span class="dur">6s</span></div><div>
+<p class="action"><b>Trap three.</b> Raichu on the floor beside the armchair with a handsaw, cutting a neat circle in the floorboards around it, SHHK SHHK SHHK. He is sawing from inside the circle. The audience is ahead of him and should be allowed to enjoy that for a moment.</p>
+<p class="beat">no dialogue · rhythmic sawing, a slowly rising oboe of dramatic irony</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:24</span><span class="code">B-9</span><span class="dur">5s</span></div><div>
+<p class="action">The circle gives way, CRACK. Raichu drops through it with a long descending WHEEEE and lands somewhere far below, THUD. The armchair and Gary do not move a millimetre. Gary turns a page.</p>
+<p class="beat">no dialogue · a crack, a long descending whistle, a distant thud</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:29</span><span class="code">B-10</span><span class="dur">5s</span></div><div>
+<p class="action">Gary, still reading, mildly.</p>
+<div class="line"><span class="who">Gary</span><p class="said">Second one this week.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:34</span><span class="code">B-11</span><span class="dur">8s</span></div><div>
+<p class="action"><b>Music scene.</b> A full orchestral chase cue and not one word. Fast cuts, a musical hit on every impact: a mousetrap the size of a door snaps shut on nothing, SNAP; a rope snare hoists MOONEY up by one back leg, SPROING; a desk fan and a burst bag of flour turn both cats completely white, FWOOMPH; RAICHU fires a grape from a slingshot, TWANG, and it comes straight back and hits him, BONK.</p>
+<p class="beat">no dialogue · full chase orchestra, whip crack, sproing, a cymbal on every impact</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:42</span><span class="code">B-12</span><span class="dur">6s</span></div><div>
+<p class="action">The aftermath. Both cats hanging upside down in the doorway, flour-white, wound in the same length of rope, revolving slowly. Gary steps over them, reaches up, and turns off the light, CLICK.</p>
+<p class="beat">no dialogue · one light switch, a single sad clarinet</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:48</span><span class="code">B-13</span><span class="dur">5s</span></div><div>
+<p class="action">Darkness. Two pairs of eyes.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">This is worse than the boat.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">2:53</span><span class="code">B-14</span><span class="dur">6s</span></div><div>
+<p class="action"><b>Cutaway.</b> A small rowing boat in the middle of the harbour at dawn. Both cats aboard. Raichu is rowing with one oar, so the boat is turning slowly in a circle. Mooney sits in the bow facing forward. Neither of them reacts. Never mentioned again.<span class="tag cutaway">cutaway</span></p>
+<p class="beat">no dialogue · gulls, one oar, water, a resigned accordion</p>
+</div></div>
+<p class="divider-rule">scene divider · 0.8s · built locally, free</p>
+</section>
+<section class="act">
+<div class="act-head"><span class="act-num">Act Three</span><h2 class="act-name">Procurement</h2><span class="act-meta">68s · 306 cr</span></div>
+<p class="act-note">Gerald returns with a second business. The transaction is played exactly as flat as the sandwich deal in Episode 1, and it costs Mooney the one thing he was fighting for.</p>
+<div class="shot"><div class="rail"><span class="tc">3:00</span><span class="code">C-1</span><span class="dur">6s</span></div><div>
+<p class="action">Night. The kitchen window. GERALD is on the moonlit fence outside. He has been there for some time and is in no hurry to say so.</p>
+<p class="beat">no dialogue · night crickets, one slow wingbeat, a low bass note</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:06</span><span class="code">C-2</span><span class="dur">4s</span></div><div>
+<p class="action">Mooney at the glass.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">I need something bigger.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:10</span><span class="code">C-3</span><span class="dur">5s</span></div><div>
+<p class="action">Gerald does not blink.</p>
+<div class="line"><span class="who">Gerald</span><p class="said">How big.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:15</span><span class="code">C-4</span><span class="dur">4s</span></div><div>
+<p class="action">Mooney.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">Raccoon.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:19</span><span class="code">C-5</span><span class="dur">7s</span></div><div>
+<p class="action">Gerald turns his head very slowly toward a tarpaulin further along the fence. He takes the corner of it in his bill and pulls, a long canvas SHHHHP. Underneath, gleaming in the moonlight, is a full-size wooden catapult.</p>
+<p class="beat">no dialogue · canvas sliding, one enormous orchestral reveal, crickets resuming</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:26</span><span class="code">C-6</span><span class="dur">4s</span></div><div>
+<p class="action">Mooney, who has learned nothing.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">What do you want.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:30</span><span class="code">C-7</span><span class="dur">4s</span></div><div>
+<p class="action">Gerald.</p>
+<div class="line"><span class="who">Gerald</span><p class="said">The chair.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:34</span><span class="code">C-8</span><span class="dur">5s</span></div><div>
+<p class="action">Mooney, without a flicker.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">It's not my chair.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:39</span><span class="code">C-9</span><span class="dur">5s</span></div><div>
+<p class="action">Gerald.</p>
+<div class="line"><span class="who">Gerald</span><p class="said">Then it isn't my catapult.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:44</span><span class="code">C-10</span><span class="dur">4s</span></div><div>
+<p class="action">Mooney sells the thing the entire war is about.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">Take the chair.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:48</span><span class="code">C-11</span><span class="dur">7s</span></div><div>
+<p class="action">Exterior, the garden at dawn. Locked-off wide. Both cats hauling on the catapult's winch, straining, back paws slipping in the wet grass. The arm ratchets back, CLICK, CLICK, CLICK. Raichu wedges a stone under it, CLUNK.</p>
+<p class="beat">no dialogue · ratchet clicks, rope creak, two cats straining</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">3:55</span><span class="code">C-12</span><span class="dur">5s</span></div><div>
+<p class="action">Raichu, radiant, one paw on the release.</p>
+<div class="line"><span class="who">Raichu</span><p class="said">Ready.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:00</span><span class="code">C-13</span><span class="dur">8s</span></div><div>
+<p class="action">Locked-off wide of the whole garden. The rope is cut, TWANG. The arm swings the wrong way, WHUMP, and both cats are launched straight out of the top of frame, their howls dopplering away to nothing. The catapult, undamaged, rocks gently to a stop. Behind it, in the lit kitchen window, Gary does not look up. Two distant SPLASHES.</p>
+<p class="beat">no dialogue · whip crack, a doppler wail going away, two distant splashes</p>
+</div></div>
+<p class="divider-rule">scene divider · 0.8s · built locally, free</p>
+</section>
+<section class="act">
+<div class="act-head"><span class="act-num">Act Four</span><h2 class="act-name">The Lease</h2><span class="act-meta">54s · 243 cr</span></div>
+<p class="act-note">The South Park turn: the institution sides with the newcomer, and it is not even close. Everything the cats did was against a tenant in good standing.</p>
+<div class="shot"><div class="rail"><span class="tc">4:08</span><span class="code">D-1</span><span class="dur">6s</span></div><div>
+<p class="action">Interior living room. MICHAEL and LYNDIE stand over the armchair, delighted, photographing Gary in it. Gary looks at the camera. He does not smile, but somehow it reads as a smile.</p>
+<p class="beat">no dialogue · camera shutter, warm domestic music</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:14</span><span class="code">D-2</span><span class="dur">6s</span></div><div>
+<p class="action">The doorway behind them. Both cats, soaked through, draped in seaweed, dripping onto the floorboards, drip, drip, SQUELCH. Nobody turns around.</p>
+<p class="beat">no dialogue · dripping, one long squelch, a single fly</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:20</span><span class="code">D-3</span><span class="dur">4s</span></div><div>
+<p class="action">Lyndie, off-screen, warmly.</p>
+<div class="line"><span class="who">Lyndie</span><p class="said">He's so well behaved.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:24</span><span class="code">D-4</span><span class="dur">5s</span></div><div>
+<p class="action">Mooney to camera, harbour water still running off his chin.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">He pays rent.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:29</span><span class="code">D-5</span><span class="dur">6s</span></div><div>
+<p class="action"><b>Cutaway.</b> The kitchen counter, close. Gary slides a single coin across it with one claw, a long CHINK. A human hand picks the coin up and pockets it. DING. Neither face is in frame.<span class="tag cutaway">cutaway</span></p>
+<p class="beat">no dialogue · one coin on wood, a cash-register ding that is far too pleased with itself</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:35</span><span class="code">D-6</span><span class="dur">6s</span></div><div>
+<p class="action">Raichu, devastated, ear tufts flat for the first time in the series.</p>
+<div class="line"><span class="who">Raichu</span><p class="said">But we <em>live</em> here.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:41</span><span class="code">D-7</span><span class="dur">6s</span></div><div>
+<p class="action">Gary, kindly, still not looking up from the crossword.</p>
+<div class="line"><span class="who">Gary</span><p class="said">You live here too.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:47</span><span class="code">D-8</span><span class="dur">5s</span></div><div>
+<p class="action">Mooney.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">That's the worst part.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:52</span><span class="code">D-9</span><span class="dur">5s</span></div><div>
+<p class="action">The chore wheel, spinning. TICK-TICK-TICK. It slows. It stops on exactly the same wedge, tick.</p>
+<p class="beat">no dialogue · wheel ratchet, one small doomed chime</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">4:57</span><span class="code">D-10</span><span class="dur">5s</span></div><div>
+<p class="action">The sink. Both cats. Aprons. Washing and drying in silence — the identical shot from Act One, held identically too long.<span class="tag cutaway">cutaway</span></p>
+<p class="beat">no dialogue · running water, one squeaky plate, a clock</p>
+</div></div>
+<p class="divider-rule">scene divider · 0.8s · built locally, free</p>
+</section>
+<section class="act">
+<div class="act-head"><span class="act-num">Resolution</span><h2 class="act-name">The Wrong Moral</h2><span class="act-meta">30s · 135 cr</span></div>
+<p class="act-note">Played completely straight — sunset, warm strings, the full apparatus of a sincere ending — and attached to a conclusion that is worse than the one in Episode 1.</p>
+<div class="shot"><div class="rail"><span class="tc">5:03</span><span class="code">E-1</span><span class="dur">6s</span></div><div>
+<p class="action">The deck at sunset. The two cats side by side at the rail, still damp, one strand of seaweed on Raichu's ear. Warm golden light. Neither looks at the other.</p>
+<div class="line"><span class="who">Raichu</span><p class="said">Maybe he's not so bad.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">5:09</span><span class="code">E-2</span><span class="dur">5s</span></div><div>
+<p class="action">A long, warm, sincere pause. Strings underneath.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">He is.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">5:14</span><span class="code">E-3</span><span class="dur">8s</span></div><div>
+<p class="action">Mooney turns to face the camera. Total sincerity, fully earnest music, no wink anywhere.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">You know, I learned something today. I learned that when somebody moves into your house and makes it cleaner, kinder and better run than you ever did — the only decent thing left to do is get a bigger catapult.</p></div>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">5:22</span><span class="code">E-4</span><span class="dur">5s</span></div><div>
+<p class="action">A beat. GARY walks into frame, sits down on the deck between them, and opens his crossword. Nobody says anything. The strings continue warmly, entirely undisturbed.</p>
+<p class="beat">no dialogue · deck creak, pencil scratch, warm strings continuing</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">5:27</span><span class="code">E-5</span><span class="dur">6s</span></div><div>
+<p class="action">Mooney does not look at him.</p>
+<div class="line"><span class="who">Mooney</span><p class="said">It's already ordered.</p></div>
+</div></div>
+<p class="divider-rule">scene divider · 0.8s · built locally, free</p>
+</section>
+<section class="act">
+<div class="act-head"><span class="act-num">End card</span><h2 class="act-name">& Teaser</h2><span class="act-meta">13s · 22 cr</span></div>
+<p class="act-note">The existing sunset end plate, unchanged. Teaser text composited in post.</p>
+<div class="shot"><div class="rail"><span class="tc">5:34</span><span class="code">EC-1</span><span class="dur">8.1s</span></div><div>
+<p class="action">The existing end plate. Logo and copyright composited in post.</p>
+<p class="beat">reused plate · 0 credits</p>
+</div></div>
+<div class="shot"><div class="rail"><span class="tc">5:42</span><span class="code">TZ-1</span><span class="dur">5s</span></div><div>
+<p class="action">The armchair. Gary, glasses on, crossword in paw. Sitting beside him, in an identical pair of small round reading glasses, is a SECOND raccoon.</p>
+<div class="line"><span class="who">Gary</span><p class="said">This is Denise.</p></div>
+<div class="line"><span class="who">Mooney (off)</span><p class="said">No.</p></div>
+</div></div>
+</section>
+
+<section class="notes">
+<h2 class="act-name">Production notes</h2>
+<div class="note-grid">
+
+<div class="note"><h3>Write the sound effect into the action, in capitals, on the beat</h3>
+<p>Taken from the owner's Lucky Lots prompt (higgsfield.ai/s/kMh3mXz6BqY), which reads
+<em>"WHOOSH, a second rocket launches upward … a split second before BOOM, an enormous colorful
+cartoon explosion"</em>. The onomatopoeia sits inline at the exact moment it lands, and the terse
+<code>Audio:</code> list still goes last. Every action line in this script is written that way
+already — CLUNK, SKKKRRT, SPROING, FWOOMPH — so it transfers into the prompt verbatim.
+<b>Unverified:</b> that sample was generated on Seedance 2.5, so its sound design may owe as much
+to the model as to the wording. Shoot one trap shot both ways before committing the act.</p></div>
+
+<div class="note"><h3>Also from that prompt: the negative, and the delivery</h3>
+<p>It carries <em>"NO on-screen text, no subtitles, no captions, no logos, no watermarks"</em> as
+one blunt line — stronger than this project's current wording, and worth adopting wholesale. It
+also puts the delivery next to the line rather than in a separate voice block:
+<em>says warmly in a strong New York accent: "…"</em>. Same shape this project already uses for
+Mooney and Raichu.</p></div>
+
+<div class="note"><h3>Stay on Seedance 2.0 unless a shot needs the length</h3>
+<p>Priced 2026-09-12: <b>2.0 is 4.5 credits a second, 2.5 is 6.5</b> (36 versus 52 for eight
+seconds). 2.5 goes to 30 seconds where 2.0 stops at 15, and the Lucky Lots prompt shows it holding
+a multi-beat sequence with an internal <em>quick cut to close-up</em>. That earns its 44% premium
+only where one long take replaces three shots that would each waste the four-second minimum —
+B-11's montage is the one candidate here. Everything else is cheaper on 2.0.</p></div>
+
+<div class="note"><h3>Every dialogue shot is single-speaker</h3>
+<p>Only TZ-1 has two. <code>voice_change</code> converts every voice on a track, so a shot where
+both cats speak can never be put on the locked voices — that is why Episode 1's CO-2 had to be
+re-shot. Mooney is Cillian, Raichu is Miles. Keep it that way and each line costs 1 credit to
+lock.</p></div>
+
+<div class="note"><h3>Cap every line in the prompt</h3>
+<p>Seedance pads a line under about six words with a second, invented utterance. Four of the
+owner's Episode 1 notes were this and nothing else. Use the <code>only()</code> wording from
+<code>ep02-chonk/prompts/refix.py</code> on every line here — this script has a lot of very short
+ones, which is exactly the failure case.</p></div>
+
+<div class="note"><h3>Silent shots are the reliable ones</h3>
+<p>Twenty-five of these sixty-three shots have no dialogue at all. That is deliberate: a shot with no
+speech cannot be padded, cannot be mumbled and never needs revoicing. It is also what Tom and Jerry
+actually is. State it explicitly — <em>there is no dialogue in this shot, nobody speaks</em> — or
+the model will add some.</p></div>
+
+<div class="note"><h3>Over-generate the action, then trim</h3>
+<p>Measured on the trailer: physical action lands somewhere unpredictable inside the shot, and both
+two-cat shots left dead frame at one end. Generate action a second or two long and cut IN and OUT
+per shot the way <code>series/trailer/assemble.py</code> does, rather than head-trimming only.</p></div>
+
+<div class="note"><h3>Lock every two-cat frame</h3>
+<p>B-6, B-11, B-12, C-11, C-13 and D-2 all have both cats moving at once, the hardest thing this
+pipeline does. Static locked-off wide, both cats named with their side of frame, and
+<em>both cats remain fully inside the frame for the entire shot</em> — and expect to trim an exit
+anyway.</p></div>
+
+<div class="note"><h3>Budget one refusal in seven</h3>
+<p>The content filter rejected two of fourteen trailer shots, twice each, over wording that was in
+no way unsafe. Slapstick is more exposed than dialogue, so for every trap shot decide the free
+fallback <em>before</em> generating: B-3 can be a still of the bucket, B-9 can hold on Gary, and
+the whole of B-11 can be built from the other traps' offcuts. Rejected jobs are not charged.</p></div>
+
+<div class="note"><h3>The music scene is one shot, not a sequence</h3>
+<p>B-11 asks for the montage inside a single 8-second generation, because cutting four separate
+4-second minimums together would cost 72 credits for four seconds of usable footage. If it comes
+back weak, build the montage locally from the trap shots already in the can and score it with a
+synthesised cue — <code>divider.py</code> and <code>outro.py</code> already synthesise audio with
+numpy, for nothing.</p></div>
+
+<div class="note"><h3>Dividers and cards are free</h3>
+<p>Five dividers at the act breaks, from the four designs in <code>ep02-chonk/divider.py</code>,
+cycling so no two adjacent match. Main title and end plate are reused. The episode line and the
+teaser text composite in post with <code>drawtext</code>. None of it costs anything.</p></div>
+
+<div class="note"><h3>Narration and score go on afterwards</h3>
+<p>There is no narrator in this episode, but the same lesson holds for the music: ask Seedance for
+the sound design per shot in the <code>Audio:</code> line, then do the wide musical decisions in the
+assembler. <code>seed_audio</code> is 0.1 credits a line if anything needs speaking.</p></div>
+
+<div class="note"><h3>Gary needs a voice before a frame is shot</h3>
+<p>He carries seven lines here against three in Episode 1, and he is the antagonist. Pick his preset
+from <code>series/VOICES.html</code> and write it into the handoff table first. Gerald needs one
+too — three lines. Assigning them up front is the whole lesson of Episode 1.</p></div>
+
+<div class="note"><h3>Cutaways still solve continuity</h3>
+<p>Four hard jumps to unrelated scenes — A-9, B-14, D-5, D-10 — where the discontinuity is the
+joke. Do not chain a reference frame into them. Everywhere else, pass the previous shot's final
+frame, and check the last frame of each shot against the first of the next.</p></div>
+
+<div class="note"><h3>Nothing readable in frame</h3>
+<p>The chore wheel, Raichu's plan on the cereal packet and Gary's crossword must all be scratches
+and marks, never letters. Ask for it explicitly on A-1, A-3, B-1, D-9 and every Gary shot. Real
+text composites in post.</p></div>
+
+</div></section>
+
+<table class="ledger"><thead><tr><th>Segment</th><th>Shots</th><th>Runtime</th><th>Credits</th></tr></thead><tbody>
+<tr><td>Cold open — The Key</td><td>5</td><td>0:23</td><td>104</td></tr>
+<tr><td>Titles — Main Title reused</td><td>1</td><td>0:10</td><td>0</td></tr>
+<tr><td>Act One — The Wheel</td><td>13</td><td>1:04</td><td>288</td></tr>
+<tr><td>Act Two — The Traps</td><td>14</td><td>1:20</td><td>360</td></tr>
+<tr><td>Act Three — Procurement</td><td>13</td><td>1:08</td><td>306</td></tr>
+<tr><td>Act Four — The Lease</td><td>10</td><td>0:54</td><td>243</td></tr>
+<tr><td>Resolution — The Wrong Moral</td><td>5</td><td>0:30</td><td>135</td></tr>
+<tr><td>End card — & Teaser</td><td>2</td><td>0:13</td><td>22</td></tr>
+<tr class="tot"><td>Episode 2 total</td><td>63</td><td>5:47</td><td>1458</td></tr>
+</tbody></table>
+</div></body>
