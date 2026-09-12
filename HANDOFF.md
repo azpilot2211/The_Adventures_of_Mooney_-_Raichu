@@ -1,8 +1,59 @@
 # HANDOFF — The Adventures of Mooney & Raichu
 
-Rewritten 2026-09-10 at the end of a long session. Everything here is current and
-verified; earlier versions of this file contained superseded advice and were
-replaced rather than patched again. Read it once end to end before touching anything.
+Rewritten 2026-09-10, extended through 2026-09-12. Everything here is current and
+verified; superseded advice is replaced rather than patched around. The rest of the
+file is reference — read it before generating anything. This first block is where to
+begin.
+
+---
+
+## START HERE — state at the end of 2026-09-12
+
+**Three things exist. Two of them are waiting on your ears, and nothing is blocked
+on me.**
+
+| | What | Where | Status |
+|---|---|---|---|
+| 1 | **Episode 1 "Chonk"** | `ep02-chonk/CHONK_EPISODE-1.mp4` | v8, 4:33.7, 69 segments. All twelve of the owner's notes are in it. **Sent for review; no verdict yet.** |
+| 2 | **Channel trailer** | `series/TRAILER.mp4` | 34.6s. **Sent for review; no verdict yet.** |
+| 3 | **Episode 2 "House Rules"** | `ep03-house-rules/` | Script only. 63 shots, 5:47, needs 1,458 credits. Nothing generated. |
+
+**Balance: 83.7 credits** (measured 2026-09-12). Episode 2 needs about eighteen times
+that, so nothing of it can be shot until a top-up.
+
+### The first move, in order
+
+1. **Get the owner's verdict on the episode and the trailer.** Both were delivered
+   without being heard end to end — everything in them was verified by measurement
+   and by frames, never by ear. Until that verdict exists, do not start Episode 2:
+   any note that comes back will change how its prompts get written.
+2. **While waiting, spend nothing and do the free work:** regenerate the YouTube
+   chapter timestamps (the cut is 4:33.7 now, the old ones are from 4:34), and write
+   the trailer's own title, description and thumbnail — the channel-trailer slot is a
+   separate upload from the episode.
+3. **Assign Gary's and Gerald's voices** from `series/VOICES.html` and fill in the cast
+   table below. About 7 credits, affordable now, and it is the one Episode 1 mistake
+   that is cheapest to avoid repeating — Gary carries seven lines in Episode 2 and is
+   the antagonist.
+4. **Then Episode 2**, once there are credits. Read the production notes in
+   `ep03-house-rules/house-rules.html` before writing a single prompt; they carry every
+   lesson from Episode 1 and the trailer, applied per shot.
+
+### Numbering, settled 2026-09-12
+
+Fowl Play was **discarded and has no number**. Chonk is **Episode 1**. House Rules is
+**Episode 2**. The folder names are production order and no longer match — `ep02-chonk/`
+holds Episode 1 and `ep03-house-rules/` holds Episode 2. That is deliberate; do not
+"fix" one to match the other without renaming everything at once.
+
+### Git
+
+Branch **`claude/cartoon-changes-fixes-33c9dc`**, seven commits, pushed to origin.
+**`main` has not been updated** — this project historically lives on main, so the work
+is on GitHub but not where you would look for it. Fast-forward main when the owner is
+happy. The main checkout's working tree shows those same files as modified; they are
+byte-identical copies made so the scripts sit beside the media, and they resolve to
+nothing once main catches up.
 
 ---
 
@@ -396,12 +447,15 @@ rendered episodes on GitHub needs Git LFS, and 1.1 GB exceeds the 1 GB free quot
 3. Regenerate the YouTube chapter timestamps — the cut is 4:33.7 now.
    The trailer needs its own title, description and thumbnail too; the channel
    trailer slot is a separate upload from the episode.
-4. Then Episode 2, **"House Rules"** — the script is written and sitting in
+4. **Watch `series/TRAILER.mp4`** too — 34.6s, also never heard. The narrator is
+   Sterling, picked unheard; swapping him is a one-line change in
+   `series/trailer/narration.py` and 0.1 credits a line to re-cut.
+5. Then Episode 2, **"House Rules"** — the script is written and sitting in
    `ep03-house-rules/`, 1,458 credits at current rates. Assign Gary's and
    Gerald's voices before generating, run voice_change as a finishing pass, and
    cap every short line with the `only()` wording below.
 
-**Balance: 88 credits.**
+**Balance: 83.7 credits** (measured 2026-09-12).
 
 
 ---
