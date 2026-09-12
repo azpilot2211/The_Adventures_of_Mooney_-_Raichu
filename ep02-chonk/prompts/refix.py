@@ -2,7 +2,7 @@
 """Round-two shots for Episode 1 'Chonk' - the owner's change list of 2026-09-11.
 
 Seven re-shoots. Six of them exist because of one newly-diagnosed failure mode,
-written up here because it will bite Episode 3 too:
+written up here because it will bite House Rules too:
 
     Seedance PADS A SHORT LINE WITH INVENTED SPEECH.
 

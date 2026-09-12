@@ -213,5 +213,5 @@ HASHTAGS
   that show on mobile. Keep the episode number, it signals a series worth
   starting.
 
-  Good:  "A Raccoon Moved In And Nobody Has Addressed It | ... | Ep 3"
-  Bad:   "The Adventures of Mooney & Raichu Episode 3 — Gary Moves In"
+  Good:  "A Raccoon Moved In And Nobody Has Addressed It | ... | Ep 2"
+  Bad:   "The Adventures of Mooney & Raichu Episode 2 — Gary Moves In"

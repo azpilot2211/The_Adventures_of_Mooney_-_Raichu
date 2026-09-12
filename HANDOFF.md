@@ -28,7 +28,7 @@ South Park satirical spine, PG ceiling.
 
 ## Current state
 
-### Episode 1 — "Fowl Play" — COMPLETE, shelved
+### "Fowl Play" — DISCARDED (it was Episode 1 before the renumber; it has no number now)
 `ep01-fowl-play/FOWL-PLAY_EPISODE-1.mp4` — 46 shots, 4:54
 `ep01-fowl-play/FOWL-PLAY_EP1_TIGHT.mp4` — recut, 4:01
 
@@ -150,7 +150,7 @@ A-12 is the take the owner singled out as Mooney's ideal voice, so leaving it is
 **Residual pitch spread after revoicing (Mooney is 90-137 Hz) is normal prosody from a
 single actor. Do not "correct" it.** That mistake is what started the whole problem.
 
-**For Episode 3: assign a preset voice per character up front, record it in the table
+**For Episode 2 "House Rules": assign a preset voice per character up front, record it in the table
 above, and run voice_change as a finishing pass on every dialogue shot.** Budget about
 1 credit per shot. Do not fight the generator.
 
@@ -190,7 +190,7 @@ Nine of the 60 shots drop to **absolute digital silence** for 16.2s in total; D-
 silent for 3.6s of its 5.1s. Played back, the sound simply cuts out mid-scene.
 Loudness also ranged **-51 to -20 LUFS** shot to shot.
 
-`ep02-chonk/assemble.py` fixes all of it and Episode 3 should copy it, not ep01's:
+`ep02-chonk/assemble.py` fixes all of it and House Rules should copy it, not Fowl Play's:
 
 - per-clip loudness matching to -23 LUFS, gain clamped to [-8, +14] dB. **The clamp
   matters** — it stops near-silent ambience shots (B-9/B-11 blank faces, D-8) from
@@ -209,7 +209,7 @@ before this was caught.
 ## Prompt rules — do not relax them
 
 Full working blocks in `ep02-chonk/prompts/blocks.py`; all 36 shot prompts in
-`prompts/shots.py`, rendered to `shots.json`. **Copy that structure for Episode 3.**
+`prompts/shots.py`, rendered to `shots.json`. **Copy that structure for House Rules.**
 
 1. **Byte-identical location block per room, every shot.** Name the wrong environment
    explicitly in the negatives — "indoors" alone is not enough.
@@ -459,7 +459,7 @@ and he does not say anyone's name.
 Before and after that one line he is completely silent.
 ```
 
-It worked on all six. **Use it on every short line in Episode 3.**
+It worked on all six. **Use it on every short line in House Rules.**
 
 Two consequences worth knowing:
 
