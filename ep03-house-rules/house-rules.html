@@ -393,6 +393,44 @@
 <h2 class="act-name">Production notes</h2>
 <div class="note-grid">
 
+<div class="note"><h3>The episode has a score, designed once</h3>
+<p>Episode 1 had none: each shot named an instrument and the finished cut had no through-line.
+<code>prompts/blocks.py</code> now holds one cue state per act, named by what the music is
+<em>doing</em>, and <code>audio()</code> stamps the right one onto every prompt automatically —
+cold open <em>light playful pizzicato, unsuspecting</em>; Act One <em>a small self-important
+bureaucratic march</em>; Act Two <em>scheming tiptoe pizzicato building into a full
+Tom-and-Jerry chase orchestra</em>; Act Three <em>low noir bass, a deal being done in the
+dark</em>; Act Four <em>warm domestic music entirely on Gary's side, which is the joke</em>;
+resolution <em>fully earnest strings</em>. Transitions — "…music begins", "the music stops
+dead" — go in the shot where they happen.</p></div>
+
+<div class="note"><h3>Direct the mix, not just the ingredients</h3>
+<p>From the owner's example prompt of 2026-09-13. Episode 1 ended every prompt with a list
+— <em>"wind, one distant gull, crickets."</em> — and left the balance to chance. Every prompt
+now ends with the mix itself: <em>clear centered dialogue, subtle room ambience, cartoon Foley,
+precisely timed comedic SFX, original orchestral score that ducks under speech and stops dead
+on the punchline, no copyrighted music.</em> "Clear centered dialogue" and "ducks under speech"
+go straight at the complaint that drove the whole Episode 1 rework.</p></div>
+
+<div class="note"><h3>Ask for the silence, not just the absence of words</h3>
+<p>The same prompt says <em>"brief comedic silence after Mooney's line"</em>. Episode 1's cap
+only forbade extra speech, which left a vacuum the model filled anyway. <code>only()</code> now
+asks for the silence by name and tells the score to stop on the line. Better comedy and a
+tighter cap in one.</p></div>
+
+<div class="note"><h3>Time-code the beats in an action take</h3>
+<p>The example carries four gags in one fifteen-second generation by writing
+<em>0–4 sec:</em>, <em>4–8 sec:</em> and pinning the audio to each. <code>beats()</code> does
+that; B-11's montage is written this way in <code>prompts/worked_examples.py</code>. It buys
+reliability and rhythm rather than credits — cost is per second either way — but a trap and its
+payoff can no longer come back as two takes that fail to match.</p></div>
+
+<div class="note"><h3>"Harmless slapstick only"</h3>
+<p>Also lifted from that prompt, and Act Two is nothing but pratfalls. The filter refused two of
+fourteen trailer shots over wording that was in no way unsafe, so every trap shot carries
+<em>nobody is hurt, nobody is injured, everyone is fine immediately afterwards</em>. Free
+insurance on the most exposed act in the episode.</p></div>
+
 <div class="note"><h3>Write the sound effect into the action, in capitals, on the beat</h3>
 <p>Taken from the owner's Lucky Lots prompt (higgsfield.ai/s/kMh3mXz6BqY), which reads
 <em>"WHOOSH, a second rocket launches upward … a split second before BOOM, an enormous colorful

@@ -39,6 +39,39 @@ that, so nothing of it can be shot until a top-up.
    `ep03-house-rules/house-rules.html` before writing a single prompt; they carry every
    lesson from Episode 1 and the trailer, applied per shot.
 
+### The audio technique, learned 2026-09-13
+
+The owner's example prompt (`LL-BG-Cards/example-prompt.txt`) showed what our prompts
+were missing. Episode 1 ended every prompt with an ingredient list — *"wind, one distant
+gull, crickets."* — and left the balance to chance. The example **directs the mix**:
+
+> *Audio professionally mixed for television: clear centered dialogue, subtle room
+> ambience, cartoon Foley, precisely timed comedic SFX, original playful orchestral/jazz
+> score that ducks under speech, musical stops around punchlines, no copyrighted music.*
+
+*Clear centered dialogue* and *ducks under speech* go straight at the complaint that drove
+the whole Episode 1 rework. It is now in `ep03-house-rules/prompts/blocks.py` as
+`AUDIO_MIX`, appended verbatim to every prompt, along with four more things from the
+same file:
+
+- **The score has a state and the state changes.** One cue per act in `SCORE`, named by
+  what the music is *doing*, stamped onto every prompt by `audio()`. Episode 1 had no
+  score design at all.
+- **"Brief comedic silence after the line"** — the positive half of our ad-lib cap, now
+  in `only()`. Forbidding extra words left a vacuum; asking for the silence fills it.
+- **Time-coded beat blocks** (`beats()`) — *0-4 sec:*, *4-8 sec:* — carry several gags in
+  one take. Buys reliability and rhythm, not credits.
+- **"Harmless slapstick only"** — a filter hedge on Act Two, which is nothing but
+  pratfalls and is the most refusal-prone thing we have written.
+
+`prompts/worked_examples.py` writes three shots out in full — one dialogue, one action,
+one montage — so the shape is settled before the other sixty get written. **None of it is
+tested.** 108 credits would shoot all three; 54 would shoot the dialogue and action ones,
+which is the pair that would actually settle it.
+
+Not taken: the example is a 2D hand-drawn show and negates 3D. Ours is established
+3D Pixar-style across a finished episode and a trailer. Take the technique, never the look.
+
 ### Numbering, settled 2026-09-12
 
 Fowl Play was **discarded and has no number**. Chonk is **Episode 1**. House Rules is
