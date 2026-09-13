@@ -663,6 +663,22 @@ one shot in seven will be refused and keep a free fallback in mind for each.
 chonk he is in the episode, despite the same character block. Re-shooting the
 worst offenders is ~90 credits and was out of budget.
 
+### NEVER copy files over the main checkout
+
+**2026-09-13: an owner edit to HANDOFF.md was destroyed this way.** The session was
+working in a git worktree, and every push was followed by `cp HANDOFF.md ../../../` to
+keep the main checkout current. The owner had added Gary's and Gerald's voices to the
+cast table in the meantime; the copy overwrote them with no warning, the edit had never
+been committed, and it was unrecoverable.
+
+The copying only existed because the local `main` branch was stale while the remote had
+moved. That is fixed — the main checkout is a clean checkout of `origin/main`. From here:
+
+**Sync with `git -C <main checkout> merge --ff-only origin/main`, never with `cp`.**
+A merge refuses when local edits are in the way. A copy destroys them silently. If a
+merge ever does refuse, read what it is protecting before clearing it — do not blanket
+`checkout --` a file you have not diffed.
+
 ### The trap that cost a review cycle
 
 This session ran in a git worktree under `.claude/worktrees/`. `clips/`, `qa/`,
