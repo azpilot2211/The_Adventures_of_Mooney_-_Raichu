@@ -165,38 +165,6 @@
  },
  {
   "key": "A-7",
-  "dur": 5,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Raichu"
-  ],
-  "lines": [
-   [
-    "Raichu",
-    "Do me. Do me."
-   ]
-  ]
- },
- {
-  "key": "A-8",
-  "dur": 5,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Gary"
-  ],
-  "lines": [
-   [
-    "Gary",
-    "Also dishes."
-   ]
-  ]
- },
- {
-  "key": "A-9",
   "dur": 7,
   "cutaway": true,
   "free": false,
@@ -205,7 +173,7 @@
   "lines": []
  },
  {
-  "key": "A-10",
+  "key": "A-8",
   "dur": 5,
   "cutaway": false,
   "free": false,
@@ -221,6 +189,38 @@
   ]
  },
  {
+  "key": "A-9",
+  "dur": 6,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Lyndie"
+  ],
+  "lines": [
+   [
+    "Lyndie",
+    "Michael. Come and look at this."
+   ]
+  ]
+ },
+ {
+  "key": "A-10",
+  "dur": 5,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Mooney"
+  ],
+  "lines": [
+   [
+    "Mooney",
+    "She has never once said that about us."
+   ]
+  ]
+ },
+ {
   "key": "A-11",
   "dur": 5,
   "cutaway": false,
@@ -232,29 +232,13 @@
   "lines": [
    [
     "Raichu",
-    "I dropped a mug and he put me in the hall."
+    "He goes."
    ]
   ]
  },
  {
   "key": "A-12",
-  "dur": 4,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Mooney"
-  ],
-  "lines": [
-   [
-    "Mooney",
-    "You <em>live</em> in the hall."
-   ]
-  ]
- },
- {
-  "key": "A-13",
-  "dur": 6,
+  "dur": 5,
   "cutaway": false,
   "free": false,
   "silent": false,
@@ -270,7 +254,7 @@
  },
  {
   "key": "B-1",
-  "dur": 5,
+  "dur": 6,
   "cutaway": false,
   "free": false,
   "silent": false,
@@ -280,12 +264,28 @@
   "lines": [
    [
     "Raichu",
-    "Trap one."
+    "One bucket."
    ]
   ]
  },
  {
   "key": "B-2",
+  "dur": 4,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Gerald"
+  ],
+  "lines": [
+   [
+    "Gerald",
+    "What have you got."
+   ]
+  ]
+ },
+ {
+  "key": "B-3",
   "dur": 6,
   "cutaway": false,
   "free": false,
@@ -294,7 +294,16 @@
   "lines": []
  },
  {
-  "key": "B-3",
+  "key": "B-4",
+  "dur": 6,
+  "cutaway": false,
+  "free": false,
+  "silent": true,
+  "speakers": [],
+  "lines": []
+ },
+ {
+  "key": "B-5",
   "dur": 7,
   "cutaway": false,
   "free": false,
@@ -303,7 +312,7 @@
   "lines": []
  },
  {
-  "key": "B-4",
+  "key": "B-6",
   "dur": 4,
   "cutaway": false,
   "free": false,
@@ -319,7 +328,16 @@
   ]
  },
  {
-  "key": "B-5",
+  "key": "B-7",
+  "dur": 5,
+  "cutaway": true,
+  "free": false,
+  "silent": true,
+  "speakers": [],
+  "lines": []
+ },
+ {
+  "key": "B-8",
   "dur": 5,
   "cutaway": false,
   "free": false,
@@ -328,7 +346,7 @@
   "lines": []
  },
  {
-  "key": "B-6",
+  "key": "B-9",
   "dur": 7,
   "cutaway": false,
   "free": false,
@@ -337,7 +355,7 @@
   "lines": []
  },
  {
-  "key": "B-7",
+  "key": "B-10",
   "dur": 5,
   "cutaway": false,
   "free": false,
@@ -353,7 +371,7 @@
   ]
  },
  {
-  "key": "B-8",
+  "key": "B-11",
   "dur": 6,
   "cutaway": false,
   "free": false,
@@ -362,7 +380,39 @@
   "lines": []
  },
  {
-  "key": "B-9",
+  "key": "B-12",
+  "dur": 4,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Raichu"
+  ],
+  "lines": [
+   [
+    "Raichu",
+    "One saw."
+   ]
+  ]
+ },
+ {
+  "key": "B-13",
+  "dur": 4,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Gerald"
+  ],
+  "lines": [
+   [
+    "Gerald",
+    "What have you got."
+   ]
+  ]
+ },
+ {
+  "key": "B-14",
   "dur": 5,
   "cutaway": false,
   "free": false,
@@ -371,7 +421,25 @@
   "lines": []
  },
  {
-  "key": "B-10",
+  "key": "B-15",
+  "dur": 6,
+  "cutaway": false,
+  "free": false,
+  "silent": true,
+  "speakers": [],
+  "lines": []
+ },
+ {
+  "key": "B-16",
+  "dur": 5,
+  "cutaway": false,
+  "free": false,
+  "silent": true,
+  "speakers": [],
+  "lines": []
+ },
+ {
+  "key": "B-17",
   "dur": 5,
   "cutaway": false,
   "free": false,
@@ -387,42 +455,8 @@
   ]
  },
  {
-  "key": "B-11",
-  "dur": 8,
-  "cutaway": false,
-  "free": false,
-  "silent": true,
-  "speakers": [],
-  "lines": []
- },
- {
-  "key": "B-12",
-  "dur": 6,
-  "cutaway": false,
-  "free": false,
-  "silent": true,
-  "speakers": [],
-  "lines": []
- },
- {
-  "key": "B-13",
+  "key": "B-18",
   "dur": 5,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Mooney"
-  ],
-  "lines": [
-   [
-    "Mooney",
-    "This is worse than the boat."
-   ]
-  ]
- },
- {
-  "key": "B-14",
-  "dur": 6,
   "cutaway": true,
   "free": false,
   "silent": true,
@@ -431,161 +465,6 @@
  },
  {
   "key": "C-1",
-  "dur": 6,
-  "cutaway": false,
-  "free": false,
-  "silent": true,
-  "speakers": [],
-  "lines": []
- },
- {
-  "key": "C-2",
-  "dur": 4,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Mooney"
-  ],
-  "lines": [
-   [
-    "Mooney",
-    "I need something bigger."
-   ]
-  ]
- },
- {
-  "key": "C-3",
-  "dur": 5,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Gerald"
-  ],
-  "lines": [
-   [
-    "Gerald",
-    "How big."
-   ]
-  ]
- },
- {
-  "key": "C-4",
-  "dur": 4,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Mooney"
-  ],
-  "lines": [
-   [
-    "Mooney",
-    "Raccoon."
-   ]
-  ]
- },
- {
-  "key": "C-5",
-  "dur": 7,
-  "cutaway": false,
-  "free": false,
-  "silent": true,
-  "speakers": [],
-  "lines": []
- },
- {
-  "key": "C-6",
-  "dur": 4,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Mooney"
-  ],
-  "lines": [
-   [
-    "Mooney",
-    "What do you want."
-   ]
-  ]
- },
- {
-  "key": "C-7",
-  "dur": 4,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Gerald"
-  ],
-  "lines": [
-   [
-    "Gerald",
-    "The chair."
-   ]
-  ]
- },
- {
-  "key": "C-8",
-  "dur": 5,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Mooney"
-  ],
-  "lines": [
-   [
-    "Mooney",
-    "It's not my chair."
-   ]
-  ]
- },
- {
-  "key": "C-9",
-  "dur": 5,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Gerald"
-  ],
-  "lines": [
-   [
-    "Gerald",
-    "Then it isn't my catapult."
-   ]
-  ]
- },
- {
-  "key": "C-10",
-  "dur": 4,
-  "cutaway": false,
-  "free": false,
-  "silent": false,
-  "speakers": [
-   "Mooney"
-  ],
-  "lines": [
-   [
-    "Mooney",
-    "Take the chair."
-   ]
-  ]
- },
- {
-  "key": "C-11",
-  "dur": 7,
-  "cutaway": false,
-  "free": false,
-  "silent": true,
-  "speakers": [],
-  "lines": []
- },
- {
-  "key": "C-12",
   "dur": 5,
   "cutaway": false,
   "free": false,
@@ -596,18 +475,125 @@
   "lines": [
    [
     "Raichu",
-    "Ready."
+    "Everything you have."
    ]
   ]
  },
  {
-  "key": "C-13",
-  "dur": 8,
+  "key": "C-2",
+  "dur": 4,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Gerald"
+  ],
+  "lines": [
+   [
+    "Gerald",
+    "What have you got."
+   ]
+  ]
+ },
+ {
+  "key": "C-3",
+  "dur": 6,
   "cutaway": false,
   "free": false,
   "silent": true,
   "speakers": [],
   "lines": []
+ },
+ {
+  "key": "C-4",
+  "dur": 12,
+  "cutaway": false,
+  "free": false,
+  "silent": true,
+  "speakers": [],
+  "lines": []
+ },
+ {
+  "key": "C-5",
+  "dur": 6,
+  "cutaway": false,
+  "free": false,
+  "silent": true,
+  "speakers": [],
+  "lines": []
+ },
+ {
+  "key": "C-6",
+  "dur": 5,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Mooney"
+  ],
+  "lines": [
+   [
+    "Mooney",
+    "What are we even doing."
+   ]
+  ]
+ },
+ {
+  "key": "C-7",
+  "dur": 6,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Raichu"
+  ],
+  "lines": [
+   [
+    "Raichu",
+    "I don't remember. But I've ordered more rope."
+   ]
+  ]
+ },
+ {
+  "key": "C-8",
+  "dur": 6,
+  "cutaway": false,
+  "free": false,
+  "silent": true,
+  "speakers": [],
+  "lines": []
+ },
+ {
+  "key": "C-9",
+  "dur": 4,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Mooney"
+  ],
+  "lines": [
+   [
+    "Mooney",
+    "It's cleaner."
+   ]
+  ]
+ },
+ {
+  "key": "C-10",
+  "dur": 5,
+  "cutaway": false,
+  "free": false,
+  "silent": false,
+  "speakers": [
+   "Raichu"
+  ],
+  "lines": [
+   [
+    "Raichu",
+    "That's what he wants."
+   ]
+  ]
  },
  {
   "key": "D-1",
@@ -661,7 +647,7 @@
  },
  {
   "key": "D-5",
-  "dur": 6,
+  "dur": 5,
   "cutaway": true,
   "free": false,
   "silent": true,
@@ -670,7 +656,7 @@
  },
  {
   "key": "D-6",
-  "dur": 6,
+  "dur": 5,
   "cutaway": false,
   "free": false,
   "silent": false,
@@ -778,22 +764,29 @@
   "lines": [
    [
     "Mooney",
-    "You know, I learned something today. I learned that when somebody moves into your house and makes it cleaner, kinder and better run than you ever did \u2014 the only decent thing left to do is get a bigger catapult."
+    "You know, I learned something today. I learned that when somebody is better than you at everything, and you can't make him leave, and the people you love like him more \u2014 there's really only one thing you can do."
    ]
   ]
  },
  {
   "key": "E-4",
-  "dur": 5,
+  "dur": 6,
   "cutaway": false,
   "free": false,
-  "silent": true,
-  "speakers": [],
-  "lines": []
+  "silent": false,
+  "speakers": [
+   "Raichu"
+  ],
+  "lines": [
+   [
+    "Raichu",
+    "Where did you get glasses."
+   ]
+  ]
  },
  {
   "key": "E-5",
-  "dur": 6,
+  "dur": 5,
   "cutaway": false,
   "free": false,
   "silent": false,
@@ -803,7 +796,7 @@
   "lines": [
    [
     "Mooney",
-    "It's already ordered."
+    "The drawer."
    ]
   ]
  },
@@ -823,16 +816,11 @@
   "free": false,
   "silent": false,
   "speakers": [
-   "Gary",
-   "Mooney (off)"
+   "Raichu (off)"
   ],
   "lines": [
    [
-    "Gary",
-    "This is Denise."
-   ],
-   [
-    "Mooney (off)",
+    "Raichu (off)",
     "No."
    ]
   ]

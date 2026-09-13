@@ -23,11 +23,11 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 TITLE = "House Rules"
 EPISODE = 2
-SUBTITLE = "One box. One key. One raccoon who has done nothing wrong."
-LOGLINE = ("Gary moves in properly, as promised. He brings a chore wheel, a laminated "
-           "sense of fairness and a key nobody gave him. Mooney and Raichu declare war "
-           "on a houseguest who wins every round without once raising his voice — and "
-           "who is, at every point, completely within his rights.")
+SUBTITLE = "Every attempt to get rid of him improves the house."
+LOGLINE = ("Gary moves in properly, as promised, and Lyndie compliments the house for the "
+           "first time in nine years. Mooney and Raichu declare war. Every trap they set "
+           "fails on its own and leaves the place tidier than it found it, Gary never once "
+           "notices he is under attack, and by the end the humans are right to prefer him.")
 
 RATE = 4.5          # credits per second, measured 2026-09-11
 DIVIDER = 0.8       # scene divider, built locally, free
@@ -50,31 +50,28 @@ def s(code, dur, action, lines=None, beat=None, cutaway=False, free=False):
 
 act("Cold open", "The Key",
     "Gary lets himself in. Nobody stops him, because nobody can think of the grounds. "
-    "Five shots, no explanation offered, and the last line is the whole episode.", [
+    "The last line plants the game: he is already more settled here than they are.", [
 
  s("CO-1", 5,
    "Exterior, the front door of the cottage, morning. Close on the cat flap at the bottom of "
    "the door. A raccoon paw comes through the flap from outside, feels its way up the inside of "
-   "the door, and turns the deadbolt. CLUNK. The door swings open with a long CREEEAK. GARY walks in "
-   "upright, carrying one cardboard box.",
-   beat="no dialogue · tumbler click, hinge creak, one jaunty bassoon"),
+   "the door, and turns the deadbolt. CLUNK. The door swings open with a long CREEEAK. GARY "
+   "walks in upright, carrying one cardboard box.",
+   beat="no dialogue · tumbler CLUNK, hinge CREEEAK, one jaunty bassoon"),
 
- s("CO-2", 4,
-   "Interior living room. Mooney is flat on the rug. He does not get up. He does not move at all.",
+ s("CO-2", 4, "Interior living room. Mooney is flat on the rug. He does not get up.",
    [("Mooney", "He has a key.")]),
 
- s("CO-3", 4,
-   "Raichu at the window, ear tufts straight up, thrilled by the wrong detail.",
+ s("CO-3", 4, "Raichu at the window, ear tufts straight up, thrilled by the wrong detail.",
    [("Raichu", "He has a <em>box.</em>")]),
 
  s("CO-4", 5,
-   "Gary sets the box down on the rug, opens it, and lifts out one small framed photograph. He "
-   "stands it on the side table and turns it a few degrees until it is straight, CLINK. The "
-   "photograph is of the armchair.",
-   beat="no dialogue · cardboard, a small glass clink, one sentimental harp"),
+   "Gary sets the box down, opens it, and lifts out one small framed photograph. He stands it "
+   "on the side table and turns it a few degrees until it is straight, CLINK. The photograph is "
+   "of the armchair.",
+   beat="no dialogue · cardboard, a small glass CLINK, one sentimental harp"),
 
- s("CO-5", 5,
-   "Mooney has still not moved.",
+ s("CO-5", 5, "Mooney has still not moved.",
    [("Mooney", "That's a photograph of the chair he's sitting in.")]),
 ])
 
@@ -83,10 +80,10 @@ act("Titles", "Main Title reused",
  s("TS-1", 10.6, "The existing main title, unchanged.", beat="reused plate · 0 credits", free=True),
 ], divider_after=False)
 
-act("Act One", "The Wheel",
-    "Gary institutionalises himself in about a minute. He is never rude, never loud and never "
-    "wrong, which is what makes it unbearable. The act ends on the shortest declaration of war "
-    "the series has managed.", [
+act("Act One", "The Improvement",
+    "The game is set here and it is not \"Gary is annoying\" — it is that everything the cats do "
+    "about Gary makes the house better, and he gets the credit. A-9 is the hinge: Lyndie notices "
+    "the house, not the raccoon, and the war starts over a compliment that was never about him.", [
 
  s("A-1", 5,
    "Gary in the armchair, reading glasses on, holding up a large cardboard disc with wedges "
@@ -105,188 +102,204 @@ act("Act One", "The Wheel",
 
  s("A-5", 4, "Mooney does not blink.", [("Mooney", "We don't have hands.")]),
 
- s("A-6", 5, "Gary, kindly, not looking up.",
-   [("Gary", "That's not on the wheel.")]),
+ s("A-6", 5, "Gary, kindly, not looking up.", [("Gary", "That's not on the wheel.")]),
 
- s("A-7", 5, "Raichu shoulders into frame, desperate to be included in his own oppression.",
-   [("Raichu", "Do me. Do me.")]),
-
- s("A-8", 5, "Gary spins it again. It ticks. It stops.", [("Gary", "Also dishes.")]),
-
- s("A-9", 7,
-   "<b>Cutaway.</b> The kitchen sink. Both cats up on their hind legs, one washing, one drying, "
-   "in complete silence, wearing tiny aprons. Neither of them looks at the other. Hold on it far "
-   "too long.",
+ s("A-7", 7,
+   "<b>Cutaway.</b> The kitchen sink. Both cats up on their hind legs in tiny aprons, one washing "
+   "and one drying, in complete silence. Neither looks at the other. Hold far too long.",
    beat="no dialogue · running water, one squeaky plate, a clock", cutaway=True),
 
- s("A-10", 5, "Back to Mooney, who turns and addresses the camera directly, flat.",
+ s("A-8", 5, "Back to Mooney, who turns and addresses the camera directly, flat.",
    [("Mooney", "That went on for nine days.")]),
 
- s("A-11", 5, "Raichu, genuinely wounded.",
-   [("Raichu", "I dropped a mug and he put me in the hall.")]),
+ s("A-9", 6,
+   "LYNDIE comes in and stops dead. She looks slowly around a living room that is, for the first "
+   "time in her life, immaculate. She is genuinely moved. She does not look at the raccoon in the "
+   "armchair even once.",
+   [("Lyndie", "Michael. Come and look at this.")]),
 
- s("A-12", 4, "Mooney, without sympathy.", [("Mooney", "You <em>live</em> in the hall.")]),
+ s("A-10", 5, "Mooney watching her from the floor. This is the wound the whole episode grows from.",
+   [("Mooney", "She has never once said that about us.")]),
 
- s("A-13", 6,
-   "Mooney rolls upright. It is the first time he has stood up in two episodes and the camera "
+ s("A-11", 5,
+   "Raichu rises into frame, ear tufts going up like a periscope. Something has ignited and it "
+   "will not go out for the rest of the episode.",
+   [("Raichu", "He goes.")]),
+
+ s("A-12", 5,
+   "Mooney gets to his feet. It is the first time he has stood up in two episodes and the camera "
    "should treat it as an event.",
    [("Mooney", "Get the string.")]),
 ])
 
-act("Act Two", "The Traps",
-    "The Tom and Jerry act. Nine of these fourteen shots have no dialogue at all — the comedy "
-    "is entirely physical, every trap backfires onto the cat who set it, and Gary never once "
-    "notices he is being attacked.", [
+act("Act Two", "Acme",
+    "Gerald is the supplier and every single trap component comes from him — Chuck Jones' rule "
+    "seven, which is why forty Road Runner cartoons never ran out of ideas. He asks the same "
+    "question every time and the cats pay in things they will miss later. Gary never notices he "
+    "is under attack; each trap fails on its own and leaves the house tidier than it found it.", [
 
- s("B-1", 5,
-   "Raichu has drawn a plan on the back of a cereal packet in claw scratches. It means nothing. "
-   "He taps it with total authority.",
-   [("Raichu", "Trap one.")]),
+ s("B-1", 6,
+   "Night. The kitchen window. GERALD is on the moonlit fence outside with a small paper bag "
+   "under one foot. He has been there some time. Raichu is up on the sill at the glass.",
+   [("Raichu", "One bucket.")]),
 
- s("B-2", 6,
+ s("B-2", 4, "Gerald does not blink.", [("Gerald", "What have you got.")]),
+
+ s("B-3", 6,
+   "Raichu pushes MOONEY'S COLLAR across the windowsill with one paw. Gerald turns it over with "
+   "his bill at length, nods once, and the paper bag slides the other way.",
+   beat="no dialogue · a collar buckle CHINK on wood, paper rustle, one tense violin note"),
+
+ s("B-4", 6,
    "<b>Trap one.</b> A metal bucket balanced on the top edge of the door frame above the "
-   "armchair. A string runs from the bucket, across the ceiling, down the far wall, to Raichu, "
-   "who is tiptoeing backwards holding the end of it and barely breathing. The string goes CREAK.",
-   beat="no dialogue · string creak, tiptoe pizzicato, one long held note"),
+   "armchair. A string runs from it across the ceiling, down the far wall, to Raichu, who is "
+   "tiptoeing backwards holding the end and barely breathing. The string goes CREAK.",
+   beat="no dialogue · string CREAK, tiptoe pizzicato, one long held note"),
 
- s("B-3", 7,
-   "Gary walks in underneath the bucket. Nothing happens. He sits down in the armchair. He looks "
-   "up at the bucket for a moment. Then he reaches up, unhooks it, CLUNK, sets it down neatly beside "
-   "the chair, and sharpens his pencil into it, SCRITCH SCRITCH.",
-   beat="no dialogue · a small clunk, pencil sharpening, a defeated trombone"),
+ s("B-5", 7,
+   "Gary walks in underneath the bucket and sits down in the armchair. Nothing happens. Without "
+   "looking up, and without any sign that he has noticed anything at all, he reaches up, unhooks "
+   "the bucket, CLUNK, sets it down neatly beside the chair, and sharpens his pencil into it, "
+   "SCRITCH SCRITCH. He never once looks at the string.",
+   beat="no dialogue · a small CLUNK, pencil sharpening, a defeated trombone"),
 
- s("B-4", 4, "Mooney, from the doorway, deadpan.", [("Mooney", "He has a bin now.")]),
-
- s("B-5", 5,
-   "<b>Trap two.</b> Raichu tips an entire jar of marbles across the hallway floor, a long skittering "
-   "RATTLE, and flattens himself against the wall, delighted with his own genius.",
-   beat="no dialogue · a long skittering pour, tense pizzicato"),
-
- s("B-6", 7,
-   "Locked-off wide, straight down the hall. Gary strolls across the marbles without looking "
-   "down, paws behind his back, entirely level, and exits. A beat of nothing. Then MOONEY steps "
-   "into the hall, WHOOP, goes straight up into the air with all four legs out, and SKKKRRT, "
-   "slides the whole length of the floor and out of frame. CRASH.",
-   beat="no dialogue · marbles, a comic slide, a distant collapse of saucepans"),
+ s("B-6", 4, "Mooney, from the doorway, deadpan.", [("Mooney", "He has a bin now.")]),
 
  s("B-7", 5,
+   "<b>Cutaway.</b> A woman's hands set a SECOND bin down beside the first one and square them "
+   "both up, approvingly. No faces in frame.",
+   beat="no dialogue · two bins set down, one small pleased humming note", cutaway=True),
+
+ s("B-8", 5,
+   "<b>Trap two.</b> Raichu tips an entire jar of marbles across the hallway floor, a long "
+   "skittering RATTLE, and flattens himself against the wall, delighted with his own genius.",
+   beat="no dialogue · a long skittering RATTLE, tense pizzicato"),
+
+ s("B-9", 7,
+   "Locked-off wide straight down the hall. Gary strolls across the marbles without once looking "
+   "down, paws behind his back, entirely level, and exits the far end. A beat of nothing. Then "
+   "MOONEY steps into the hall, WHOOP, goes straight up into the air with all four legs out, and "
+   "SKKKRRT, slides the whole length of the floorboards and out of frame. CRASH.",
+   beat="no dialogue · marbles, a rising WHOOP, a long comic slide, a distant CRASH of saucepans"),
+
+ s("B-10", 5,
    "Mooney upside down against the far wall, legs folded over his head, perfectly calm about it.",
    [("Mooney", "Trap two.")]),
 
- s("B-8", 6,
-   "<b>Trap three.</b> Raichu on the floor beside the armchair with a handsaw, cutting a neat "
-   "circle in the floorboards around it, SHHK SHHK SHHK. He is sawing from inside the circle. The audience is "
-   "ahead of him and should be allowed to enjoy that for a moment.",
-   beat="no dialogue · rhythmic sawing, a slowly rising oboe of dramatic irony"),
+ s("B-11", 6,
+   "Gary sweeps the marbles into a jar with a small brush, sets the jar on a shelf, and squares "
+   "it up with one claw. The hallway is now spotless. He has still not looked at anything.",
+   beat="no dialogue · a soft brush, marbles pouring into glass, one prim little woodwind phrase"),
 
- s("B-9", 5,
+ s("B-12", 4, "Back at the window. Same shot, same seagull, same night.",
+   [("Raichu", "One saw.")]),
+
+ s("B-13", 4, "Gerald.", [("Gerald", "What have you got.")]),
+
+ s("B-14", 5,
+   "Raichu pushes the television remote across the windowsill. Gerald inspects it, nods once, and "
+   "a handsaw slides the other way.",
+   beat="no dialogue · plastic on wood, paper rustle, the same tense violin note"),
+
+ s("B-15", 6,
+   "<b>Trap three.</b> Raichu on the floor beside the armchair with the handsaw, cutting a neat "
+   "circle in the floorboards around it, SHHK SHHK SHHK. He is sawing from inside the circle. "
+   "The audience is ahead of him and should be allowed to enjoy that for a moment.",
+   beat="no dialogue · rhythmic SHHK sawing, a slowly rising oboe of dramatic irony"),
+
+ s("B-16", 5,
    "The circle gives way, CRACK. Raichu drops through it with a long descending WHEEEE and lands "
    "somewhere far below, THUD. The armchair and Gary do not move a millimetre. Gary turns a page.",
-   beat="no dialogue · a crack, a long descending whistle, a distant thud"),
+   beat="no dialogue · a CRACK, a long descending WHEEEE, a distant THUD"),
 
- s("B-10", 5, "Gary, still reading, mildly.", [("Gary", "Second one this week.")]),
+ s("B-17", 5, "Gary, still reading, mildly, as a household observation and not an accusation.",
+   [("Gary", "Second one this week.")]),
 
- s("B-11", 8,
-   "<b>Music scene.</b> A full orchestral chase cue and not one word. Fast cuts, a musical hit on "
-   "every impact: a mousetrap the size of a door snaps shut on nothing, SNAP; a rope snare hoists "
-   "MOONEY up by one back leg, SPROING; a desk fan and a burst bag of flour turn both cats "
-   "completely white, FWOOMPH; RAICHU fires a grape from a slingshot, TWANG, and it comes "
-   "straight back and hits him, BONK.",
-   beat="no dialogue · full chase orchestra, whip crack, sproing, a cymbal on every impact"),
-
- s("B-12", 6,
-   "The aftermath. Both cats hanging upside down in the doorway, flour-white, wound in the same "
-   "length of rope, revolving slowly. Gary steps over them, reaches up, and turns off the light, CLICK.",
-   beat="no dialogue · one light switch, a single sad clarinet"),
-
- s("B-13", 5, "Darkness. Two pairs of eyes.",
-   [("Mooney", "This is worse than the boat.")]),
-
- s("B-14", 6,
-   "<b>Cutaway.</b> A small rowing boat in the middle of the harbour at dawn. Both cats aboard. "
-   "Raichu is rowing with one oar, so the boat is turning slowly in a circle. Mooney sits in the "
-   "bow facing forward. Neither of them reacts. Never mentioned again.",
-   beat="no dialogue · gulls, one oar, water, a resigned accordion", cutaway=True),
+ s("B-18", 5,
+   "<b>Cutaway.</b> MICHAEL kneeling beside the new hole in the floorboards, shining a torch down "
+   "into it, absolutely delighted with what he has found.",
+   beat="no dialogue · a torch click, a happy echo down a hole, one discovery chord", cutaway=True),
 ])
 
-act("Act Three", "Procurement",
-    "Gerald returns with a second business. The transaction is played exactly as flat as the "
-    "sandwich deal in Episode 1, and it costs Mooney the one thing he was fighting for.", [
+act("Act Three", "The Fanatic",
+    "Chuck Jones: \"the Coyote could stop anytime — if he were not a fanatic,\" and a fanatic is "
+    "one who redoubles his effort when he has forgotten his aim. C-7 is that sentence as a joke, "
+    "and it is the thesis of the episode. Mooney quits here; Raichu cannot.", [
 
- s("C-1", 6,
-   "Night. The kitchen window. GERALD is on the moonlit fence outside. He has been there for some "
-   "time and is in no hurry to say so.",
-   beat="no dialogue · night crickets, one slow wingbeat, a low bass note"),
+ s("C-1", 5, "The window again. Raichu has stopped asking for specific items.",
+   [("Raichu", "Everything you have.")]),
 
- s("C-2", 4, "Mooney at the glass.", [("Mooney", "I need something bigger.")]),
+ s("C-2", 4, "Gerald, unchanged, unhurried, doing extremely well out of this.",
+   [("Gerald", "What have you got.")]),
 
- s("C-3", 5, "Gerald does not blink.", [("Gerald", "How big.")]),
+ s("C-3", 6,
+   "Wide on the windowsill. It is stacked with everything the cats own — a toy mouse, a catnip "
+   "banana, both collars, a small ball with a bell in it. Raichu pushes the entire pile across "
+   "with both paws. Gerald does not help.",
+   beat="no dialogue · a small avalanche of toys, one bell, paper rustle, a smug gull call"),
 
- s("C-4", 4, "Mooney.", [("Mooney", "Raccoon.")]),
+ s("C-4", 12,
+   "<b>Music scene.</b> A fast comedy montage in one continuous take, four traps, each landing "
+   "cleanly on its own beat, and every single one of them going wrong for the cat who set it. "
+   "Gary is not in this shot at all.",
+   beat="no dialogue · SNAP, SPROING, FWOOMPH, TWANG with three ricochet PINGs, a final BONK · "
+        "full chase orchestra with a musical hit on every impact"),
 
- s("C-5", 7,
-   "Gerald turns his head very slowly toward a tarpaulin further along the fence. He takes the "
-   "corner of it in his bill and pulls, a long canvas SHHHHP. Underneath, gleaming in the "
-   "moonlight, is a full-size wooden catapult.",
-   beat="no dialogue · canvas sliding, one enormous orchestral reveal, crickets resuming"),
+ s("C-5", 6,
+   "The aftermath. Both cats hang upside down in the doorway, flour-white, wound in the same "
+   "length of rope, revolving slowly. Gary steps over them without looking, reaches up, and turns "
+   "off the light, CLICK.",
+   beat="no dialogue · rope creaking, one light switch CLICK, a single sad clarinet"),
 
- s("C-6", 4, "Mooney, who has learned nothing.", [("Mooney", "What do you want.")]),
+ s("C-6", 5, "Darkness. Two pairs of reflective eyes. Mooney has run out.",
+   [("Mooney", "What are we even doing.")]),
 
- s("C-7", 4, "Gerald.", [("Gerald", "The chair.")]),
+ s("C-7", 6,
+   "Raichu in the dark. Absolutely certain. Not one flicker of doubt.",
+   [("Raichu", "I don't remember. But I've ordered more rope.")]),
 
- s("C-8", 5, "Mooney, without a flicker.", [("Mooney", "It's not my chair.")]),
+ s("C-8", 6,
+   "Morning. A wide locked-off shot of the living room. It is IMMACULATE — swept, squared, the "
+   "bins lined up, the hole in the floor neatly boarded over and polished. Gary is in the "
+   "armchair doing his crossword. Sunlight. It looks like a show home.",
+   beat="no dialogue · a clock, a pencil scratch, one warm domestic phrase"),
 
- s("C-9", 5, "Gerald.", [("Gerald", "Then it isn't my catapult.")]),
+ s("C-9", 4, "Mooney in the doorway, looking at the room. He has understood before Raichu has.",
+   [("Mooney", "It's cleaner.")]),
 
- s("C-10", 4, "Mooney sells the thing the entire war is about.",
-   [("Mooney", "Take the chair.")]),
-
- s("C-11", 7,
-   "Exterior, the garden at dawn. Locked-off wide. Both cats hauling on the catapult's winch, "
-   "straining, back paws slipping in the wet grass. The arm ratchets back, CLICK, CLICK, CLICK. Raichu wedges "
-   "a stone under it, CLUNK.",
-   beat="no dialogue · ratchet clicks, rope creak, two cats straining"),
-
- s("C-12", 5, "Raichu, radiant, one paw on the release.", [("Raichu", "Ready.")]),
-
- s("C-13", 8,
-   "Locked-off wide of the whole garden. The rope is cut, TWANG. The arm swings the wrong way, WHUMP, and both cats are launched "
-   "straight out of the top of frame, their howls dopplering away to nothing. The catapult, "
-   "undamaged, rocks gently to a stop. Behind it, in the lit kitchen window, Gary does not look "
-   "up. Two distant SPLASHES.",
-   beat="no dialogue · whip crack, a doppler wail going away, two distant splashes"),
+ s("C-10", 5, "Raichu, refusing it entirely, eyes narrowed at the tidiest room he has ever seen.",
+   [("Raichu", "That's what he wants.")]),
 ])
 
-act("Act Four", "The Lease",
-    "The South Park turn: the institution sides with the newcomer, and it is not even close. "
-    "Everything the cats did was against a tenant in good standing.", [
+act("Act Four", "The Tenant",
+    "The South Park turn. The institution does not merely side with Gary — it is right to. "
+    "Everything the cats did was against a tenant in good standing who has improved the property.", [
 
  s("D-1", 6,
-   "Interior living room. MICHAEL and LYNDIE stand over the armchair, delighted, photographing "
-   "Gary in it. Gary looks at the camera. He does not smile, but somehow it reads as a smile.",
-   beat="no dialogue · camera shutter, warm domestic music"),
+   "MICHAEL and LYNDIE stand over the armchair, delighted, photographing Gary in it. Gary looks "
+   "at the camera. He does not smile, but somehow it reads as a smile.",
+   beat="no dialogue · a camera shutter, warm domestic music"),
 
  s("D-2", 6,
-   "The doorway behind them. Both cats, soaked through, draped in seaweed, dripping onto the floorboards, "
-   "drip, drip, SQUELCH. Nobody turns around.",
-   beat="no dialogue · dripping, one long squelch, a single fly"),
+   "The doorway behind them. Both cats, flour-white, still tangled in rope, dripping. Nobody "
+   "turns around.",
+   beat="no dialogue · rope creaking, one long drip, a single fly"),
 
  s("D-3", 4, "Lyndie, off-screen, warmly.", [("Lyndie", "He's so well behaved.")]),
 
- s("D-4", 5, "Mooney to camera, harbour water still running off his chin.",
+ s("D-4", 5, "Mooney turns his head and speaks directly to the camera.",
    [("Mooney", "He pays rent.")]),
 
- s("D-5", 6,
-   "<b>Cutaway.</b> The kitchen counter, close. Gary slides a single coin across it with one claw, a long CHINK. "
-   "A human hand picks the coin up and pockets it. DING. Neither face is in frame.",
-   beat="no dialogue · one coin on wood, a cash-register ding that is far too pleased with itself",
+ s("D-5", 5,
+   "<b>Cutaway.</b> The kitchen counter, close. Gary slides a single coin across it with one "
+   "claw, a long CHINK. A human hand picks it up and pockets it. Neither face is in frame.",
+   beat="no dialogue · one coin CHINK on wood, a cash-register DING far too pleased with itself",
    cutaway=True),
 
- s("D-6", 6,
-   "Raichu, devastated, ear tufts flat for the first time in the series.",
+ s("D-6", 5, "Raichu, devastated, ear tufts flat for the first time in the series.",
    [("Raichu", "But we <em>live</em> here.")]),
 
- s("D-7", 6, "Gary, kindly, still not looking up from the crossword.",
+ s("D-7", 6, "Gary, kindly, still not looking up from the crossword. He means it entirely.",
    [("Gary", "You live here too.")]),
 
  s("D-8", 5, "Mooney.", [("Mooney", "That's the worst part.")]),
@@ -302,29 +315,29 @@ act("Act Four", "The Lease",
 ])
 
 act("Resolution", "The Wrong Moral",
-    "Played completely straight — sunset, warm strings, the full apparatus of a sincere ending — "
-    "and attached to a conclusion that is worse than the one in Episode 1.", [
+    "Played completely straight — sunset, warm strings, the full apparatus of a sincere ending. "
+    "The moral is worse than Episode 1's because this time he acts on it in the same breath, and "
+    "the last line is a callback to the laser drawer.", [
 
  s("E-1", 6,
-   "The deck at sunset. The two cats side by side at the rail, still damp, one strand of seaweed "
-   "on Raichu's ear. Warm golden light. Neither looks at the other.",
+   "The deck at sunset. Both cats side by side at the rail, still faintly white with flour. Warm "
+   "golden light. Neither looks at the other.",
    [("Raichu", "Maybe he's not so bad.")]),
 
- s("E-2", 5, "A long, warm, sincere pause. Strings underneath.",
-   [("Mooney", "He is.")]),
+ s("E-2", 5, "A long, warm, sincere pause. Strings underneath.", [("Mooney", "He is.")]),
 
  s("E-3", 8,
    "Mooney turns to face the camera. Total sincerity, fully earnest music, no wink anywhere.",
-   [("Mooney", "You know, I learned something today. I learned that when somebody moves into your "
-               "house and makes it cleaner, kinder and better run than you ever did — the only "
-               "decent thing left to do is get a bigger catapult.")]),
+   [("Mooney", "You know, I learned something today. I learned that when somebody is better than "
+               "you at everything, and you can't make him leave, and the people you love like him "
+               "more — there's really only one thing you can do.")]),
 
- s("E-4", 5,
-   "A beat. GARY walks into frame, sits down on the deck between them, and opens his crossword. "
-   "Nobody says anything. The strings continue warmly, entirely undisturbed.",
-   beat="no dialogue · deck creak, pencil scratch, warm strings continuing"),
+ s("E-4", 6,
+   "A wider shot of the two of them at the rail. MOONEY IS NOW WEARING SMALL ROUND READING "
+   "GLASSES. He was not wearing them a moment ago. He looks out at the harbour, serene.",
+   [("Raichu", "Where did you get glasses.")]),
 
- s("E-5", 6, "Mooney does not look at him.", [("Mooney", "It's already ordered.")]),
+ s("E-5", 5, "Mooney does not turn his head.", [("Mooney", "The drawer.")]),
 ])
 
 act("End card", "& Teaser",
@@ -332,9 +345,10 @@ act("End card", "& Teaser",
  s("EC-1", 8.1, "The existing end plate. Logo and copyright composited in post.",
    beat="reused plate · 0 credits", free=True),
  s("TZ-1", 5,
-   "The armchair. Gary, glasses on, crossword in paw. Sitting beside him, in an identical pair of "
-   "small round reading glasses, is a SECOND raccoon.",
-   [("Gary", "This is Denise."), ("Mooney (off)", "No.")]),
+   "The armchair, and beside it a SECOND armchair that was not there before. GARY sits in one "
+   "doing his crossword. MOONEY sits in the other in identical small round reading glasses, doing "
+   "his own crossword. Neither looks up. Neither speaks. An unseen cat objects from off-screen.",
+   [("Raichu (off)", "No.")]),
 ], divider_after=False)
 
 
@@ -476,11 +490,11 @@ def check(shots, silent, cutaways, speakers):
     b = [sh for sh in shots if sh["code"].startswith("B-")]
     claims = [
         (len(shots), 63, "total shots"),
-        (silent, 25, "silent shots"),
-        (cutaways, 4, "cutaways"),
-        (sum(1 for sh in b if not sh["lines"]), 9, "silent shots in Act Two"),
-        (len(b), 14, "shots in Act Two"),
-        (speakers.get("Gary", 0), 7, "Gary's lines"),
+        (silent, 26, "silent shots"),
+        (cutaways, 5, "cutaways"),
+        (sum(1 for sh in b if not sh["lines"]), 11, "silent shots in Act Two"),
+        (len(b), 18, "shots in Act Two"),
+        (speakers.get("Gary", 0), 5, "Gary's lines"),
         (speakers.get("Gerald", 0), 3, "Gerald's lines"),
     ]
     bad = ["%s: notes say %d, shot list has %d" % (what, claimed, actual)
@@ -654,7 +668,7 @@ tighter cap in one.</p></div>
 <div class="note"><h3>Time-code the beats in an action take</h3>
 <p>The example carries four gags in one fifteen-second generation by writing
 <em>0–4 sec:</em>, <em>4–8 sec:</em> and pinning the audio to each. <code>beats()</code> does
-that; B-11's montage is written this way in <code>prompts/worked_examples.py</code>. It buys
+that; C-4's montage is written this way. It buys
 reliability and rhythm rather than credits — cost is per second either way — but a trap and its
 payoff can no longer come back as two takes that fail to match.</p></div>
 
@@ -688,7 +702,7 @@ only where one long take replaces three shots that would each waste the four-sec
 B-11's montage is the one candidate here. Everything else is cheaper on 2.0.</p></div>
 
 <div class="note"><h3>Every dialogue shot is single-speaker</h3>
-<p>Only TZ-1 has two. <code>voice_change</code> converts every voice on a track, so a shot where
+<p>Not one shot in this episode has two. Every line in the episode is recoverable for 1 credit. <code>voice_change</code> converts every voice on a track, so a shot where
 both cats speak can never be put on the locked voices — that is why Episode 1's CO-2 had to be
 re-shot. Mooney is Cillian, Raichu is Miles. Keep it that way and each line costs 1 credit to
 lock.</p></div>
@@ -700,7 +714,7 @@ owner's Episode 1 notes were this and nothing else. Use the <code>only()</code> 
 ones, which is exactly the failure case.</p></div>
 
 <div class="note"><h3>Silent shots are the reliable ones</h3>
-<p>Twenty-five of these sixty-three shots have no dialogue at all. That is deliberate: a shot with no
+<p>Twenty-six of these sixty-three shots have no dialogue at all. That is deliberate: a shot with no
 speech cannot be padded, cannot be mumbled and never needs revoicing. It is also what Tom and Jerry
 actually is. State it explicitly — <em>there is no dialogue in this shot, nobody speaks</em> — or
 the model will add some.</p></div>
@@ -711,7 +725,7 @@ two-cat shots left dead frame at one end. Generate action a second or two long a
 per shot the way <code>series/trailer/assemble.py</code> does, rather than head-trimming only.</p></div>
 
 <div class="note"><h3>Lock every two-cat frame</h3>
-<p>B-6, B-11, B-12, C-11, C-13 and D-2 all have both cats moving at once, the hardest thing this
+<p>B-9, C-4, C-5 and D-2 all have both cats moving at once, the hardest thing this
 pipeline does. Static locked-off wide, both cats named with their side of frame, and
 <em>both cats remain fully inside the frame for the entire shot</em> — and expect to trim an exit
 anyway.</p></div>
@@ -723,7 +737,7 @@ fallback <em>before</em> generating: B-3 can be a still of the bucket, B-9 can h
 the whole of B-11 can be built from the other traps' offcuts. Rejected jobs are not charged.</p></div>
 
 <div class="note"><h3>The music scene is one shot, not a sequence</h3>
-<p>B-11 asks for the montage inside a single 8-second generation, because cutting four separate
+<p>C-4 asks for the montage inside a single 12-second generation, because cutting four separate
 4-second minimums together would cost 72 credits for four seconds of usable footage. If it comes
 back weak, build the montage locally from the trap shots already in the can and score it with a
 synthesised cue — <code>divider.py</code> and <code>outro.py</code> already synthesise audio with
@@ -740,13 +754,13 @@ the sound design per shot in the <code>Audio:</code> line, then do the wide musi
 assembler. <code>seed_audio</code> is 0.1 credits a line if anything needs speaking.</p></div>
 
 <div class="note"><h3>Gary needs a voice before a frame is shot</h3>
-<p>He carries seven lines here against three in Episode 1, and he is the antagonist. Pick his preset
+<p>He carries five lines here against three in Episode 1, and he is the antagonist. Pick his preset
 from <code>series/VOICES.html</code> and write it into the handoff table first. Gerald needs one
 too — three lines. Assigning them up front is the whole lesson of Episode 1.</p></div>
 
 <div class="note"><h3>Cutaways still solve continuity</h3>
-<p>Four hard jumps to unrelated scenes — A-9, B-14, D-5, D-10 — where the discontinuity is the
-joke. Do not chain a reference frame into them. Everywhere else, pass the previous shot's final
+<p>Five hard jumps to unrelated scenes — A-7, B-7, B-18, D-5, D-10 — where the discontinuity is
+the joke. Do not chain a reference frame into them. Everywhere else, pass the previous shot's final
 frame, and check the last frame of each shot against the first of the next.</p></div>
 
 <div class="note"><h3>Nothing readable in frame</h3>

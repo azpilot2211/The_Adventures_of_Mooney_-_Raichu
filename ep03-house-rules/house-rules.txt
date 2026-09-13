@@ -1,23 +1,23 @@
 House Rules
 The Adventures of Mooney & Raichu · Episode 2 · Shooting Script
-One box. One key. One raccoon who has done nothing wrong.
+Every attempt to get rid of him improves the house.
 
-Gary moves in properly, as promised. He brings a chore wheel, a laminated sense of fairness and a key nobody gave him. Mooney and Raichu declare war on a houseguest who wins every round without once raising his voice — and who is, at every point, completely within his rights.
+Gary moves in properly, as promised, and Lyndie compliments the house for the first time in nine years. Mooney and Raichu declare war. Every trap they set fails on its own and leaves the place tidier than it found it, Gary never once notices he is under attack, and by the end the humans are right to prefer him.
 
-Runtime 5:47   Shots 63   Avg shot 5.3s   Silent shots 25   Cutaways 4   Dividers 6
+Runtime 5:47   Shots 63   Avg shot 5.3s   Silent shots 26   Cutaways 5   Dividers 6
 New footage 1458 credits at 4.5/second
 
 
 ========================================================================
 COLD OPEN — The Key   (23s · 104 cr)
-Gary lets himself in. Nobody stops him, because nobody can think of the grounds. Five shots, no explanation offered, and the last line is the whole episode.
+Gary lets himself in. Nobody stops him, because nobody can think of the grounds. The last line plants the game: he is already more settled here than they are.
 
   0:00  CO-1  5s
     Exterior, the front door of the cottage, morning. Close on the cat flap at the bottom of the door. A raccoon paw comes through the flap from outside, feels its way up the inside of the door, and turns the deadbolt. CLUNK. The door swings open with a long CREEEAK. GARY walks in upright, carrying one cardboard box.
-    (no dialogue · tumbler click, hinge creak, one jaunty bassoon)
+    (no dialogue · tumbler CLUNK, hinge CREEEAK, one jaunty bassoon)
 
   0:05  CO-2  4s
-    Interior living room. Mooney is flat on the rug. He does not get up. He does not move at all.
+    Interior living room. Mooney is flat on the rug. He does not get up.
     MOONEY         He has a key.
 
   0:09  CO-3  4s
@@ -25,8 +25,8 @@ Gary lets himself in. Nobody stops him, because nobody can think of the grounds.
     RAICHU         He has a box.
 
   0:13  CO-4  5s
-    Gary sets the box down on the rug, opens it, and lifts out one small framed photograph. He stands it on the side table and turns it a few degrees until it is straight, CLINK. The photograph is of the armchair.
-    (no dialogue · cardboard, a small glass clink, one sentimental harp)
+    Gary sets the box down, opens it, and lifts out one small framed photograph. He stands it on the side table and turns it a few degrees until it is straight, CLINK. The photograph is of the armchair.
+    (no dialogue · cardboard, a small glass CLINK, one sentimental harp)
 
   0:18  CO-5  5s
     Mooney has still not moved.
@@ -45,8 +45,8 @@ The existing main title plate. Episode line composited in post: Episode 2 — "H
 
 
 ========================================================================
-ACT ONE — The Wheel   (64s · 288 cr)
-Gary institutionalises himself in about a minute. He is never rude, never loud and never wrong, which is what makes it unbearable. The act ends on the shortest declaration of war the series has managed.
+ACT ONE — The Improvement   (60s · 270 cr)
+The game is set here and it is not "Gary is annoying" — it is that everything the cats do about Gary makes the house better, and he gets the credit. A-9 is the hinge: Lyndie notices the house, not the raccoon, and the war starts over a compliment that was never about him.
 
   0:34  A-1   5s
     Gary in the armchair, reading glasses on, holding up a large cardboard disc with wedges scratched into it. He presents it the way a man presents a boat he has built.
@@ -72,189 +72,189 @@ Gary institutionalises himself in about a minute. He is never rude, never loud a
     Gary, kindly, not looking up.
     GARY           That's not on the wheel.
 
-  1:01  A-7   5s
-    Raichu shoulders into frame, desperate to be included in his own oppression.
-    RAICHU         Do me. Do me.
-
-  1:06  A-8   5s
-    Gary spins it again. It ticks. It stops.
-    GARY           Also dishes.
-
-  1:11  A-9   7s
-    Cutaway. The kitchen sink. Both cats up on their hind legs, one washing, one drying, in complete silence, wearing tiny aprons. Neither of them looks at the other. Hold on it far too long.
+  1:01  A-7   7s
+    Cutaway. The kitchen sink. Both cats up on their hind legs in tiny aprons, one washing and one drying, in complete silence. Neither looks at the other. Hold far too long.
     (no dialogue · running water, one squeaky plate, a clock)
 
-  1:18  A-10  5s
+  1:08  A-8   5s
     Back to Mooney, who turns and addresses the camera directly, flat.
     MOONEY         That went on for nine days.
 
-  1:23  A-11  5s
-    Raichu, genuinely wounded.
-    RAICHU         I dropped a mug and he put me in the hall.
+  1:13  A-9   6s
+    LYNDIE comes in and stops dead. She looks slowly around a living room that is, for the first time in her life, immaculate. She is genuinely moved. She does not look at the raccoon in the armchair even once.
+    LYNDIE         Michael. Come and look at this.
 
-  1:28  A-12  4s
-    Mooney, without sympathy.
-    MOONEY         You live in the hall.
+  1:19  A-10  5s
+    Mooney watching her from the floor. This is the wound the whole episode grows from.
+    MOONEY         She has never once said that about us.
 
-  1:32  A-13  6s
-    Mooney rolls upright. It is the first time he has stood up in two episodes and the camera should treat it as an event.
+  1:24  A-11  5s
+    Raichu rises into frame, ear tufts going up like a periscope. Something has ignited and it will not go out for the rest of the episode.
+    RAICHU         He goes.
+
+  1:29  A-12  5s
+    Mooney gets to his feet. It is the first time he has stood up in two episodes and the camera should treat it as an event.
     MOONEY         Get the string.
 
   --- SCENE DIVIDER (0.8s, built locally, free) ---
 
 
 ========================================================================
-ACT TWO — The Traps   (80s · 360 cr)
-The Tom and Jerry act. Nine of these fourteen shots have no dialogue at all — the comedy is entirely physical, every trap backfires onto the cat who set it, and Gary never once notices he is being attacked.
+ACT TWO — Acme   (95s · 428 cr)
+Gerald is the supplier and every single trap component comes from him — Chuck Jones' rule seven, which is why forty Road Runner cartoons never ran out of ideas. He asks the same question every time and the cats pay in things they will miss later. Gary never notices he is under attack; each trap fails on its own and leaves the house tidier than it found it.
 
-  1:39  B-1   5s
-    Raichu has drawn a plan on the back of a cereal packet in claw scratches. It means nothing. He taps it with total authority.
-    RAICHU         Trap one.
+  1:35  B-1   6s
+    Night. The kitchen window. GERALD is on the moonlit fence outside with a small paper bag under one foot. He has been there some time. Raichu is up on the sill at the glass.
+    RAICHU         One bucket.
 
-  1:44  B-2   6s
-    Trap one. A metal bucket balanced on the top edge of the door frame above the armchair. A string runs from the bucket, across the ceiling, down the far wall, to Raichu, who is tiptoeing backwards holding the end of it and barely breathing. The string goes CREAK.
-    (no dialogue · string creak, tiptoe pizzicato, one long held note)
+  1:41  B-2   4s
+    Gerald does not blink.
+    GERALD         What have you got.
 
-  1:50  B-3   7s
-    Gary walks in underneath the bucket. Nothing happens. He sits down in the armchair. He looks up at the bucket for a moment. Then he reaches up, unhooks it, CLUNK, sets it down neatly beside the chair, and sharpens his pencil into it, SCRITCH SCRITCH.
-    (no dialogue · a small clunk, pencil sharpening, a defeated trombone)
+  1:45  B-3   6s
+    Raichu pushes MOONEY'S COLLAR across the windowsill with one paw. Gerald turns it over with his bill at length, nods once, and the paper bag slides the other way.
+    (no dialogue · a collar buckle CHINK on wood, paper rustle, one tense violin note)
 
-  1:57  B-4   4s
+  1:51  B-4   6s
+    Trap one. A metal bucket balanced on the top edge of the door frame above the armchair. A string runs from it across the ceiling, down the far wall, to Raichu, who is tiptoeing backwards holding the end and barely breathing. The string goes CREAK.
+    (no dialogue · string CREAK, tiptoe pizzicato, one long held note)
+
+  1:57  B-5   7s
+    Gary walks in underneath the bucket and sits down in the armchair. Nothing happens. Without looking up, and without any sign that he has noticed anything at all, he reaches up, unhooks the bucket, CLUNK, sets it down neatly beside the chair, and sharpens his pencil into it, SCRITCH SCRITCH. He never once looks at the string.
+    (no dialogue · a small CLUNK, pencil sharpening, a defeated trombone)
+
+  2:04  B-6   4s
     Mooney, from the doorway, deadpan.
     MOONEY         He has a bin now.
 
-  2:01  B-5   5s
+  2:08  B-7   5s
+    Cutaway. A woman's hands set a SECOND bin down beside the first one and square them both up, approvingly. No faces in frame.
+    (no dialogue · two bins set down, one small pleased humming note)
+
+  2:13  B-8   5s
     Trap two. Raichu tips an entire jar of marbles across the hallway floor, a long skittering RATTLE, and flattens himself against the wall, delighted with his own genius.
-    (no dialogue · a long skittering pour, tense pizzicato)
+    (no dialogue · a long skittering RATTLE, tense pizzicato)
 
-  2:06  B-6   7s
-    Locked-off wide, straight down the hall. Gary strolls across the marbles without looking down, paws behind his back, entirely level, and exits. A beat of nothing. Then MOONEY steps into the hall, WHOOP, goes straight up into the air with all four legs out, and SKKKRRT, slides the whole length of the floor and out of frame. CRASH.
-    (no dialogue · marbles, a comic slide, a distant collapse of saucepans)
+  2:18  B-9   7s
+    Locked-off wide straight down the hall. Gary strolls across the marbles without once looking down, paws behind his back, entirely level, and exits the far end. A beat of nothing. Then MOONEY steps into the hall, WHOOP, goes straight up into the air with all four legs out, and SKKKRRT, slides the whole length of the floorboards and out of frame. CRASH.
+    (no dialogue · marbles, a rising WHOOP, a long comic slide, a distant CRASH of saucepans)
 
-  2:13  B-7   5s
+  2:25  B-10  5s
     Mooney upside down against the far wall, legs folded over his head, perfectly calm about it.
     MOONEY         Trap two.
 
-  2:18  B-8   6s
-    Trap three. Raichu on the floor beside the armchair with a handsaw, cutting a neat circle in the floorboards around it, SHHK SHHK SHHK. He is sawing from inside the circle. The audience is ahead of him and should be allowed to enjoy that for a moment.
-    (no dialogue · rhythmic sawing, a slowly rising oboe of dramatic irony)
+  2:30  B-11  6s
+    Gary sweeps the marbles into a jar with a small brush, sets the jar on a shelf, and squares it up with one claw. The hallway is now spotless. He has still not looked at anything.
+    (no dialogue · a soft brush, marbles pouring into glass, one prim little woodwind phrase)
 
-  2:24  B-9   5s
+  2:36  B-12  4s
+    Back at the window. Same shot, same seagull, same night.
+    RAICHU         One saw.
+
+  2:40  B-13  4s
+    Gerald.
+    GERALD         What have you got.
+
+  2:44  B-14  5s
+    Raichu pushes the television remote across the windowsill. Gerald inspects it, nods once, and a handsaw slides the other way.
+    (no dialogue · plastic on wood, paper rustle, the same tense violin note)
+
+  2:49  B-15  6s
+    Trap three. Raichu on the floor beside the armchair with the handsaw, cutting a neat circle in the floorboards around it, SHHK SHHK SHHK. He is sawing from inside the circle. The audience is ahead of him and should be allowed to enjoy that for a moment.
+    (no dialogue · rhythmic SHHK sawing, a slowly rising oboe of dramatic irony)
+
+  2:55  B-16  5s
     The circle gives way, CRACK. Raichu drops through it with a long descending WHEEEE and lands somewhere far below, THUD. The armchair and Gary do not move a millimetre. Gary turns a page.
-    (no dialogue · a crack, a long descending whistle, a distant thud)
+    (no dialogue · a CRACK, a long descending WHEEEE, a distant THUD)
 
-  2:29  B-10  5s
-    Gary, still reading, mildly.
+  3:00  B-17  5s
+    Gary, still reading, mildly, as a household observation and not an accusation.
     GARY           Second one this week.
 
-  2:34  B-11  8s
-    Music scene. A full orchestral chase cue and not one word. Fast cuts, a musical hit on every impact: a mousetrap the size of a door snaps shut on nothing, SNAP; a rope snare hoists MOONEY up by one back leg, SPROING; a desk fan and a burst bag of flour turn both cats completely white, FWOOMPH; RAICHU fires a grape from a slingshot, TWANG, and it comes straight back and hits him, BONK.
-    (no dialogue · full chase orchestra, whip crack, sproing, a cymbal on every impact)
-
-  2:42  B-12  6s
-    The aftermath. Both cats hanging upside down in the doorway, flour-white, wound in the same length of rope, revolving slowly. Gary steps over them, reaches up, and turns off the light, CLICK.
-    (no dialogue · one light switch, a single sad clarinet)
-
-  2:48  B-13  5s
-    Darkness. Two pairs of eyes.
-    MOONEY         This is worse than the boat.
-
-  2:53  B-14  6s
-    Cutaway. A small rowing boat in the middle of the harbour at dawn. Both cats aboard. Raichu is rowing with one oar, so the boat is turning slowly in a circle. Mooney sits in the bow facing forward. Neither of them reacts. Never mentioned again.
-    (no dialogue · gulls, one oar, water, a resigned accordion)
+  3:05  B-18  5s
+    Cutaway. MICHAEL kneeling beside the new hole in the floorboards, shining a torch down into it, absolutely delighted with what he has found.
+    (no dialogue · a torch click, a happy echo down a hole, one discovery chord)
 
   --- SCENE DIVIDER (0.8s, built locally, free) ---
 
 
 ========================================================================
-ACT THREE — Procurement   (68s · 306 cr)
-Gerald returns with a second business. The transaction is played exactly as flat as the sandwich deal in Episode 1, and it costs Mooney the one thing he was fighting for.
+ACT THREE — The Fanatic   (59s · 266 cr)
+Chuck Jones: "the Coyote could stop anytime — if he were not a fanatic," and a fanatic is one who redoubles his effort when he has forgotten his aim. C-7 is that sentence as a joke, and it is the thesis of the episode. Mooney quits here; Raichu cannot.
 
-  3:00  C-1   6s
-    Night. The kitchen window. GERALD is on the moonlit fence outside. He has been there for some time and is in no hurry to say so.
-    (no dialogue · night crickets, one slow wingbeat, a low bass note)
+  3:11  C-1   5s
+    The window again. Raichu has stopped asking for specific items.
+    RAICHU         Everything you have.
 
-  3:06  C-2   4s
-    Mooney at the glass.
-    MOONEY         I need something bigger.
+  3:16  C-2   4s
+    Gerald, unchanged, unhurried, doing extremely well out of this.
+    GERALD         What have you got.
 
-  3:10  C-3   5s
-    Gerald does not blink.
-    GERALD         How big.
+  3:20  C-3   6s
+    Wide on the windowsill. It is stacked with everything the cats own — a toy mouse, a catnip banana, both collars, a small ball with a bell in it. Raichu pushes the entire pile across with both paws. Gerald does not help.
+    (no dialogue · a small avalanche of toys, one bell, paper rustle, a smug gull call)
 
-  3:15  C-4   4s
-    Mooney.
-    MOONEY         Raccoon.
+  3:26  C-4   12s
+    Music scene. A fast comedy montage in one continuous take, four traps, each landing cleanly on its own beat, and every single one of them going wrong for the cat who set it. Gary is not in this shot at all.
+    (no dialogue · SNAP, SPROING, FWOOMPH, TWANG with three ricochet PINGs, a final BONK · full chase orchestra with a musical hit on every impact)
 
-  3:19  C-5   7s
-    Gerald turns his head very slowly toward a tarpaulin further along the fence. He takes the corner of it in his bill and pulls, a long canvas SHHHHP. Underneath, gleaming in the moonlight, is a full-size wooden catapult.
-    (no dialogue · canvas sliding, one enormous orchestral reveal, crickets resuming)
+  3:38  C-5   6s
+    The aftermath. Both cats hang upside down in the doorway, flour-white, wound in the same length of rope, revolving slowly. Gary steps over them without looking, reaches up, and turns off the light, CLICK.
+    (no dialogue · rope creaking, one light switch CLICK, a single sad clarinet)
 
-  3:26  C-6   4s
-    Mooney, who has learned nothing.
-    MOONEY         What do you want.
+  3:44  C-6   5s
+    Darkness. Two pairs of reflective eyes. Mooney has run out.
+    MOONEY         What are we even doing.
 
-  3:30  C-7   4s
-    Gerald.
-    GERALD         The chair.
+  3:49  C-7   6s
+    Raichu in the dark. Absolutely certain. Not one flicker of doubt.
+    RAICHU         I don't remember. But I've ordered more rope.
 
-  3:34  C-8   5s
-    Mooney, without a flicker.
-    MOONEY         It's not my chair.
+  3:55  C-8   6s
+    Morning. A wide locked-off shot of the living room. It is IMMACULATE — swept, squared, the bins lined up, the hole in the floor neatly boarded over and polished. Gary is in the armchair doing his crossword. Sunlight. It looks like a show home.
+    (no dialogue · a clock, a pencil scratch, one warm domestic phrase)
 
-  3:39  C-9   5s
-    Gerald.
-    GERALD         Then it isn't my catapult.
+  4:01  C-9   4s
+    Mooney in the doorway, looking at the room. He has understood before Raichu has.
+    MOONEY         It's cleaner.
 
-  3:44  C-10  4s
-    Mooney sells the thing the entire war is about.
-    MOONEY         Take the chair.
-
-  3:48  C-11  7s
-    Exterior, the garden at dawn. Locked-off wide. Both cats hauling on the catapult's winch, straining, back paws slipping in the wet grass. The arm ratchets back, CLICK, CLICK, CLICK. Raichu wedges a stone under it, CLUNK.
-    (no dialogue · ratchet clicks, rope creak, two cats straining)
-
-  3:55  C-12  5s
-    Raichu, radiant, one paw on the release.
-    RAICHU         Ready.
-
-  4:00  C-13  8s
-    Locked-off wide of the whole garden. The rope is cut, TWANG. The arm swings the wrong way, WHUMP, and both cats are launched straight out of the top of frame, their howls dopplering away to nothing. The catapult, undamaged, rocks gently to a stop. Behind it, in the lit kitchen window, Gary does not look up. Two distant SPLASHES.
-    (no dialogue · whip crack, a doppler wail going away, two distant splashes)
+  4:05  C-10  5s
+    Raichu, refusing it entirely, eyes narrowed at the tidiest room he has ever seen.
+    RAICHU         That's what he wants.
 
   --- SCENE DIVIDER (0.8s, built locally, free) ---
 
 
 ========================================================================
-ACT FOUR — The Lease   (54s · 243 cr)
-The South Park turn: the institution sides with the newcomer, and it is not even close. Everything the cats did was against a tenant in good standing.
+ACT FOUR — The Tenant   (52s · 234 cr)
+The South Park turn. The institution does not merely side with Gary — it is right to. Everything the cats did was against a tenant in good standing who has improved the property.
 
-  4:08  D-1   6s
-    Interior living room. MICHAEL and LYNDIE stand over the armchair, delighted, photographing Gary in it. Gary looks at the camera. He does not smile, but somehow it reads as a smile.
-    (no dialogue · camera shutter, warm domestic music)
+  4:10  D-1   6s
+    MICHAEL and LYNDIE stand over the armchair, delighted, photographing Gary in it. Gary looks at the camera. He does not smile, but somehow it reads as a smile.
+    (no dialogue · a camera shutter, warm domestic music)
 
-  4:14  D-2   6s
-    The doorway behind them. Both cats, soaked through, draped in seaweed, dripping onto the floorboards, drip, drip, SQUELCH. Nobody turns around.
-    (no dialogue · dripping, one long squelch, a single fly)
+  4:16  D-2   6s
+    The doorway behind them. Both cats, flour-white, still tangled in rope, dripping. Nobody turns around.
+    (no dialogue · rope creaking, one long drip, a single fly)
 
-  4:20  D-3   4s
+  4:22  D-3   4s
     Lyndie, off-screen, warmly.
     LYNDIE         He's so well behaved.
 
-  4:24  D-4   5s
-    Mooney to camera, harbour water still running off his chin.
+  4:26  D-4   5s
+    Mooney turns his head and speaks directly to the camera.
     MOONEY         He pays rent.
 
-  4:29  D-5   6s
-    Cutaway. The kitchen counter, close. Gary slides a single coin across it with one claw, a long CHINK. A human hand picks the coin up and pockets it. DING. Neither face is in frame.
-    (no dialogue · one coin on wood, a cash-register ding that is far too pleased with itself)
+  4:31  D-5   5s
+    Cutaway. The kitchen counter, close. Gary slides a single coin across it with one claw, a long CHINK. A human hand picks it up and pockets it. Neither face is in frame.
+    (no dialogue · one coin CHINK on wood, a cash-register DING far too pleased with itself)
 
-  4:35  D-6   6s
+  4:36  D-6   5s
     Raichu, devastated, ear tufts flat for the first time in the series.
     RAICHU         But we live here.
 
   4:41  D-7   6s
-    Gary, kindly, still not looking up from the crossword.
+    Gary, kindly, still not looking up from the crossword. He means it entirely.
     GARY           You live here too.
 
   4:47  D-8   5s
@@ -274,10 +274,10 @@ The South Park turn: the institution sides with the newcomer, and it is not even
 
 ========================================================================
 RESOLUTION — The Wrong Moral   (30s · 135 cr)
-Played completely straight — sunset, warm strings, the full apparatus of a sincere ending — and attached to a conclusion that is worse than the one in Episode 1.
+Played completely straight — sunset, warm strings, the full apparatus of a sincere ending. The moral is worse than Episode 1's because this time he acts on it in the same breath, and the last line is a callback to the laser drawer.
 
   5:03  E-1   6s
-    The deck at sunset. The two cats side by side at the rail, still damp, one strand of seaweed on Raichu's ear. Warm golden light. Neither looks at the other.
+    The deck at sunset. Both cats side by side at the rail, still faintly white with flour. Warm golden light. Neither looks at the other.
     RAICHU         Maybe he's not so bad.
 
   5:09  E-2   5s
@@ -286,15 +286,15 @@ Played completely straight — sunset, warm strings, the full apparatus of a sin
 
   5:14  E-3   8s
     Mooney turns to face the camera. Total sincerity, fully earnest music, no wink anywhere.
-    MOONEY         You know, I learned something today. I learned that when somebody moves into your house and makes it cleaner, kinder and better run than you ever did — the only decent thing left to do is get a bigger catapult.
+    MOONEY         You know, I learned something today. I learned that when somebody is better than you at everything, and you can't make him leave, and the people you love like him more — there's really only one thing you can do.
 
-  5:22  E-4   5s
-    A beat. GARY walks into frame, sits down on the deck between them, and opens his crossword. Nobody says anything. The strings continue warmly, entirely undisturbed.
-    (no dialogue · deck creak, pencil scratch, warm strings continuing)
+  5:22  E-4   6s
+    A wider shot of the two of them at the rail. MOONEY IS NOW WEARING SMALL ROUND READING GLASSES. He was not wearing them a moment ago. He looks out at the harbour, serene.
+    RAICHU         Where did you get glasses.
 
-  5:27  E-5   6s
-    Mooney does not look at him.
-    MOONEY         It's already ordered.
+  5:28  E-5   5s
+    Mooney does not turn his head.
+    MOONEY         The drawer.
 
   --- SCENE DIVIDER (0.8s, built locally, free) ---
 
@@ -308,6 +308,5 @@ The existing sunset end plate, unchanged. Teaser text composited in post.
     (reused plate · 0 credits)
 
   5:42  TZ-1  5s
-    The armchair. Gary, glasses on, crossword in paw. Sitting beside him, in an identical pair of small round reading glasses, is a SECOND raccoon.
-    GARY           This is Denise.
-    MOONEY (OFF)   No.
+    The armchair, and beside it a SECOND armchair that was not there before. GARY sits in one doing his crossword. MOONEY sits in the other in identical small round reading glasses, doing his own crossword. Neither looks up. Neither speaks. An unseen cat objects from off-screen.
+    RAICHU (OFF)   No.
