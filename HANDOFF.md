@@ -32,13 +32,13 @@ generated until a top-up**, not even a one-shot test. Episode 2 needs 1,458.
    chapter timestamps (the cut is 4:33.7 now, the old ones are from 4:34), and write
    the trailer's own title, description and thumbnail — the channel-trailer slot is a
    separate upload from the episode.
-3. **Choose Gary's and Gerald's voices** from `series/VOICES.html` — choosing is free,
-   the page has inline previews. Applying them to Episode 1's six reachable shots
-   (A-1 Lyndie, A-10 and C-11 Gary, C-4/C-6/C-8 Gerald) costs 6 credits and finishes
-   its voice work; CO-1 and TZ-1 have two speakers each and can never be reached.
-   It is the one Episode 1 mistake
-   that is cheapest to avoid repeating — Gary carries seven lines in Episode 2 and is
-   the antagonist.
+3. **The cast is fully assigned as of 2026-09-13** — Gary is Arthur, Gerald is
+   Knox, Lyndie is Delia, Michael is Ian, on top of Mooney/Cillian and
+   Raichu/Miles. Applying them to Episode 1's six reachable shots costs 6
+   credits: A-1 Lyndie, A-10 and C-11 Gary, C-4/C-6/C-8 Gerald. **Episode 2 gets
+   generated with all six already in the table** — assigning voices after the
+   fact is the single most expensive mistake Episode 1 made, and Gary carries
+   seven lines in House Rules as the antagonist.
 4. **Then Episode 2**, once there are credits. Read the production notes in
    `ep03-house-rules/house-rules.html` before writing a single prompt; they carry every
    lesson from Episode 1 and the trailer, applied per shot.
@@ -211,8 +211,11 @@ character has one voice, with zero processing.
 | **Raichu** | **Miles (preset)** | `e18664a7-ee4f-5273-acf8-533eb24cd366` | `preset` |
 |  | *chosen by the owner 2026-09-11 after auditioning all 113 presets in `series/VOICES.html`. Applied to all 17 Raichu-solo shots on 2026-09-11.* |  |  |
 |  | *Still unconfirmed by ear: Miles was Mooney's original voice, rejected then as too deep. Mooney is Cillian now, so the open question is whether the two read as distinct characters when they talk to each other. Listen to Act One, which is nothing but the two of them.* |  |  |
-| Gerald | not yet assigned (never drifted, 119-129 Hz) | — | — |
-| Gary | not yet assigned | — | — |
+| **Gerald** | **Knox (preset)** | `195e386a-cb61-5c1b-a53b-0e2f0669c408` | `preset` |
+| **Gary** | **Arthur (preset)** | `30fc8796-ceb6-4a66-b3a7-4a145ef7f346` | `preset` |
+| **Lyndie** | **Delia (preset)** | `1550321e-7f5b-526e-b001-02328b03e9bc` | `preset` |
+| **Michael** | **Ian (preset)** | `472a562a-4c33-5114-8210-d6ffa1e4e2c5` | `preset` |
+|  | *all four chosen by the owner 2026-09-13 from `series/VOICES.html`. **The cast is now complete for the first time.** None applied to a clip yet — Episode 1's six reachable shots cost 6 credits: A-1 is Lyndie, A-10 and C-11 are Gary, C-4, C-6 and C-8 are Gerald. Michael's only Episode 1 line is off-screen inside CO-1, which also has Lyndie in it, so **Ian cannot be applied to Episode 1 at all** — he starts clean in Episode 2. CO-1, CO-5, A-12 and TZ-1 each have two speakers and can never be reached.* |  |  |
 
 Also available, unused: a clone of Mooney's A-12 "I have never been hungry" take,
 `e1f028f2-9e60-4659-9a86-07e6f285112f`, voice_type `element`. Cost 40 credits. Kept in
@@ -605,7 +608,8 @@ Run the audit before calling a voice pass done.
 
 ### Still not done
 
-- **Gerald, Gary and Lyndie have no assigned voice.** ~7 credits, same method.
+- **The whole cast has a voice as of 2026-09-13, but none is applied to a clip yet.**
+  6 credits finishes Episode 1's reachable shots.
 - **Nobody has heard v8 end to end.** Everything above was verified by
   measurement and by frames.
 - **YouTube chapter timestamps** are still from the 4:34 cut. It is now 4:33.7,

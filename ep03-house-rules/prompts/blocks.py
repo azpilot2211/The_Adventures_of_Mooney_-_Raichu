@@ -101,7 +101,8 @@ def only(words, who="He"):
             'Then a brief comedic silence — %s speaks no other words at any point in this '
             'shot, no second sentence, no muttering, no trailing off, no ad-libbed dialogue, '
             'and does not say anyone\'s name unless it is in that line. '
-            'The score drops away under the line and stops on it.' % (who, words, who.lower()))
+            'The score drops away under the line and stops on it.'
+            % (who, words, who if who != "He" else "he"))
 
 # ------------------------------------------------------------------ cast
 MOONEY = ("MOONEY is a very overweight black-and-white tuxedo cat with a white chest, "
@@ -128,6 +129,21 @@ V_RAICHU = ("brightly and eagerly, at a normal speaking pitch, quick but CLEARLY
             "every word crisp and easy to understand, not squeaky and not mumbled")
 V_GARY = "kindly and reasonably, in an unhurried older male voice, never raising it"
 V_GERALD = "flatly, in a calm low smug unhurried voice"
+
+# ------------------------------------------------------------------ voices
+# Locked 2026-09-13. Every character has one BEFORE a frame is generated, which is
+# the whole lesson of Episode 1 — its voices were sorted out afterwards, one
+# re-shoot and one revoice pass at a time. voice_change converts EVERY voice on a
+# track, so a shot with two speakers can never be put on these: keep one speaker
+# per shot and each line costs 1 credit to lock.
+VOICE = {
+    "MOONEY":  ("Cillian", "d8ba9f14-8a24-44db-932b-99e16c45bd32"),
+    "RAICHU":  ("Miles",   "e18664a7-ee4f-5273-acf8-533eb24cd366"),
+    "GARY":    ("Arthur",  "30fc8796-ceb6-4a66-b3a7-4a145ef7f346"),
+    "GERALD":  ("Knox",    "195e386a-cb61-5c1b-a53b-0e2f0669c408"),
+    "LYNDIE":  ("Delia",   "1550321e-7f5b-526e-b001-02328b03e9bc"),
+    "MICHAEL": ("Ian",     "472a562a-4c33-5114-8210-d6ffa1e4e2c5"),
+}
 
 # ------------------------------------------------------------------ locations
 LOUNGE = ("LOCATION: INTERIOR, INSIDE THE HOUSE - the living room of a Cape Cod cottage. "
@@ -158,6 +174,21 @@ DECK_SUNSET = ("LOCATION: EXTERIOR, the wooden deck of a Cape Cod cottage at sun
                "grey deck boards, a simple wooden railing, warm golden-orange low sunlight, the "
                "harbour soft and out of focus behind. THIS SHOT IS ENTIRELY OUTDOORS ON THE "
                "DECK: do not show kitchen cabinets, do not show any interior room.")
+
+KITCHEN_NIGHT = ("LOCATION: INTERIOR, INSIDE THE HOUSE - the kitchen of a Cape Cod cottage at "
+                 "night. Painted shaker cabinets, a wooden countertop, tiled floor, a window over "
+                 "the sink. The only light is cold blue moonlight through the window and a faint "
+                 "glow from the refrigerator. THIS SHOT IS ENTIRELY INDOORS: do not show deck "
+                 "boards, do not show a garden, do not show daylight.")
+
+LOUNGE_DARK = ("LOCATION: INTERIOR, INSIDE THE HOUSE - the living room of a Cape Cod cottage with "
+               "the light switched off. Almost total darkness, one thin band of moonlight through "
+               "the window, the shapes of a couch and an armchair barely visible. "
+               "THIS SHOT IS ENTIRELY INDOORS AND VERY DARK: no daylight, no lamplight.")
+
+BOAT = ("LOCATION: EXTERIOR, a small wooden rowing boat on flat calm harbour water at dawn, "
+        "moored fishing boats far behind, pale early light, mist on the water. "
+        "THIS SHOT IS ENTIRELY OUTDOORS ON THE WATER: do not show any room, do not show a garden.")
 
 FRONT_DOOR = ("LOCATION: EXTERIOR, the front door of a grey-shingled Cape Cod cottage in "
               "morning light, a cat flap set into the bottom of the door, hydrangeas either "
