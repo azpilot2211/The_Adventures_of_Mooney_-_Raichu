@@ -18,8 +18,9 @@ on me.**
 | 2 | **Channel trailer** | `series/TRAILER.mp4` | 34.6s. **Sent for review; no verdict yet.** |
 | 3 | **Episode 2 "House Rules"** | `ep03-house-rules/` | Script only. 63 shots, 5:47, needs 1,458 credits. Nothing generated. |
 
-**Balance: 83.7 credits** (measured 2026-09-12). Episode 2 needs about eighteen times
-that, so nothing of it can be shot until a top-up.
+**Balance: 16.2 credits** (measured 2026-09-13). That is below the cost of a single
+shot — Seedance 2.0's four-second minimum is 18 credits — so **nothing at all can be
+generated until a top-up**, not even a one-shot test. Episode 2 needs 1,458.
 
 ### The first move, in order
 
@@ -31,8 +32,11 @@ that, so nothing of it can be shot until a top-up.
    chapter timestamps (the cut is 4:33.7 now, the old ones are from 4:34), and write
    the trailer's own title, description and thumbnail — the channel-trailer slot is a
    separate upload from the episode.
-3. **Assign Gary's and Gerald's voices** from `series/VOICES.html` and fill in the cast
-   table below. About 7 credits, affordable now, and it is the one Episode 1 mistake
+3. **Choose Gary's and Gerald's voices** from `series/VOICES.html` — choosing is free,
+   the page has inline previews. Applying them to Episode 1's six reachable shots
+   (A-1 Lyndie, A-10 and C-11 Gary, C-4/C-6/C-8 Gerald) costs 6 credits and finishes
+   its voice work; CO-1 and TZ-1 have two speakers each and can never be reached.
+   It is the one Episode 1 mistake
    that is cheapest to avoid repeating — Gary carries seven lines in Episode 2 and is
    the antagonist.
 4. **Then Episode 2**, once there are credits. Read the production notes in
@@ -65,9 +69,10 @@ same file:
   pratfalls and is the most refusal-prone thing we have written.
 
 `prompts/worked_examples.py` writes three shots out in full — one dialogue, one action,
-one montage — so the shape is settled before the other sixty get written. **None of it is
-tested.** 108 credits would shoot all three; 54 would shoot the dialogue and action ones,
-which is the pair that would actually settle it.
+one montage — so the shape is settled before the other sixty get written. **None of it is tested by me** — and at 16.2 credits none of it can be. But the owner
+appears to have run the example prompt itself on 2026-09-13 (a single 67.5-credit
+Seedance **2.0** charge, 15 seconds, the exact length the file asks for), so the
+verdict may already exist by ear. **Ask before spending anything to re-derive it.**
 
 Not taken: the example is a 2D hand-drawn show and negates 3D. Ours is established
 3D Pixar-style across a finished episode and a trailer. Take the technique, never the look.
@@ -488,7 +493,8 @@ rendered episodes on GitHub needs Git LFS, and 1.1 GB exceeds the 1 GB free quot
    Gerald's voices before generating, run voice_change as a finishing pass, and
    cap every short line with the `only()` wording below.
 
-**Balance: 83.7 credits** (measured 2026-09-12).
+**Balance: 16.2 credits** (measured 2026-09-13) — below the 18-credit cost of one
+minimum-length shot.
 
 
 ---
