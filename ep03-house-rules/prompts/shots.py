@@ -244,7 +244,7 @@ def build():
             loc, cast, foley, music, staging = SHOTS[code]
             sheets = " ".join(SHEET[c] for c in cast if c in SHEET)
 
-            body = [STYLE, loc, sheets, strip_html(sh["action"])]
+            body = [STYLE, ON_MODEL, ANIMATION, loc, sheets, strip_html(sh["action"])]
             if staging:
                 body.append(staging)
             body.append(count(cast))
@@ -305,7 +305,9 @@ def main():
         for must, why in [("Audio professionally mixed", "mix block"),
                           ("Score:", "score cue"),
                           ("NO on-screen text", "text negative"),
-                          ("no other animals.", "head count")]:
+                          ("no other animals.", "head count"),
+                          ("identical in every shot", "on-model rule"),
+                          ("secondary animation", "animation rule")]:
             if must not in p:
                 bad.append("%s missing %s" % (s["key"], why))
         if "says," in p and "NOTHING else" not in p and s["key"] != "TZ-1":

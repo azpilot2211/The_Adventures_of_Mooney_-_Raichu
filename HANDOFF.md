@@ -7,6 +7,11 @@ begin.
 
 ---
 
+> ## Building an episode? Read `series/EPISODE-BIBLE.md` first.
+> That file is the craft — the prompt anatomy, every failure mode and the exact wording
+> that fixes it, the audio direction, the edit spec, the costs and the filter. This file
+> is only session state: what is half-finished, what is waiting, what the balance is.
+
 ## START HERE — state at the end of 2026-09-12
 
 **Three things exist. Two of them are waiting on your ears, and nothing is blocked

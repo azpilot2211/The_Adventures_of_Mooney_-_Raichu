@@ -46,6 +46,19 @@ STYLE = ("3D animated cartoon, Pixar-style feature animation, soft cinematic lig
          "shallow depth of field, expressive facial acting, exaggerated comedic timing. "
          "No photorealism, no live action, no imitation of any existing show's exact style.")
 
+# From the full-episode document's global block. We pass a cast reference image on
+# every shot, but never actually asked for on-model consistency in words, and
+# Episode 1 drifted: Mooney reads as a normal-sized cat in several trailer shots
+# despite an identical character block. Cheap to say, so say it.
+ON_MODEL = ("The characters are EXACTLY as the reference image and identical in every shot: "
+            "never change their coat patterns, proportions, eye appearance, relative size or "
+            "overall design. Mooney is clearly and unmistakably the much fatter of the two cats.")
+
+# Also from that document. Costs nothing and is the difference between a puppet and
+# a performance.
+ANIMATION = ("Natural blinking, breathing, ear flicks and tail movement throughout, with "
+             "anticipation, follow-through and secondary animation on every action.")
+
 NO_TEXT = ("NO on-screen text, no subtitles, no captions, no letters, no numbers, no logos "
            "and no watermarks anywhere in frame.")
 

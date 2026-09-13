@@ -587,6 +587,14 @@ NOTES = """
 <h2 class="act-name">Production notes</h2>
 <div class="note-grid">
 
+<div class="note"><h3>Read the bible before writing a prompt</h3>
+<p><code>series/EPISODE-BIBLE.md</code> carries the whole craft: prompt anatomy in order,
+every failure mode this show has hit with the exact wording that fixes it, the audio
+direction, the edit spec, the real costs and the content filter's behaviour. These notes
+cover what is specific to <em>this</em> episode; the bible covers what is true of all of
+them. <code>prompts/blocks.py</code> is the bible made executable — import it and the rules
+are applied whether you remember them or not.</p></div>
+
 <div class="note"><h3>The edit has a spec now, not just a loudness pass</h3>
 <p>From the owner's full-episode document, 2026-09-13. Its editing master prompt asks for
 things <code>assemble.py</code> has never done: <b>J-cuts and L-cuts</b> so audio carries across
