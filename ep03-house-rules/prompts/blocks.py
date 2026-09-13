@@ -58,10 +58,22 @@ HARMLESS = ("Harmless cartoon slapstick only — nobody is hurt, nobody is injur
 # Appended LAST to every single prompt, verbatim, the way the example does it.
 AUDIO_MIX = (
     "Audio professionally mixed for broadcast television: clear centered dialogue, "
-    "subtle room ambience underneath everything, cartoon Foley, precisely timed comedic "
-    "sound effects, original orchestral score that ducks under speech and stops dead on "
-    "the punchline, no copyrighted music."
+    "realistic room tone underneath everything so it never feels artificially silent, "
+    "Foley for paws and furniture and objects, exaggerated cartoon effects used "
+    "SELECTIVELY for jokes only. Original score that ducks 6 to 10 dB under dialogue and "
+    "comes back between lines, and stops dead on the punchline. "
+    "DO NOT FILL EVERY SECOND WITH MUSIC OR EFFECTS - silence and reaction pauses are "
+    "part of the comedy. No copyrighted music."
 )
+
+# Series canon, from the owner's full-episode document: the humans cannot
+# understand the cats. Every shot where a person shares the frame with a talking
+# animal carries this, or Michael and Lyndie start reacting to dialogue they are
+# not supposed to hear. Act Four of House Rules is built on it.
+MEOWS = ("The humans CANNOT understand the animals. The cats' and the raccoon's speech is "
+         "plain English to the audience, but any human in the shot hears only ordinary "
+         "meowing and reacts accordingly - no human ever answers a cat's line or shows any "
+         "sign of understanding it.")
 
 # The score has a shape across the episode. Episode 1 had no score design at all -
 # each shot named an instrument and the cut had no through-line. One cue state per
@@ -210,6 +222,19 @@ REF_GERALD = "32f71a43-98f7-4f0f-88db-729ac34a90d8"
 REF_LIVINGROOM = "3c223738-22f6-4de6-bfd6-6c62333be42c"
 REF_MICHAEL = "0606324c-cfc1-4cbd-a45a-8bb2c5384b6b"
 REF_LYNDIE = "36f7a2a3-7eae-4fac-bb93-d1924413fcf3"
+
+
+# The example marks the transition OUT of a shot: "SMASH CUT", "slow dissolve",
+# "quick flashback transition". Ours were all unmarked hard cuts. Only worth
+# saying where it is a deliberate device - a smash cut into a cutaway, a dissolve
+# into the sincere ending.
+TRANSITION = {
+    "smash":    "END THIS SHOT ON A HARD SMASH CUT - no fade, no dissolve, cut instantly on "
+                "the last frame.",
+    "dissolve": "END THIS SHOT ON A SLOW GENTLE DISSOLVE.",
+    "hold":     "HOLD ON THE REACTION for a beat after the action finishes before the shot "
+                "ends - the pause is the joke.",
+}
 
 
 def beats(*pairs):

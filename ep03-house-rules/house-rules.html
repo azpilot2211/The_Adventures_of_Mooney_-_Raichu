@@ -393,6 +393,37 @@
 <h2 class="act-name">Production notes</h2>
 <div class="note-grid">
 
+<div class="note"><h3>The edit has a spec now, not just a loudness pass</h3>
+<p>From the owner's full-episode document, 2026-09-13. Its editing master prompt asks for
+things <code>assemble.py</code> has never done: <b>J-cuts and L-cuts</b> so audio carries across
+a cut; <b>reaction shots kept after punchlines</b>; <b>no cutting immediately after every spoken
+sentence</b>; <b>0.5–1.5s of silence around important jokes</b>; <b>2–3 frame impact accents on
+major crashes</b>; consistent screen direction; and the summary line worth pinning above the
+edit bay — <em>"the finished cartoon must feel intentionally storyboarded rather than a
+collection of unrelated AI video clips."</em> The TRIM/TAIL tables get us the reaction holds
+and the silence; the J-cuts and the impact accents are new work and both are free in ffmpeg.</p></div>
+
+<div class="note"><h3>The 6–10 dB duck has to come from the prompt, not the mix</h3>
+<p>That document specifies the score ducking <em>6 to 10 dB under dialogue and returning between
+lines</em>, which is exactly right and now in <code>AUDIO_MIX</code>. It cannot be done in our
+assembler: Seedance hands back one pre-mixed track per shot with score, Foley and dialogue baked
+together, and there are no stems to duck. Asking for it in the prompt is the only lever we have,
+so it matters that it is asked for in every one.</p></div>
+
+<div class="note"><h3>Do not fill every second</h3>
+<p>The one instruction most likely to improve the finished thing: <em>"do not fill every second
+with music or effects — silence and reaction pauses are part of the comedy."</em> Our per-act
+score design risks exactly that failure, so the sentence is now in every prompt in capitals.
+Episode 1's B-9 and B-11 — six blank cat faces in total silence, held far too long — are the
+proof it works; they are the best-timed shots in the episode.</p></div>
+
+<div class="note"><h3>Humans hear meows. It is canon now</h3>
+<p>Also from that document: <em>humans cannot understand the cats; whenever they speak in front
+of a human, the human hears ordinary meowing.</em> House Rules Act Four is built on it — Michael
+and Lyndie photograph Gary while both cats stand there dripping and complaining, and none of it
+lands unless the humans genuinely cannot hear them. <code>MEOWS</code> goes on every shot with a
+person and a talking animal in the same frame.</p></div>
+
 <div class="note"><h3>The episode has a score, designed once</h3>
 <p>Episode 1 had none: each shot named an instrument and the finished cut had no through-line.
 <code>prompts/blocks.py</code> now holds one cue state per act, named by what the music is

@@ -213,6 +213,20 @@ SHOTS = {
 
 SKIP = {"TS-1", "EC-1"}          # reused plates, nothing to generate
 
+# Transitions worth naming. Everything unlisted is an ordinary television cut.
+# Smash cuts go into and out of the cutaways, where the discontinuity IS the joke;
+# holds go on the beats where the pause is the punchline.
+CUTS = {
+    "A-9":  "hold",     # the sink, held far too long
+    "B-9":  "smash",    # Raichu drops through the floor
+    "B-13": "smash",    # into the boat cutaway
+    "B-14": "hold",     # the boat, held too long, never explained
+    "C-13": "hold",     # the catapult rocking to a stop after they have gone
+    "D-5":  "smash",    # the coin
+    "D-10": "hold",     # the sink again, identical, held identically
+    "E-4":  "hold",     # Gary sits down between them and nobody reacts
+}
+
 
 def strip_html(t):
     return re.sub(r"<[^>]+>", "", t).replace("  ", " ").strip()
@@ -250,6 +264,10 @@ def build():
 
             if code.startswith("B-") or code in ("C-13",):
                 body.append(HARMLESS)
+            if "HUMANS" in cast:
+                body.append(MEOWS)
+            if code in CUTS:
+                body.append(TRANSITION[CUTS[code]])
             body.append(NO_TEXT)
             body.append(audio(code, foley, music=music))
 
@@ -294,6 +312,13 @@ def main():
             bad.append("%s has dialogue but no cap" % s["key"])
         if "says," not in p and "NO DIALOGUE" not in p.upper():
             bad.append("%s is silent but never says so" % s["key"])
+        if "DO NOT FILL EVERY SECOND" not in p:
+            bad.append("%s missing the silence rule" % s["key"])
+    humans = [x["key"] for x in shots if "two humans" in x["prompt"]]
+    for k in humans:
+        pr = next(x["prompt"] for x in shots if x["key"] == k)
+        if "CANNOT understand" not in pr:
+            bad.append("%s has humans in frame but no meows rule" % k)
     if bad:
         raise SystemExit("INCOMPLETE PROMPTS:\n  " + "\n  ".join(bad))
 

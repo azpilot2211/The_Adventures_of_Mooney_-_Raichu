@@ -77,6 +77,37 @@ verdict may already exist by ear. **Ask before spending anything to re-derive it
 Not taken: the example is a 2D hand-drawn show and negates 3D. Ours is established
 3D Pixar-style across a finished episode and a trailer. Take the technique, never the look.
 
+### The full-episode document, 2026-09-13
+
+The owner's second example (`LL-BG-Cards/example-2-prompt.txt`) is a whole episode
+written as one master document. Four things from it are now in the pipeline:
+
+- **"Do not fill every second with music or effects — silence and reaction pauses are
+  part of the comedy."** In `AUDIO_MIX`, in capitals, on all 61 prompts. Our per-act
+  score design risks exactly that failure. Episode 1's held silences (B-9, B-11) are the
+  proof it works.
+- **The score ducks 6–10 dB under dialogue and returns between lines.** A number, not a
+  vibe. **This can only ever come from the prompt** — Seedance returns one pre-mixed
+  track per shot with score, Foley and dialogue baked together, and there are no stems
+  to duck in the assembler.
+- **Humans hear meows.** Series canon: the cats speak English to the audience, but any
+  human in frame hears ordinary meowing and never answers a line. `MEOWS` goes on every
+  shot with a person and a talking animal together. House Rules Act Four depends on it.
+- **Transitions are marked** where they are a device — smash cuts into the cutaways,
+  holds where the pause is the punchline. `TRANSITION` in blocks.py, `CUTS` in shots.py.
+
+**Still to do: the editing spec.** That document asks for J-cuts and L-cuts, reaction
+shots kept after punchlines, no cut immediately after every spoken sentence, 0.5–1.5s of
+silence around important jokes, 2–3 frame impact accents on major crashes, and consistent
+screen direction — summarised as *"the finished cartoon must feel intentionally
+storyboarded rather than a collection of unrelated AI video clips."* Our TRIM and TAIL
+tables already give the reaction holds and the silence. **J-cuts and impact accents are
+new work, both free in ffmpeg, and neither is written yet.**
+
+Not adopted: it wants readable on-screen labels ("SMARTPET AUTOMATIC FEEDER"). We negate
+all text and composite it in post, because generated lettering comes back as garbage.
+Its 2D hand-drawn look is also not ours.
+
 ### Numbering, settled 2026-09-12
 
 Fowl Play was **discarded and has no number**. Chonk is **Episode 1**. House Rules is
